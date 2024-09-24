@@ -1,2 +1,2 @@
-# wis2-monitoring-alerting-message
-WIS2 Monitoring and Alerting Message Encoding
+# wis2-monitoring-alerting
+WIS2 Monitoring and Alerting

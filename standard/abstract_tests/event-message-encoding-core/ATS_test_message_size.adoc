@@ -9,7 +9,7 @@ test-purpose:: Validate that a WEM has a valid message size.
 =====
 [.component,class=step]
 --
-Check that the size of the complete WNM does not exceed 8192 bytes.
+Check that the size of the complete WEM does not exceed 64000 bytes.
 --
 
 =====

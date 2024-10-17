@@ -1,0 +1,10 @@
+== References
+
+* [[rfc8259]] IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc8259]
+* [[rfc3339]] IETF: RFC 3339: Date and Time on the Internet: Timestamps (2002) footnote:[https://datatracker.ietf.org/doc/html/rfc3339]
+* W3C: Data on the Web Best Practices, W3C Recommendation (2017) footnote:[https://www.w3.org/TR/dwbp]
+* IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
+* [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
+* [[cloud-events]] CloudEvents: CloudEvents specification (2024) footnote:[https://cloudevents.io/specification]
+* [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
+* [[wis2-notification-message]] WMO: WIS2 Notification Message (2022) footnote:[https://github.com/wmo-im/wis2-notification-message]

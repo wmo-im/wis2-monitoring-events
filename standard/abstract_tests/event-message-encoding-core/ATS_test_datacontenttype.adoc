@@ -1,0 +1,21 @@
+[[ats_event-message-encoding-core_datacontenttype]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/datacontenttype
+subject:: /req/event-message-encoding-core/datacontenttype
+test-purpose:: Validate that a WEM has a valid data content type.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+datacontenttype+` property in the WEM.
+--
+
+[.component,class=step]
+--
+Check that the `+datacontenttype+` property is set to `application/json`.
+--
+
+=====
+====

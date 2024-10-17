@@ -1,0 +1,18 @@
+[[examples]]
+[appendix]
+:appendix-caption: Annex
+== Examples (Informative)
+
+=== WIS2 Alerting Hierarchy 
+
+.Example: Notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Météo-France (Toulouse)
+[source,text]
+----
+monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/fr-meteofrance
+----
+
+.Example: Notification from Météo-France (Toulouse), Global Broker Service, concerning a WNM from Servicio Meteorológico Nacional (Argentina)
+[source,text]
+----
+monitor/a/wis2/fr-meteofrance-global-broker/ar-smn
+----

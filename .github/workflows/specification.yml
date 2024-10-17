@@ -1,0 +1,54 @@
+name: build specification and KPIs
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'standard/**'
+    - 'kpi/**'
+
+env:
+  SPEC_FILE_BASENAME: wis2-monitoring-alerting-DRAFT
+  KPI_FILE_BASENAME: wis2-monitoring-alerting-kpi-DRAFT
+
+jobs:
+  build-wis2-monitoring-alerting:
+    name: Build WIS2 Monitoring and Alerting documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y \
+          && sudo apt-get install -y pandoc \
+          && sudo gem install asciidoctor asciidoctor-pdf
+      - name: checkout repository
+        uses: actions/checkout@v3
+      - name: build specification
+        run: |
+          cd standard \
+          && asciidoctor --trace -o /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
+          && cd ..
+      - name: build KPIs
+        run: |
+          cd kpi \
+          && asciidoctor --trace -o /tmp/wis2-monitoring-alerting/kpi/${KPI_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-monitoring-alerting/kpi/${KPI_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-monitoring-alerting/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
+          && cd ..
+      - name: checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - name: update gh-pages branch and publish
+        run: | 
+          git checkout gh-pages
+          git config --global user.email "tomkralidis@gmail.com"
+          git config --global user.name "Tom Kralidis"
+          rm -rf standard kpi
+          mv -f /tmp/wis2-monitoring-alerting/* .
+          git add .
+          git commit -am "update WNM build"
+          git push

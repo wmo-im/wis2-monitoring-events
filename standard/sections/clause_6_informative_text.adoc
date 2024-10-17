@@ -1,0 +1,24 @@
+== Introduction
+
+=== Motivation
+
+WIS2 Global Services provide high availability capabilities in support of discovery, access and exchange of weather/climate/water/environmental data on WIS2.
+
+Once connected to the WIS2 infrastructure, any Global Service will be monitored by the WIS2 Global Monitor.  Monitoring of WIS2 Global Services will allow
+for detection of service anomalities, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 Operations.
+
+A mechanism to notify on and describe such events is required in support of Global Service communication and corrective action.  Using the WIS2 Topic Hiearchy
+and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and alerting handling in the WIS2 ecosystem and beyond..
+
+=== Scenarios
+
+The following scenarios are useful in understanding the drivers and principles that were used in the
+development of this specification:
+
+* _Global Service service down_: a Global Service may cease to operate for any given reason
+* _Global Service malfunctioning_: a Global Service may fail to function normally (e.g.: Global Cache not providing messages, etc.)
+* _WIS2 Node malfunctioning_: a WIS2 Node may publish malformed or invalid WIS2 Notification Messages
+
+These scenarios can be realized as planned/expected outages, or occur suddenly, in an unexpected manner.
+
+Those events should be detected, and the Global Services or WIS2 Nodes should be informed to drive corrective action and succssful operation of WIS2.

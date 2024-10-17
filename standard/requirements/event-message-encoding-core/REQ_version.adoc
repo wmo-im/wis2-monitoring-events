@@ -1,0 +1,6 @@
+[[req_event-message-encoding-core-version]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/event-message-encoding-core/version*
+^|A |The `+specversion+` property SHALL be fixed to "1.0".
+|===

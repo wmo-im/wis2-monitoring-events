@@ -1,0 +1,26 @@
+[[ats_event-message-encoding-core_data]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/data
+subject:: /req/event-message-encoding-core/data
+test-purpose:: Validate that a WEM has a valid data payload.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+data+` property in the WEM.
+--
+
+[.component,class=step]
+--
+Parse the `+data+` property as a JSON object.
+--
+
+[.component,class=step]
+--
+Validate the parsed JSON object against the JSON Schema defined in the `+dataschema+` property.
+--
+
+=====
+====

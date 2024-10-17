@@ -1,0 +1,14 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.wmo.int/wam/1/eventMessageEncodingJSON.yaml
+title: WIS2 Event Message Encoding
+description: WIS2 Event Message Encoding
+
+allOf:
+  - $ref: 'https://raw.githubusercontent.com/cloudevents/spec/refs/heads/main/cloudevents/formats/cloudevents.json'
+  - required:
+      - datacontenttype
+      - dataschema
+      - subject
+      - time
+      - data
+    

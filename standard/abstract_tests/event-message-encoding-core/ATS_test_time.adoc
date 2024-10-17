@@ -1,0 +1,26 @@
+[[ats_event-message-encoding-core_time]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/time
+subject:: /req/event-message-encoding-core/time
+test-purpose:: Validate that a WEM has a valid identifier.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of an `+time+` property.
+--
+
+[.component,class=step]
+--
+Check that the `+time+` property is in RFC3339 format.
+--
+
+[.component,class=step]
+--
+Check that the `+time+` property is in the UTC timezone.
+--
+
+=====
+====

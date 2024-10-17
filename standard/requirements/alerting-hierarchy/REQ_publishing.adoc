@@ -1,0 +1,11 @@
+[[req_alerting-hierarchy_publishing]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/alerting-hierarchy/publishing*
+^|A |Alerts SHALL NOT be published with a topic that is not defined in this specification.
+^|B |Alerts SHALL be published to exactly level 5.
+^|C |Alert topic level 1 SHALL be named ``monitor``.
+^|D |Alert topic levels 2 and 3 SHALL be defined as per the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>.
+^|E |Alert topic level 4 SHALL be a centre identifier based on the entity producing the alert.
+^|F |Alert topic level 5 SHALL be a centre identifier based on the intended target of the alert.
+|===

@@ -1,0 +1,6 @@
+[[req_alerting-hierarchy_management]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/alerting-hierarchy/management*
+^|A |Topic levels 2 and 3 SHALL be as specified by the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>.
+|===

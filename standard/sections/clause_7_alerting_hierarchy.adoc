@@ -1,0 +1,65 @@
+== The WIS2 Alerting Hierarchy
+
+The WIS2 Alerting Hierarchy (WAH) provides a mechanism for Global Services to provide reports and alerts to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.
+
+=== Requirements Class "WIS2 Alerting Hierarchy"
+
+==== Overview
+
+This Requirements Class provides requirements for the WIS2 Alerting Hierarchy.
+
+include::../requirements/requirements_class_alerting-hierarchy.adoc[]
+
+Successful operation of the WIS2 infrastructure and monitoring/alerting of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.
+
+The WAH is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WAH levels:
+
+* _producer_: the centre identifier of the entity producing the alert
+* _target_: the centre identifier of the intended target of the alert
+
+The representation is encoded as a simple text string of values in each topic level separated by a slash (``/``). 
+
+Examples:
+
+``monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/de-dwd``
+
+``monitor/a/wis2/fr-meteofrance-global-broker/cn-cma``
+
+The table below provides an overview of the primary topic levels.
+
+.WAH primary topic levels
+|===
+|Level|Name|Description
+
+|1
+|channel
+|Location of where the data originates from (fixed value of ``monitor``)
+
+|2
+|version
+|Alphabetical version of the topic hierarchy
+
+|3
+|system
+|Fixed value of ``wis2`` for WIS2
+
+|4
+|centre-id
+|Acronym proposed by Member and endorsed by WMO Secretariat, of the entity producing the alert (source)
+
+|5
+|centre-id
+|Acronym proposed by Member and endorsed by WMO Secretariat, of the intended target of the alert (subject)
+|===
+
+==== Publishing
+
+A simple ruleset is defined for publishing alerts to WAH that enables the clear identification of the alert producer and its intended target, to trigger corrective action.
+
+include::../requirements/alerting-hierarchy/REQ_publishing.adoc[]
+
+==== Management
+
+Primary levels are managed consistently to maintain stability.
+
+include::../requirements/alerting-hierarchy/REQ_management.adoc[]

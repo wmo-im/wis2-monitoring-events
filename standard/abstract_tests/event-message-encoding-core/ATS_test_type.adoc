@@ -1,0 +1,21 @@
+[[ats_event-message-encoding-core_type]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/type
+subject:: /req/event-message-encoding-core/type
+test-purpose:: Validate that a WEM has a valid type.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+type+` property in the WEM.
+--
+
+[.component,class=step]
+--
+Check that the `+type+` property begins with `int.wmo.wis.wam.event`.
+--
+
+=====
+====

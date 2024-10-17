@@ -1,0 +1,40 @@
+[[ats_alerting-hierarchy_publishing]]
+====
+[%metadata]
+label:: /conf/alerting-hierarchy/publishing
+subject:: /req/alerting-hierarchy/publishing
+test-purpose:: Validate that a given topic meets the conventions of WAH.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Split the topic by the `/` character, into tokens.
+--
+
+--
+Check that there are exactly 5 tokens.
+--
+
+--
+Check that the first token is a value of `monitor`.
+--
+
+--
+Check that the second token is a valid WTH version value.
+--
+
+--
+Check that the third token is a valid WTH system value of `wis2`.
+--
+
+--
+Check that the fourth token is a valid centre identifier.
+--
+
+--
+Check that the fifth token is also a valid centre identifier.
+--
+
+=====
+====

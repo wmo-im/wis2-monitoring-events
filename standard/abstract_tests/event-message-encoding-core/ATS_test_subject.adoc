@@ -1,0 +1,21 @@
+[[ats_event-message-encoding-core_subject]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/subject
+subject:: /req/event-message-encoding-core/subject
+test-purpose:: Validate that a WEM has a valid subject.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+subject+` property in the WEM.
+--
+
+[.component,class=step]
+--
+Check that the `+subject+` property is a valid WIS2 centre identifier.
+--
+
+=====
+====

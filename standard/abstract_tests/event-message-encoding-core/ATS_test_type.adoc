@@ -14,7 +14,7 @@ Check for the existence of a `+type+` property in the WEM.
 
 [.component,class=step]
 --
-Check that the `+type+` property begins with `int.wmo.wis.wam.event`.
+Check that the `+type+` property begins with `int.wmo.wis.wma.event`.
 --
 
 =====

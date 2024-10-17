@@ -100,7 +100,7 @@ TODO: define as a codelist / URI for codes.wmo.int instead?
 Example:
 [source,json]
 ----
-"type": "int.wmo.wis.wam.event.wcmp2-ets"
+"type": "int.wmo.wis.wma.event.wcmp2-ets"
 ----
 
 include::../requirements/event-message-encoding-core/REQ_type.adoc[]

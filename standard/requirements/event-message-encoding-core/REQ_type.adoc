@@ -3,5 +3,5 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/event-message-encoding-core/type*
 ^|A |The `+type+` property SHALL be encoded using a reverse DNS notation.
-^|A |The `+type+` property SHALL begin with `int.wmo.wis.wam.event`
+^|A |The `+type+` property SHALL begin with `int.wmo.wis.wma.event`
 |===

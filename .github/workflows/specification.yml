@@ -29,3 +29,17 @@ jobs:
           && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.docx \
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
           && cd ..
+      - name: checkout gh-pages branch
+        uses: actions/checkout@master
+        with:
+          ref: gh-pages
+      - name: update gh-pages branch and publish
+        run: | 
+          git checkout gh-pages
+          git config --global user.email "tomkralidis@gmail.com"
+          git config --global user.name "Tom Kralidis"
+          rm -rf standard
+          mv -f /tmp/wis2-monitoring-alerting/* .
+          git add .
+          git commit -am "update WMA build"
+          git push

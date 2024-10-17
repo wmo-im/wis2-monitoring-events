@@ -6,6 +6,10 @@ subject:: Requirements Class "WIS2 Event Message Encoding: Core"
 classification:: Target Type:Event Metadata
 ====
 
+==== Message size
+
+include::./event-message-encoding-core/ATS_test_message_size.adoc[]
+
 ==== Identifier
 
 include::./event-message-encoding-core/ATS_test_id.adoc[]

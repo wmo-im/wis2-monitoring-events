@@ -8,7 +8,7 @@ Once connected to the WIS2 infrastructure, any Global Service will be monitored 
 for detection of service anomalities, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 Operations.
 
 A mechanism to notify on and describe such events is required in support of Global Service communication and corrective action.  Using the WIS2 Topic Hiearchy
-and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and alerting handling in the WIS2 ecosystem and beyond..
+and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and alerting handling in the WIS2 ecosystem and beyond.
 
 === Scenarios
 

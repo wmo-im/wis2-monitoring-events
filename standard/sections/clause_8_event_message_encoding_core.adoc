@@ -118,7 +118,7 @@ The centre identifier of the intended target of the event (as defined in the <<w
 Example:
 [source,json]
 ----
-"source": "de-dwd"
+"subject": "de-dwd"
 ----
 
 include::../requirements/event-message-encoding-core/REQ_subject.adoc[]

@@ -87,8 +87,8 @@ The following additional terms and definitions also apply.
 |WEM
 |WIS2 Event Message
 
-|WATH
-|WIS2 Alerting Topic Hierarchy
+|WET
+|WIS2 Event Topic
 
 |WMO
 |World Meteorological Organization

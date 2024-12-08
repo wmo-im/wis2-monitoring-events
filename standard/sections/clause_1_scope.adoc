@@ -1,5 +1,5 @@
 == Scope
 
-This document defines the content, structure, and encoding for WIS2 monitoring and alerting. This standard is an extension of the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>> as well as the <<cloud-events, CloudEvents specification>>.
+This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is an extension of the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>> as well as the <<cloud-events, CloudEvents specification>>.
 
-This specification defines the conformance requirements for WIS2 Monitoring and Alerting (topic hierarchy and notification message).  Annex A defines the abstract test suite.
+This specification defines the conformance requirements for WIS2 Monitoring Events (topic hierarchy and notification message).  Annex A defines the abstract test suite.

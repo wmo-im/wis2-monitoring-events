@@ -1,7 +1,7 @@
 [[ats_event-message-encoding-core]]
 ====
 [%metadata]
-label:: http://wis.wmo.int/spec/wma/1/req/event-message-encoding-core
+label:: http://wis.wmo.int/spec/wme/1/req/event-message-encoding-core
 subject:: Requirements Class "WIS2 Event Message Encoding: Core"
 classification:: Target Type:Event Metadata
 ====

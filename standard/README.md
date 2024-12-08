@@ -1,4 +1,4 @@
-# WIS2 Monitoring and Alerting
+# WIS2 Monitoring Events
 
 ## Overview
 
@@ -20,11 +20,11 @@ npm install asciidoctor asciidoctor-pdf asciidoc-link-check
 
 ```bash
 # create HTML (single page)
-asciidoctor --trace -o wis2-monitoring-alerting.html index.adoc
+asciidoctor --trace -o wis2-monitoring-events.html index.adoc
 # create PDF
-asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o wis2-monitoring-alerting.pdf index.adoc
+asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o wis2-monitoring-events.pdf index.adoc
 # create Word document
-asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output wis2-monitoring-alerting.docx
+asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output wis2-monitoring-events.docx
 ```
 
 # check links

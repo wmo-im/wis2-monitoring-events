@@ -2,9 +2,9 @@
 :appendix-caption: Annex
 == Conformance Class Abstract Test Suite (Normative)
 
-=== Conformance Class: WIS2 Alerting Hierarchy
+=== Conformance Class: WIS2 Monitoring Event Topic
 
-include::../abstract_tests/ATS_class_alerting-hierarchy.adoc[]
+include::../abstract_tests/ATS_class_monitoring-event-topic.adoc[]
 
 === Conformance Class: WIS2 Event Message Encoding: Core
 

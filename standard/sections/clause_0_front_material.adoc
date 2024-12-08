@@ -4,15 +4,15 @@ WIS2 is comprised of a network of Global Services which provide highly available
 
 Successful operation of WIS2 Global Services will depend on running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.  The WIS2 Guide defines service levels and performance indicators footnote:[https://wmo-im.github.io/wis2-guide/wis2-guide-DRAFT.html#_2_7_2_2_service_levels_performance_indicators_and_fair_usage_policies] for Global Services in order to monitor and maintain the health of the network.
 
-This document defines the content, structure, and encoding for WIS2 monitoring and alerting. This standard is an extension of the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>> as well as the <<cloud-events, CloudEvents specification>>.
+This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is an extension of the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>> as well as the <<cloud-events, CloudEvents specification>>.
 
-WIS2 Monitoring and Alerting topics shall extend the appraoch of the WIS2 Topic Hierarchy.  WIS2 monitoring and alerting messages shall be encoded using CloudEvents along with a domain specific model for WIS2.
+WIS2 Monitoring Event topics shall extend the approach of the WIS2 Topic Hierarchy.  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.
 
 [big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
-wmo, wis 2.0, weather, climate, water, metadata, pubsub, alert, event, mqp, monitoring, cloudevents, JSON
+wmo, wis 2.0, weather, climate, water, metadata, pubsub, event, mqp, monitoring, cloudevents, JSON
 
 [big]*iii.    Security Considerations*
 

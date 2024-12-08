@@ -3,7 +3,7 @@
 :appendix-caption: Annex
 == Examples (Informative)
 
-=== WIS2 Alerting Hierarchy 
+=== WIS2 Monitoring Topic
 
 .Example: Notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Météo-France (Toulouse)
 [source,text]

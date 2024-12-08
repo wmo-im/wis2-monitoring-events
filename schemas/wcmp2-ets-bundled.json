@@ -33,8 +33,6 @@
     },
     "tests": {
       "type": "array",
-      "maxItems": 12,
-      "minItems": 12,
       "items": {
         "type": "object",
         "properties": {

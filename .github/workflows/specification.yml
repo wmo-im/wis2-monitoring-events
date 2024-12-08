@@ -8,10 +8,10 @@ on:
     - 'standard/**'
 
 env:
-  SPEC_FILE_BASENAME: wis2-monitoring-alerting-DRAFT
+  SPEC_FILE_BASENAME: wis2-monitoring-events-DRAFT
 
 jobs:
-  build-wis2-monitoring-alerting:
+  build-wis2-monitoring-events:
     name: Build WIS2 Monitoring and Alerting documentation
     runs-on: ubuntu-latest
     steps:
@@ -25,9 +25,9 @@ jobs:
       - name: build specification
         run: |
           cd standard \
-          && asciidoctor --trace -o /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.html index.adoc \
-          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.docx \
-          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-monitoring-alerting/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
+          && asciidoctor --trace -o /tmp/wis2-monitoring-events/standard/${SPEC_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-monitoring-events/standard/${SPEC_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-monitoring-events/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
           && cd ..
       - name: checkout gh-pages branch
         uses: actions/checkout@master
@@ -39,7 +39,7 @@ jobs:
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
           rm -rf standard
-          mv -f /tmp/wis2-monitoring-alerting/* .
+          mv -f /tmp/wis2-monitoring-events/* .
           git add .
           git commit -am "update WMA build"
           git push

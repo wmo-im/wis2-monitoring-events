@@ -1,9 +1,9 @@
-[[ats_alerting-hierarchy_publishing]]
+[[ats_monitoring-event-topic_publishing]]
 ====
 [%metadata]
-label:: /conf/alerting-hierarchy/publishing
-subject:: /req/alerting-hierarchy/publishing
-test-purpose:: Validate that a given topic meets the conventions of WAH.
+label:: /conf/monitoring-event-topic/publishing
+subject:: /req/monitoring-event-topic/publishing
+test-purpose:: Validate that a given topic meets the conventions of WET.
 
 [.component,class=test method]
 =====

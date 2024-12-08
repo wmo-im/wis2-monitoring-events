@@ -1,4 +1,4 @@
-FILE_BASENAME=wis2-monitoring-alerting
+FILE_BASENAME=wis2-monitoring-events
 
 html:
 	asciidoctor --verbose --trace -o ${FILE_BASENAME}.html index.adoc

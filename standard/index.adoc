@@ -1,4 +1,4 @@
-:title: WMO WIS2 Monitoring and Alerting
+:title: WMO WIS2 Monitoring Events
 :titletext: {title}
 :version: 1.0.0-DRAFT-{docdate}
 :copyright: Copyright © 2024 World Meteorological Organization (WMO)
@@ -48,7 +48,7 @@ include::sections/clause_5_conventions.adoc[]
 
 include::sections/clause_6_informative_text.adoc[]
 
-include::sections/clause_7_alerting_hierarchy.adoc[]
+include::sections/clause_7_monitoring_event_topic.adoc[]
 
 include::sections/clause_8_event_message_encoding_core.adoc[]
 

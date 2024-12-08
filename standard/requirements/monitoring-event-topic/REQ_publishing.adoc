@@ -1,0 +1,11 @@
+[[req_monitoring-event-topic_publishing]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-topic/publishing*
+^|A |Events SHALL NOT be published with a topic that is not defined in this specification.
+^|B |Events SHALL be published to exactly level 5.
+^|C |Event topic level 1 SHALL be named ``monitor``.
+^|D |Event topic levels 2 and 3 SHALL be defined as per the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>.
+^|E |Event topic level 4 SHALL be a centre identifier based on the entity producing the event.
+^|F |Event topic level 5 SHALL be a centre identifier based on the intended target of the event.
+|===

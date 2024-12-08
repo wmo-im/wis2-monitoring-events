@@ -4,25 +4,25 @@ This section provides details and examples for any conventions used in the docum
 === Identifiers
 The normative provisions in this Standard are denoted by the URI:
 
-http://wis.wmo.int/spec/wma/1
+http://wis.wmo.int/spec/wme/1
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
 === Examples
 
-Alerting topics examples provided in this specification are encoded as `plain text strings`.
+Event topics examples provided in this specification are encoded as `plain text strings`.
 
-Alerting message examples provided in this specification are encoded as JSON.
+Event message examples provided in this specification are encoded as JSON.
 
-Complete examples can be found at https://schemas.wmo.int/wma/1.0/examples
+Complete examples can be found at https://schemas.wmo.int/wme/1.0/examples
 
 === Codelists bundle
 
-Given the WIS2 Alerting Hierarchy extends the WIS2 Topic Hierarchy, no additional codelists bundles are made available given the WTH codelists bundles satisfy the requirements of this specification.
+Given the WIS2 Monitoring Event Topic extends the WIS2 Topic Hierarchy, no additional codelists bundles are made available given the WTH codelists bundles satisfy the requirements of this specification.
 
 === Schemas
 
-WIS2 Alerting message schemas can be found at https://schemas.wmo.int/wma/1.0
+WIS2 Event message schemas can be found at https://schemas.wmo.int/wme/1.0
 
 === Schema representation
 
@@ -30,7 +30,7 @@ JSON Schema footnote:[https://json-schema.org] objects are used throughout this 
 of metadata records. These schema objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
 YAML is a superset of JSON, and in this standard is regarded as equivalent.
 
-Alerting message instances are always defined as JSON.
+Event message instances are always defined as JSON.
 
 ==== Properties
 

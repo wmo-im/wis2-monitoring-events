@@ -1,0 +1,15 @@
+[[ats_monitoring-event-topic]]
+====
+[%metadata]
+label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-topic
+subject:: Requirements Class "WIS2 Monitoring Event Topic"
+classification:: Target Type:Topic Classification
+====
+
+==== Management
+
+This requirement is not applicable to ATS testing.
+
+==== Publishing
+
+include::./monitoring-event-topic/ATS_test_publishing.adoc[]

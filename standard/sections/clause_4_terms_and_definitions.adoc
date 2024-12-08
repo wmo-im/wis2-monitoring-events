@@ -84,11 +84,14 @@ The following additional terms and definitions also apply.
 |WIS
 |WMO Information System
 
-|WEM
-|WIS2 Event Message
+|WME
+|WIS2 Monitoring Events
 
-|WET
-|WIS2 Event Topic
+|WMEM
+|WIS2 Monitoring Event Message
+
+|WMET
+|WIS2 Monitoring Event Topic
 
 |WMO
 |World Meteorological Organization

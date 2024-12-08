@@ -1,6 +1,0 @@
-[[req_event-message-encoding-core_id]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/event-message-encoding-core/id*
-^|A |The `+id+` property SHALL be a Universally Unique Identifier (UUID).
-|===

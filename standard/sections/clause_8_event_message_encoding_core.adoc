@@ -1,8 +1,8 @@
-== WIS2 Event Message Encoding
+== WIS2 Monitoring Event Message Encoding
 
 Event payloads published via the WIS2 Monitoring Event Topic (WET) are defined using the <<cloud-events,CloudEvents>> specification as a building block.
 
-=== Requirements Class "WIS2 Event Message Encoding: Core"
+=== Requirements Class "WIS2 Monitoring Event Message Encoding: Core"
 
 ==== Overview
 
@@ -10,9 +10,9 @@ This Requirements Class provides baseline requirements for all WIS2 event and re
 
 CloudEvents provides a standards-based encoding for all event data, and provides mechanisms for extensibility.
 
-include::../requirements/requirements_class_event-message-encoding-core.adoc[]
+include::../requirements/requirements_class_monitoring-event-message-encoding-core.adoc[]
 
-The table below provides an overview of the set of properties that are included in a WIS2 Event Message (WEM).
+The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WEM).
 
 .WEM core properties
 |===
@@ -57,9 +57,9 @@ The table below provides an overview of the set of properties that are included 
 
 ==== Message size
 
-The WIS2 Event Message Encoding allows for the transmission of event messages in a compact manner and includes the ability to embed content inline as required.
+The WIS2 Monitoring Event Message Encoding allows for the transmission of event messages in a compact manner.
 
-include::../requirements/event-message-encoding-core/REQ_message_size.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_message_size.adoc[]
 
 ==== Identifier
 
@@ -71,7 +71,7 @@ Example:
 "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_id.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_id.adoc[]
 
 ==== Version
 
@@ -83,7 +83,7 @@ Example:
 "specversion": "1.0"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_version.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_version.adoc[]
 
 ==== Source
 
@@ -95,7 +95,7 @@ Example:
 "source": "ca-eccc-msc-global-discovery-catalogue"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_source.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_source.adoc[]
 
 ==== Type
 
@@ -109,7 +109,7 @@ Example:
 "type": "int.wmo.wis.wme.event.wcmp2-ets"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_type.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_type.adoc[]
 
 ==== Subject
 
@@ -121,7 +121,7 @@ Example:
 "subject": "de-dwd"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_subject.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_subject.adoc[]
 
 ==== Time
 
@@ -133,7 +133,7 @@ Example:
 "time": "2024-10-17T03:42:23Z"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_time.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_time.adoc[]
 
 ==== Data content type
 
@@ -145,7 +145,7 @@ Example:
 "datacontenttype": "application/json"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_datacontenttype.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_datacontenttype.adoc[]
 
 ==== Data schema
 
@@ -157,7 +157,7 @@ Example:
 "dataschema": "https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json"
 ----
 
-include::../requirements/event-message-encoding-core/REQ_dataschema.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_dataschema.adoc[]
 
 ==== Data
 
@@ -186,4 +186,4 @@ Example:
 }
 ----
 
-include::../requirements/event-message-encoding-core/REQ_data.adoc[]
+include::../requirements/monitoring-event-message-encoding-core/REQ_data.adoc[]

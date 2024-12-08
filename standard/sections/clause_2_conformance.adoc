@@ -15,6 +15,6 @@ This standard identifies numerous Requirements Classes which define the function
 The mandatory Requirements Classes for this specification are:
 
 * "WIS2 Monitoring Event Topic"
-* "WIS2 Event Message Encoding: Core"
-* "WIS2 Event Message Encoding: WCMP2 Executable Test Suite Report"
-* "WIS2 Event Message Encoding: WCMP2 Key Performance Indicator Report"
+* "WIS2 Monitoring Event Message Encoding: Core"
+* "WIS2 Monitoring Event Message Encoding: WCMP2 Executable Test Suite Report"
+* "WIS2 Monitoring Event Message Encoding: WCMP2 Key Performance Indicator Report"

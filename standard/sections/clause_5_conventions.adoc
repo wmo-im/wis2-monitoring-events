@@ -10,9 +10,9 @@ All requirements and conformance tests that appear in this document are denoted 
 
 === Examples
 
-Event topics examples provided in this specification are encoded as `plain text strings`.
+Monitoring event topics examples provided in this specification are encoded as `plain text strings`.
 
-Event message examples provided in this specification are encoded as JSON.
+Monitoring event message examples provided in this specification are encoded as JSON.
 
 Complete examples can be found at https://schemas.wmo.int/wme/1.0/examples
 
@@ -22,7 +22,7 @@ Given the WIS2 Monitoring Event Topic extends the WIS2 Topic Hierarchy, no addit
 
 === Schemas
 
-WIS2 Event message schemas can be found at https://schemas.wmo.int/wme/1.0
+Monitoring event message schemas can be found at https://schemas.wmo.int/wme/1.0
 
 === Schema representation
 

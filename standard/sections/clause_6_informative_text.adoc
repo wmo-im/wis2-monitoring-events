@@ -16,7 +16,9 @@ development of this specification:
 
 * _Global Service service down_: a Global Service may cease to operate for any given reason
 * _Global Service malfunctioning_: a Global Service may fail to function normally (e.g.: Global Cache not providing messages, etc.)
-* _WIS2 Node malfunctioning_: a WIS2 Node may publish malformed or invalid WIS2 Notification Messages
+* _WIS2 Node malfunctioning_:
+** a WIS2 Node may publish malformed or invalid WIS2 Notification Messages
+** a WIS2 Node may provide correct notifications but no data
 
 These scenarios can be realized as planned/expected outages, or occur suddenly, in an unexpected manner.
 

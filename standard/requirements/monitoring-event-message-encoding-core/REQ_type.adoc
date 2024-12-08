@@ -1,7 +1,7 @@
-[[req_event-message-encoding-core_type]]
+[[req_monitoring-event-message-encoding-core_type]]
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/event-message-encoding-core/type*
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/type*
 ^|A |The `+type+` property SHALL be encoded using a reverse DNS notation.
 ^|A |The `+type+` property SHALL begin with `int.wmo.wis.wme.event`
 |===

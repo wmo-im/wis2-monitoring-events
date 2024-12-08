@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="copyright" content="Copyright © 2024 World Meteorological Organization (WMO)">
-<title>WMO WIS2 Monitoring and Alerting</title>
+<title>WMO WIS2 Monitoring Events</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,7 +437,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book">
 <div id="header">
-<h1>WMO WIS2 Monitoring and Alerting</h1>
+<h1>WMO WIS2 Monitoring Events</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -455,10 +455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-12-08</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2024-10-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2024-12-08</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -508,9 +508,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_scenarios">6.2. Scenarios</a></li>
 </ul>
 </li>
-<li><a href="#_the_wis2_alerting_hierarchy">7. The WIS2 Alerting Hierarchy</a>
+<li><a href="#_the_wis2_monitoring_event_topic">7. The WIS2 Monitoring Event Topic</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_class_wis2_alerting_hierarchy">7.1. Requirements Class "WIS2 Alerting Hierarchy"</a>
+<li><a href="#_requirements_class_wis2_monitoring_event_topic">7.1. Requirements Class "WIS2 Monitoring Event Topic"</a>
 <ul class="sectlevel3">
 <li><a href="#_overview">7.1.1. Overview</a></li>
 <li><a href="#_publishing">7.1.2. Publishing</a></li>
@@ -540,7 +540,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
-<li><a href="#_conformance_class_wis2_alerting_hierarchy">A.1. Conformance Class: WIS2 Alerting Hierarchy</a>
+<li><a href="#_conformance_class_wis2_monitoring_event_topic">A.1. Conformance Class: WIS2 Monitoring Event Topic</a>
 <ul class="sectlevel3">
 <li><a href="#_management_2">A.1.1. Management</a></li>
 <li><a href="#_publishing_2">A.1.2. Publishing</a></li>
@@ -569,7 +569,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#examples">Annex C: Examples (Informative)</a>
 <ul class="sectlevel2">
-<li><a href="#_wis2_alerting_hierarchy">C.1. WIS2 Alerting Hierarchy</a></li>
+<li><a href="#_wis2_monitoring_topic">C.1. WIS2 Monitoring Topic</a></li>
 <li><a href="#_wis2_event_message_encoding_2">C.2. WIS2 Event Message Encoding</a></li>
 </ul>
 </li>
@@ -588,10 +588,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Successful operation of WIS2 Global Services will depend on running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.  The WIS2 Guide defines service levels and performance indicators <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> for Global Services in order to monitor and maintain the health of the network.</p>
 </div>
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 monitoring and alerting. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
-<p>WIS2 Monitoring and Alerting topics shall extend the appraoch of the WIS2 Topic Hierarchy.  WIS2 monitoring and alerting messages shall be encoded using CloudEvents along with a domain specific model for WIS2.</p>
+<p>WIS2 Monitoring Event topics shall extend the approach of the WIS2 Topic Hierarchy.  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">ii.    Keywords</strong></p>
@@ -600,7 +600,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 </div>
 <div class="paragraph">
-<p>wmo, wis 2.0, weather, climate, water, metadata, pubsub, alert, event, mqp, monitoring, cloudevents, JSON</p>
+<p>wmo, wis 2.0, weather, climate, water, metadata, pubsub, event, mqp, monitoring, cloudevents, JSON</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">iii.    Security Considerations</strong></p>
@@ -617,10 +617,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 monitoring and alerting. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
-<p>This specification defines the conformance requirements for WIS2 Monitoring and Alerting (topic hierarchy and notification message).  Annex A defines the abstract test suite.</p>
+<p>This specification defines the conformance requirements for WIS2 Monitoring Events (topic hierarchy and notification message).  Annex A defines the abstract test suite.</p>
 </div>
 </div>
 </div>
@@ -640,7 +640,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Global Service providers are required to comply with all conformance classes of this specification in support of providing highly available services for discovery, subscription, notification and download of data and metadata within WIS2.</p>
 </div>
 <div class="paragraph">
-<p>WMO shall publish guidance material to assist data providers in constructing WIS2 Alerting Hierarchy and Alert Messages.</p>
+<p>WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topic and Event Messages.</p>
 </div>
 <div class="paragraph">
 <p>This standard identifies numerous Requirements Classes which define the functional requirements.</p>
@@ -651,7 +651,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>"WIS2 Alerting Hierarchy"</p>
+<p>"WIS2 Monitoring Event Topic"</p>
 </li>
 <li>
 <p>"WIS2 Event Message Encoding: Core"</p>
@@ -827,8 +827,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Event Message</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WATH</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Alerting Topic Hierarchy</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WET</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Event Topic</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO</p></td>
@@ -855,7 +855,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The normative provisions in this Standard are denoted by the URI:</p>
 </div>
 <div class="paragraph">
-<p><a href="http://wis.wmo.int/spec/wma/1" class="bare">http://wis.wmo.int/spec/wma/1</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1" class="bare">http://wis.wmo.int/spec/wme/1</a></p>
 </div>
 <div class="paragraph">
 <p>All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
@@ -864,25 +864,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_examples"><a class="anchor" href="#_examples"></a>5.2. Examples</h3>
 <div class="paragraph">
-<p>Alerting topics examples provided in this specification are encoded as <code>plain text strings</code>.</p>
+<p>Event topics examples provided in this specification are encoded as <code>plain text strings</code>.</p>
 </div>
 <div class="paragraph">
-<p>Alerting message examples provided in this specification are encoded as JSON.</p>
+<p>Event message examples provided in this specification are encoded as JSON.</p>
 </div>
 <div class="paragraph">
-<p>Complete examples can be found at <a href="https://schemas.wmo.int/wma/1.0/examples" class="bare">https://schemas.wmo.int/wma/1.0/examples</a></p>
+<p>Complete examples can be found at <a href="https://schemas.wmo.int/wme/1.0/examples" class="bare">https://schemas.wmo.int/wme/1.0/examples</a></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_codelists_bundle"><a class="anchor" href="#_codelists_bundle"></a>5.3. Codelists bundle</h3>
 <div class="paragraph">
-<p>Given the WIS2 Alerting Hierarchy extends the WIS2 Topic Hierarchy, no additional codelists bundles are made available given the WTH codelists bundles satisfy the requirements of this specification.</p>
+<p>Given the WIS2 Monitoring Event Topic extends the WIS2 Topic Hierarchy, no additional codelists bundles are made available given the WTH codelists bundles satisfy the requirements of this specification.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.4. Schemas</h3>
 <div class="paragraph">
-<p>WIS2 Alerting message schemas can be found at <a href="https://schemas.wmo.int/wma/1.0" class="bare">https://schemas.wmo.int/wma/1.0</a></p>
+<p>WIS2 Event message schemas can be found at <a href="https://schemas.wmo.int/wme/1.0" class="bare">https://schemas.wmo.int/wme/1.0</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -893,7 +893,7 @@ of metadata records. These schema objects are also typically represented using Y
 YAML is a superset of JSON, and in this standard is regarded as equivalent.</p>
 </div>
 <div class="paragraph">
-<p>Alerting message instances are always defined as JSON.</p>
+<p>Event message instances are always defined as JSON.</p>
 </div>
 <div class="sect3">
 <h4 id="_properties"><a class="anchor" href="#_properties"></a>5.5.1. Properties</h4>
@@ -922,8 +922,7 @@ YAML is a superset of JSON, and in this standard is regarded as equivalent.</p>
 for detection of service anomalities, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 Operations.</p>
 </div>
 <div class="paragraph">
-<p>A mechanism to notify on and describe such events is required in support of Global Service communication and corrective action.  Using the WIS2 Topic Hiearchy
-and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and alerting handling in the WIS2 ecosystem and beyond.</p>
+<p>A mechanism to notify on and describe such events is required in support of Global Service communication and corrective action.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.</p>
 </div>
 </div>
 <div class="sect2">
@@ -955,19 +954,19 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_wis2_alerting_hierarchy"><a class="anchor" href="#_the_wis2_alerting_hierarchy"></a>7. The WIS2 Alerting Hierarchy</h2>
+<h2 id="_the_wis2_monitoring_event_topic"><a class="anchor" href="#_the_wis2_monitoring_event_topic"></a>7. The WIS2 Monitoring Event Topic</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The WIS2 Alerting Hierarchy (WAH) provides a mechanism for Global Services to provide reports and alerts to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.</p>
+<p>The WIS2 Monitoring Event Topic (WET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.</p>
 </div>
 <div class="sect2">
-<h3 id="_requirements_class_wis2_alerting_hierarchy"><a class="anchor" href="#_requirements_class_wis2_alerting_hierarchy"></a>7.1. Requirements Class "WIS2 Alerting Hierarchy"</h3>
+<h3 id="_requirements_class_wis2_monitoring_event_topic"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_topic"></a>7.1. Requirements Class "WIS2 Monitoring Event Topic"</h3>
 <div class="sect3">
 <h4 id="_overview"><a class="anchor" href="#_overview"></a>7.1.1. Overview</h4>
 <div class="paragraph">
-<p>This Requirements Class provides requirements for the WIS2 Alerting Hierarchy.</p>
+<p>This Requirements Class provides requirements for the WIS2 Monitoring Event Topic.</p>
 </div>
-<table id="rc_alerting-hierarchy" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rc_monitoring-event-topic" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -977,7 +976,7 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wma/1/req/alerting-hierarchy" class="bare">http://www.wmo.int/spec/wma/1/req/alerting-hierarchy</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wme/1/req/monitoring-event-topic" class="bare">http://www.wmo.int/spec/wme/1/req/monitoring-event-topic</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -994,18 +993,18 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Successful operation of the WIS2 infrastructure and monitoring/alerting of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.</p>
+<p>Successful operation of the WIS2 infrastructure and monitoring events of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.</p>
 </div>
 <div class="paragraph">
-<p>The WAH is composed of five levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WAH levels:</p>
+<p>The WET is composed of five levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WET levels:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>producer</em>: the centre identifier of the entity producing the alert</p>
+<p><em>producer</em>: the centre identifier of the entity producing the event</p>
 </li>
 <li>
-<p><em>target</em>: the centre identifier of the intended target of the alert</p>
+<p><em>target</em>: the centre identifier of the intended target of the event</p>
 </li>
 </ul>
 </div>
@@ -1025,7 +1024,7 @@ development of this specification:</p>
 <p>The table below provides an overview of the primary topic levels.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. WAH primary topic levels</caption>
+<caption class="title">Table 2. WETprimary topic levels</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1057,12 +1056,12 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">centre-id</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the entity producing the alert (source)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the entity producing the event (source)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">centre-id</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the intended target of the alert (subject)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the intended target of the event (subject)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1070,9 +1069,9 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_publishing"><a class="anchor" href="#_publishing"></a>7.1.2. Publishing</h4>
 <div class="paragraph">
-<p>A simple ruleset is defined for publishing alerts to WAH that enables the clear identification of the alert producer and its intended target, to trigger corrective action.</p>
+<p>A simple ruleset is defined for publishing events to WET that enables the clear identification of the event producer and its intended target, to trigger corrective action.</p>
 </div>
-<table id="req_alerting-hierarchy_publishing" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-topic_publishing" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1081,43 +1080,43 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/alerting-hierarchy/publishing</strong></p>
+<p><strong>/req/monitoring-event-topic/publishing</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alerts SHALL NOT be published with a topic that is not defined in this specification.</p>
+<p>Events SHALL NOT be published with a topic that is not defined in this specification.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alerts SHALL be published to exactly level 5.</p>
+<p>Events SHALL be published to exactly level 5.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alert topic level 1 SHALL be named <code>monitor</code>.</p>
+<p>Event topic level 1 SHALL be named <code>monitor</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alert topic levels 2 and 3 SHALL be defined as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>.</p>
+<p>Event topic levels 2 and 3 SHALL be defined as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alert topic level 4 SHALL be a centre identifier based on the entity producing the alert.</p>
+<p>Event topic level 4 SHALL be a centre identifier based on the entity producing the event.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Alert topic level 5 SHALL be a centre identifier based on the intended target of the alert.</p>
+<p>Event topic level 5 SHALL be a centre identifier based on the intended target of the event.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1128,7 +1127,7 @@ development of this specification:</p>
 <div class="paragraph">
 <p>Primary levels are managed consistently to maintain stability.</p>
 </div>
-<table id="req_alerting-hierarchy_management" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-topic_management" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1137,7 +1136,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/alerting-hierarchy/management</strong></p>
+<p><strong>/req/monitoring-event-topic/management</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1156,7 +1155,7 @@ development of this specification:</p>
 <h2 id="_wis2_event_message_encoding"><a class="anchor" href="#_wis2_event_message_encoding"></a>8. WIS2 Event Message Encoding</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Event payloads published via the WIS2 Alerts Hierarchy (WAH) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
+<p>Event payloads published via the WIS2 Monitoring Event Topic (WET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_class_wis2_event_message_encoding_core"><a class="anchor" href="#_requirements_class_wis2_event_message_encoding_core"></a>8.1. Requirements Class "WIS2 Event Message Encoding: Core"</h3>
@@ -1178,7 +1177,7 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wma/1/req/event-message-encoding-core" class="bare">http://www.wmo.int/spec/wma/1/req/event-message-encoding-core</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wme/1/req/event-message-encoding-core" class="bare">http://www.wmo.int/spec/wme/1/req/event-message-encoding-core</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -1401,7 +1400,7 @@ development of this specification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wma.event.wcmp2-ets"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.wcmp2-ets"</code></pre>
 </div>
 </div>
 <table id="req_event-message-encoding-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1425,7 +1424,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property SHALL begin with <code>int.wmo.wis.wma.event</code></p>
+<p>The <code>type</code> property SHALL begin with <code>int.wmo.wis.wme.event</code></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1649,18 +1648,18 @@ development of this specification:</p>
 <h2 id="_conformance_class_abstract_test_suite_normative"><a class="anchor" href="#_conformance_class_abstract_test_suite_normative"></a>Annex A: Conformance Class Abstract Test Suite (Normative)</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_conformance_class_wis2_alerting_hierarchy"><a class="anchor" href="#_conformance_class_wis2_alerting_hierarchy"></a>A.1. Conformance Class: WIS2 Alerting Hierarchy</h3>
-<div id="ats_alerting-hierarchy" class="exampleblock">
+<h3 id="_conformance_class_wis2_monitoring_event_topic"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_topic"></a>A.1. Conformance Class: WIS2 Monitoring Event Topic</h3>
+<div id="ats_monitoring-event-topic" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://wis.wmo.int/spec/wma/1/req/alerting-hierarchy" class="bare">http://wis.wmo.int/spec/wma/1/req/alerting-hierarchy</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-topic" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-topic</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>Requirements Class "WIS2 Alerting Hierarchy"</p>
+<p>Requirements Class "WIS2 Monitoring Event Topic"</p>
 </dd>
 <dt class="hdlist1">classification</dt>
 <dd>
@@ -1678,21 +1677,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_publishing_2"><a class="anchor" href="#_publishing_2"></a>A.1.2. Publishing</h4>
-<div id="ats_alerting-hierarchy_publishing" class="exampleblock">
+<div id="ats_monitoring-event-topic_publishing" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/alerting-hierarchy/publishing</p>
+<p>/conf/monitoring-event-topic/publishing</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/alerting-hierarchy/publishing</p>
+<p>/req/monitoring-event-topic/publishing</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a given topic meets the conventions of WAH.</p>
+<p>Validate that a given topic meets the conventions of WET.</p>
 </dd>
 </dl>
 </div>
@@ -1761,7 +1760,7 @@ development of this specification:</p>
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://wis.wmo.int/spec/wma/1/req/event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wma/1/req/event-message-encoding-core</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1/req/event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wme/1/req/event-message-encoding-core</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
@@ -1964,7 +1963,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>type</code> property begins with <code>int.wmo.wis.wma.event</code>.</p>
+<p>Check that the <code>type</code> property begins with <code>int.wmo.wis.wme.event</code>.</p>
 </div>
 </div>
 </div>
@@ -2250,7 +2249,7 @@ allOf:
 <h2 id="examples"><a class="anchor" href="#examples"></a>Annex C: Examples (Informative)</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_wis2_alerting_hierarchy"><a class="anchor" href="#_wis2_alerting_hierarchy"></a>C.1. WIS2 Alerting Hierarchy</h3>
+<h3 id="_wis2_monitoring_topic"><a class="anchor" href="#_wis2_monitoring_topic"></a>C.1. WIS2 Monitoring Topic</h3>
 <div class="listingblock">
 <div class="title">Example: Notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Météo-France (Toulouse)</div>
 <div class="content">
@@ -2448,7 +2447,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-28 14:44:59 UTC
+Last updated 2024-12-08 09:59:08 UTC
 </div>
 </div>
 </body>

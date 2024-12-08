@@ -519,9 +519,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_wis2_event_message_encoding">8. WIS2 Event Message Encoding</a>
+<li><a href="#_wis2_monitoring_event_message_encoding">8. WIS2 Monitoring Event Message Encoding</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_class_wis2_event_message_encoding_core">8.1. Requirements Class "WIS2 Event Message Encoding: Core"</a>
+<li><a href="#_requirements_class_wis2_monitoring_event_message_encoding_core">8.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</a>
 <ul class="sectlevel3">
 <li><a href="#_overview_2">8.1.1. Overview</a></li>
 <li><a href="#_message_size">8.1.2. Message size</a></li>
@@ -546,7 +546,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_publishing_2">A.1.2. Publishing</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_wis2_event_message_encoding_core">A.2. Conformance Class: WIS2 Event Message Encoding: Core</a>
+<li><a href="#_conformance_class_wis2_monitoring_event_message_encoding_core">A.2. Conformance Class: WIS2 Monitoring Event Message Encoding: Core</a>
 <ul class="sectlevel3">
 <li><a href="#_message_size_2">A.2.1. Message size</a></li>
 <li><a href="#_identifier_2">A.2.2. Identifier</a></li>
@@ -564,13 +564,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#schemas">Annex B: Schemas (Normative)</a>
 <ul class="sectlevel2">
-<li><a href="#_wis2_event_message_encoding_schema">B.1. WIS2 Event Message Encoding Schema</a></li>
+<li><a href="#_wis2_monitoring_event_message_encoding_schema">B.1. WIS2 Monitoring Event Message Encoding Schema</a></li>
 </ul>
 </li>
 <li><a href="#examples">Annex C: Examples (Informative)</a>
 <ul class="sectlevel2">
 <li><a href="#_wis2_monitoring_topic">C.1. WIS2 Monitoring Topic</a></li>
-<li><a href="#_wis2_event_message_encoding_2">C.2. WIS2 Event Message Encoding</a></li>
+<li><a href="#_wis2_monitoring_event_message_encoding_2">C.2. WIS2 Monitoring Event Message Encoding</a></li>
 </ul>
 </li>
 <li><a href="#Bibliography">Annex D: Bibliography</a></li>
@@ -654,13 +654,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>"WIS2 Monitoring Event Topic"</p>
 </li>
 <li>
-<p>"WIS2 Event Message Encoding: Core"</p>
+<p>"WIS2 Monitoring Event Message Encoding: Core"</p>
 </li>
 <li>
-<p>"WIS2 Event Message Encoding: WCMP2 Executable Test Suite Report"</p>
+<p>"WIS2 Monitoring Event Message Encoding: WCMP2 Executable Test Suite Report"</p>
 </li>
 <li>
-<p>"WIS2 Event Message Encoding: WCMP2 Key Performance Indicator Report"</p>
+<p>"WIS2 Monitoring Event Message Encoding: WCMP2 Key Performance Indicator Report"</p>
 </li>
 </ul>
 </div>
@@ -823,12 +823,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO Information System</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WEM</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Event Message</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WME</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Monitoring Events</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WET</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Event Topic</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMEM</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Monitoring Event Message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMET</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Monitoring Event Topic</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO</p></td>
@@ -864,10 +868,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_examples"><a class="anchor" href="#_examples"></a>5.2. Examples</h3>
 <div class="paragraph">
-<p>Event topics examples provided in this specification are encoded as <code>plain text strings</code>.</p>
+<p>Monitoring event topics examples provided in this specification are encoded as <code>plain text strings</code>.</p>
 </div>
 <div class="paragraph">
-<p>Event message examples provided in this specification are encoded as JSON.</p>
+<p>Monitoring event message examples provided in this specification are encoded as JSON.</p>
 </div>
 <div class="paragraph">
 <p>Complete examples can be found at <a href="https://schemas.wmo.int/wme/1.0/examples" class="bare">https://schemas.wmo.int/wme/1.0/examples</a></p>
@@ -882,7 +886,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.4. Schemas</h3>
 <div class="paragraph">
-<p>WIS2 Event message schemas can be found at <a href="https://schemas.wmo.int/wme/1.0" class="bare">https://schemas.wmo.int/wme/1.0</a></p>
+<p>Monitoring event message schemas can be found at <a href="https://schemas.wmo.int/wme/1.0" class="bare">https://schemas.wmo.int/wme/1.0</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -940,7 +944,17 @@ development of this specification:</p>
 <p><em>Global Service malfunctioning</em>: a Global Service may fail to function normally (e.g.: Global Cache not providing messages, etc.)</p>
 </li>
 <li>
-<p><em>WIS2 Node malfunctioning</em>: a WIS2 Node may publish malformed or invalid WIS2 Notification Messages</p>
+<p><em>WIS2 Node malfunctioning</em>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a WIS2 Node may publish malformed or invalid WIS2 Notification Messages</p>
+</li>
+<li>
+<p>a WIS2 Node may provide correct notifications but no data</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1152,13 +1166,13 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wis2_event_message_encoding"><a class="anchor" href="#_wis2_event_message_encoding"></a>8. WIS2 Event Message Encoding</h2>
+<h2 id="_wis2_monitoring_event_message_encoding"><a class="anchor" href="#_wis2_monitoring_event_message_encoding"></a>8. WIS2 Monitoring Event Message Encoding</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Event payloads published via the WIS2 Monitoring Event Topic (WET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
 </div>
 <div class="sect2">
-<h3 id="_requirements_class_wis2_event_message_encoding_core"><a class="anchor" href="#_requirements_class_wis2_event_message_encoding_core"></a>8.1. Requirements Class "WIS2 Event Message Encoding: Core"</h3>
+<h3 id="_requirements_class_wis2_monitoring_event_message_encoding_core"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_core"></a>8.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</h3>
 <div class="sect3">
 <h4 id="_overview_2"><a class="anchor" href="#_overview_2"></a>8.1.1. Overview</h4>
 <div class="paragraph">
@@ -1167,7 +1181,7 @@ development of this specification:</p>
 <div class="paragraph">
 <p>CloudEvents provides a standards-based encoding for all event data, and provides mechanisms for extensibility.</p>
 </div>
-<table id="rc_event-message-encoding-core" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rc_monitoring-event-message-encoding-core" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -1177,7 +1191,7 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wme/1/req/event-message-encoding-core" class="bare">http://www.wmo.int/spec/wme/1/req/event-message-encoding-core</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core" class="bare">http://www.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -1194,7 +1208,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The table below provides an overview of the set of properties that are included in a WIS2 Event Message (WEM).</p>
+<p>The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WEM).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. WEM core properties</caption>
@@ -1262,9 +1276,9 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_message_size"><a class="anchor" href="#_message_size"></a>8.1.2. Message size</h4>
 <div class="paragraph">
-<p>The WIS2 Event Message Encoding allows for the transmission of event messages in a compact manner and includes the ability to embed content inline as required.</p>
+<p>The WIS2 Monitoring Event Message Encoding allows for the transmission of event messages in a compact manner.</p>
 </div>
-<table id="req_event-message-encoding-core_messsage_size" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_messsage_size" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1273,7 +1287,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/message_size</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/message_size</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1298,7 +1312,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_id" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_id" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1307,7 +1321,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/id</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/id</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1332,7 +1346,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"specversion": "1.0"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core-version" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core-version" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1341,7 +1355,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/version</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/version</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1366,7 +1380,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"source": "ca-eccc-msc-global-discovery-catalogue"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core-source" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core-source" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1375,7 +1389,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/source</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/source</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1403,7 +1417,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.wcmp2-ets"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1412,7 +1426,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/type</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/type</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1443,7 +1457,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"subject": "de-dwd"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core-subject" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core-subject" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1452,7 +1466,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/subject</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/subject</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1477,7 +1491,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"time": "2024-10-17T03:42:23Z"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_time" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1486,7 +1500,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/time</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/time</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1523,7 +1537,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"datacontenttype": "application/json"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_datacontenttype" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_datacontenttype" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1532,7 +1546,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/datacontenttype</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/datacontenttype</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1557,7 +1571,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"dataschema": "https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json"</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1566,7 +1580,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/dataschema</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/dataschema</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1608,7 +1622,7 @@ development of this specification:</p>
 }</code></pre>
 </div>
 </div>
-<table id="req_event-message-encoding-core_data" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-core_data" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1617,7 +1631,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/event-message-encoding-core/data</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-core/data</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1753,18 +1767,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_wis2_event_message_encoding_core"><a class="anchor" href="#_conformance_class_wis2_event_message_encoding_core"></a>A.2. Conformance Class: WIS2 Event Message Encoding: Core</h3>
-<div id="ats_event-message-encoding-core" class="exampleblock">
+<h3 id="_conformance_class_wis2_monitoring_event_message_encoding_core"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_encoding_core"></a>A.2. Conformance Class: WIS2 Monitoring Event Message Encoding: Core</h3>
+<div id="ats_monitoring-event-message-encoding-core" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://wis.wmo.int/spec/wme/1/req/event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wme/1/req/event-message-encoding-core</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>Requirements Class "WIS2 Event Message Encoding: Core"</p>
+<p>Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</p>
 </dd>
 <dt class="hdlist1">classification</dt>
 <dd>
@@ -2224,7 +2238,7 @@ Schema documents will only be published on <code>schemas.wmo.int</code> once the
 </table>
 </div>
 <div class="sect2">
-<h3 id="_wis2_event_message_encoding_schema"><a class="anchor" href="#_wis2_event_message_encoding_schema"></a>B.1. WIS2 Event Message Encoding Schema</h3>
+<h3 id="_wis2_monitoring_event_message_encoding_schema"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_schema"></a>B.1. WIS2 Monitoring Event Message Encoding Schema</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: https://json-schema.org/draft/2020-12/schema
@@ -2264,7 +2278,7 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_event_message_encoding_2"><a class="anchor" href="#_wis2_event_message_encoding_2"></a>C.2. WIS2 Event Message Encoding</h3>
+<h3 id="_wis2_monitoring_event_message_encoding_2"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_2"></a>C.2. WIS2 Monitoring Event Message Encoding</h3>
 <div class="listingblock">
 <div class="title">Example: WCMP2 compliance report event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)</div>
 <div class="content">
@@ -2447,7 +2461,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-12-08 09:59:08 UTC
+Last updated 2024-12-08 10:21:05 UTC
 </div>
 </div>
 </body>

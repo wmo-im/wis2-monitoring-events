@@ -1,12 +1,12 @@
 {
     "specversion": "1.0",
-    "type": "int.wmo.wis.wma.event.wcmp2-ets",
+    "type": "int.wmo.wis.wme.event.wcmp2-ets",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wma/1.0.0/schemas/wcmp2-ets-bundled.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wcmp2-ets-bundled.json",
     "data": {
         "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
         "report_type": "ets",

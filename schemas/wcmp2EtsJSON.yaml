@@ -1,5 +1,5 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wma/1/wcmp2EtsJSON.yaml
+$id: https://schemas.wmo.int/wme/1/wcmp2EtsJSON.yaml
 title: WCMP2 Executable Test Suite report
 description: WCMP2 Executable Test Suite report
 

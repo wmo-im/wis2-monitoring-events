@@ -1,5 +1,5 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wma/1/eventMessageEncodingJSON.yaml
+$id: https://schemas.wmo.int/wme/1/eventMessageEncodingJSON.yaml
 title: WIS2 Event Message Encoding
 description: WIS2 Event Message Encoding
 

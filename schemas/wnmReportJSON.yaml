@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.wmo.int/wme/1/wnmReportJSON.yaml
+title: WNM report
+description: WNM report
+
+properties:
+    topic:
+        type: string
+        description: WIS2 Topic related to the report
+    wnm:
+        type: object
+        description: WNM related to the report
+    exception:
+        type: object
+        properties:
+            code:
+                type: string
+                description: type of exception
+                enum:
+                    - invalid-schema
+                    - invalid-topic
+                    - missing-metadata
+            description:
+                type: string
+                description: details of exception
+            errors:
+                type: array
+                description: error stack of exception
+                minItems: 1
+                items:
+                    type: object
+        required:
+            - code
+            - description
+required:
+    - topic
+    - wnm
+    - exception

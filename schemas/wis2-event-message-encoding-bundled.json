@@ -95,6 +95,17 @@
       "definitions": {}
     },
     {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "int.wmo.wis.wme.event.wcmp2",
+            "int.wmo.wis.wme.event.wnm"
+          ]
+        }
+      }
+    },
+    {
       "required": [
         "datacontenttype",
         "dataschema",

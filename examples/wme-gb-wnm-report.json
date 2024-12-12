@@ -1,0 +1,94 @@
+{
+    "specversion": "1.0",
+    "type": "int.wmo.wis2.wme.report.wnm",
+    "source": "io-wis2dev-global-broker",
+    "subject": "io-wis2dev-12-test",
+    "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
+    "time": "2024-12-11T12:54:40.605Z",
+    "datacontenttype": "application/json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wnm-exception.json",
+    "data": {
+        "topic": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl",
+        "wnm": {
+            "id": "885f789e-b724-11ef-bede-e43d1a214826",
+            "conformsTo": [
+                "http://wis.wmo.int/spec/wnm/1/conf/core"
+            ],
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "data_id": "wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl/UANT99KDDL101828",
+                "metadata_id": "",
+                "gts": {
+                    "ttaaii": "UANT99",
+                    "cccc": "kddl"
+                },
+                "pubtime": "2024-12-10T18:28:20.643304Z",
+                "integrity": {
+                    "method": "sha512",
+                    "value": "o0JGIwEbv4XGDPhxc7vf1dcX8BJb6tYl+xogVxENgYZ8ddVxnLxwPfhCqkmnuGqRP4jYpr5FZ3z0RHH9IcmLag=="
+                }
+            },
+            "links": [
+                {
+                    "href": "https://wis2.dwd.de/recommended/gts/kddl/A_UANT99KDDL101828_C_EDZW_20241210182815_25486915",
+                    "rel": "canonical",
+                    "type": "application/octet-stream",
+                    "security": {
+                        "default": {
+                            "type": "http",
+                            "scheme": "basic",
+                            "description": "Please contact DWD Team for WIS2 Global Cache via wis@dwd.de for accessing this secured resource."
+                        }
+                    },
+                    "length": 122
+                },
+                {
+                    "href": "https://gisc.dwd.de/angular-frontend/xmlProductDetails;pid=urn:x-wmo:md:int.wmo.wis::UANT99KDDL",
+                    "rel": "about",
+                    "type": "text/html"
+                }
+            ]
+        },
+        "exception": {
+            "code": "invalid-schema",
+            "description": "WIS2 Notification Message not compliant with the defined schema",
+            "errors": [
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                    "params": {
+                        "missingProperty": "start_datetime"
+                    },
+                    "message": "should have required property 'start_datetime'"
+                },
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                    "params": {
+                        "missingProperty": "end_datetime"
+                    },
+                    "message": "should have required property 'end_datetime'"
+                },
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/1/allOf/0/required",
+                    "params": {
+                        "missingProperty": "datetime"
+                    },
+                    "message": "should have required property 'datetime'"
+                },
+                {
+                    "keyword": "oneOf",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf",
+                    "params": {},
+                    "message": "should match exactly one schema in oneOf"
+                }
+            ]
+        }
+    }
+}

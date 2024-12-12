@@ -22,5 +22,11 @@ monitor/a/wis2/fr-meteofrance-global-broker/ar-smn
 .Example: WCMP2 compliance report event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)
 [source,json]
 ----
-include::../../examples/example1.json[]
+include::../../examples/wme-gdc-wcmp2-ets.json[]
+----
+
+.Example: WNM compliance report event notification from a WIS2 development Global Broker, concerning a WIS2 Notification message from a WIS2 Node in testing
+[source,json]
+----
+include::../../examples/wme-gb-wnm-report.json[]
 ----

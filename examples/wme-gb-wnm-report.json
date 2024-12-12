@@ -1,6 +1,6 @@
 {
     "specversion": "1.0",
-    "type": "int.wmo.wis2.wme.event.wnm",
+    "type": "int.wmo.wis.wme.event.wnm",
     "source": "io-wis2dev-global-broker",
     "subject": "io-wis2dev-12-test",
     "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",

@@ -101,12 +101,10 @@ include::../requirements/monitoring-event-message-encoding-core/REQ_source.adoc[
 
 The type of event related to the event message encoding, using a reverse DNS notation.
 
-TODO: define as a codelist / URI for codes.wmo.int instead?
-
 Example:
 [source,json]
 ----
-"type": "int.wmo.wis.wme.event.wcmp2-ets"
+"type": "int.wmo.wis.wme.event.wcmp2.ets"
 ----
 
 include::../requirements/monitoring-event-message-encoding-core/REQ_type.adoc[]

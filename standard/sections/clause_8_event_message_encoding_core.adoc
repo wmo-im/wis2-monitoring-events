@@ -104,7 +104,7 @@ The type of event related to the event message encoding, using a reverse DNS not
 Example:
 [source,json]
 ----
-"type": "int.wmo.wis.wme.event.wcmp2.ets"
+"type": "int.wmo.wis.wme.event.wcmp2"
 ----
 
 include::../requirements/monitoring-event-message-encoding-core/REQ_type.adoc[]

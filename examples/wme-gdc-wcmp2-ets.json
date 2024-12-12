@@ -1,6 +1,6 @@
 {
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.wcmp2.ets",
+    "type": "int.wmo.wis.wme.event.wcmp2",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",

@@ -455,10 +455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-12-08</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-12-12</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2024-12-08</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2024-12-12</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -2242,7 +2242,7 @@ Schema documents will only be published on <code>schemas.wmo.int</code> once the
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wma/1/eventMessageEncodingJSON.yaml
+$id: https://schemas.wmo.int/wme/1/eventMessageEncodingJSON.yaml
 title: WIS2 Event Message Encoding
 description: WIS2 Event Message Encoding
 
@@ -2284,13 +2284,13 @@ allOf:
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "specversion": "1.0",
-    "type": "int.wmo.wis.wma.event.wcmp2-ets",
+    "type": "int.wmo.wis.wme.event.wcmp2-ets",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wma/1.0.0/schemas/wcmp2-ets-bundled.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wcmp2-ets-bundled.json",
     "data": {
         "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
         "report_type": "ets",
@@ -2356,6 +2356,105 @@ allOf:
         ],
         "datetime": "2024-10-02T13:55:00Z",
         "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL"
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: WNM compliance report event notification from a WIS2 development Global Broker, concerning a WIS2 Notification message from a WIS2 Node in testing</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "specversion": "1.0",
+    "type": "int.wmo.wis2.wme.report.wnm",
+    "source": "io-wis2dev-global-broker",
+    "subject": "io-wis2dev-12-test",
+    "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
+    "time": "2024-12-11T12:54:40.605Z",
+    "datacontenttype": "application/json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wnm-exception.json",
+    "data": {
+        "topic": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl",
+        "wnm": {
+            "id": "885f789e-b724-11ef-bede-e43d1a214826",
+            "conformsTo": [
+                "http://wis.wmo.int/spec/wnm/1/conf/core"
+            ],
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "data_id": "wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl/UANT99KDDL101828",
+                "metadata_id": "",
+                "gts": {
+                    "ttaaii": "UANT99",
+                    "cccc": "kddl"
+                },
+                "pubtime": "2024-12-10T18:28:20.643304Z",
+                "integrity": {
+                    "method": "sha512",
+                    "value": "o0JGIwEbv4XGDPhxc7vf1dcX8BJb6tYl+xogVxENgYZ8ddVxnLxwPfhCqkmnuGqRP4jYpr5FZ3z0RHH9IcmLag=="
+                }
+            },
+            "links": [
+                {
+                    "href": "https://wis2.dwd.de/recommended/gts/kddl/A_UANT99KDDL101828_C_EDZW_20241210182815_25486915",
+                    "rel": "canonical",
+                    "type": "application/octet-stream",
+                    "security": {
+                        "default": {
+                            "type": "http",
+                            "scheme": "basic",
+                            "description": "Please contact DWD Team for WIS2 Global Cache via wis@dwd.de for accessing this secured resource."
+                        }
+                    },
+                    "length": 122
+                },
+                {
+                    "href": "https://gisc.dwd.de/angular-frontend/xmlProductDetails;pid=urn:x-wmo:md:int.wmo.wis::UANT99KDDL",
+                    "rel": "about",
+                    "type": "text/html"
+                }
+            ]
+        },
+        "exception": {
+            "code": "invalid-schema",
+            "description": "WIS2 Notification Message not compliant with the defined schema",
+            "errors": [
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                    "params": {
+                        "missingProperty": "start_datetime"
+                    },
+                    "message": "should have required property 'start_datetime'"
+                },
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                    "params": {
+                        "missingProperty": "end_datetime"
+                    },
+                    "message": "should have required property 'end_datetime'"
+                },
+                {
+                    "keyword": "required",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf/1/allOf/0/required",
+                    "params": {
+                        "missingProperty": "datetime"
+                    },
+                    "message": "should have required property 'datetime'"
+                },
+                {
+                    "keyword": "oneOf",
+                    "dataPath": ".properties",
+                    "schemaPath": "#/properties/properties/oneOf",
+                    "params": {},
+                    "message": "should match exactly one schema in oneOf"
+                }
+            ]
+        }
     }
 }</code></pre>
 </div>
@@ -2461,7 +2560,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-12-08 10:21:05 UTC
+Last updated 2024-12-12 13:55:35 UTC
 </div>
 </div>
 </body>

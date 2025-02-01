@@ -52,9 +52,11 @@ include::sections/clause_7_monitoring_event_topic.adoc[]
 
 include::sections/clause_8_event_message_encoding_core.adoc[]
 
-//include::sections/clause_9_monitoring_message_wcmp2_ets.adoc[]
+include::sections/clause_9_event_message_encoding_wcmp2_ets.adoc[]
 
-//include::sections/clause_10_monitoring_message_wcmp2_kpi.adoc[]
+include::sections/clause_10_event_message_encoding_wcmp2_kpi.adoc[]
+
+include::sections/clause_11_event_message_encoding_wnm.adoc[]
 
 include::sections/annex_a_ats.adoc[]
 

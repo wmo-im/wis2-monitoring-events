@@ -1,0 +1,21 @@
+[[ats_event-message-encoding-wcmp2-ets_type]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-wcmp2-ets/type
+subject:: /req/event-message-encoding-wcmp2-ets/type
+test-purpose:: Validate that a WCMP2 ETS report has a valid type.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+type+` property in the WEM.
+--
+
+[.component,class=step]
+--
+Check that the `+type+` property is equal to `int.wmo.wis.wme.event.wcmp2.ets`.
+--
+
+=====
+====

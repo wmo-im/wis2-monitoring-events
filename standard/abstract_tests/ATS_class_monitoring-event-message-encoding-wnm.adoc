@@ -1,0 +1,15 @@
+[[ats_monitoring-event-message-encoding-wnm]]
+====
+[%metadata]
+label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-wnm
+subject:: Requirements Class "WIS2 Monitoring Event Message Encoding: WNM Validation Report"
+classification:: Target Type:Event Metadata
+====
+
+==== Validation
+
+include::./monitoring-event-message-encoding-wnm/ATS_test_validation.adoc[]
+
+==== Type
+
+include::./monitoring-event-message-encoding-wnm/ATS_test_type.adoc[]

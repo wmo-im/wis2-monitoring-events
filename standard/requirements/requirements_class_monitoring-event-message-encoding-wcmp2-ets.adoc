@@ -1,0 +1,9 @@
+[[rc_monitoring-event-message-encoding-wcmp2-ets]]
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class*
+2+|http://www.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-wcmp2-ets
+|Target type |Event metadata
+|Dependency |<<rc_monitoring-event-message-encoding-core, WIS2 Monitoring Event Message Encoding: Core>>
+|Pre-conditions |The event message conforms to "WIS2 Monitoring Event Message Encoding: Core" Requirements Class.
+|===

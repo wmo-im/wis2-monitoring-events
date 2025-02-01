@@ -9,3 +9,15 @@ include::../abstract_tests/ATS_class_monitoring-event-topic.adoc[]
 === Conformance Class: WIS2 Monitoring Event Message Encoding: Core
 
 include::../abstract_tests/ATS_class_monitoring-event-message-encoding-core.adoc[]
+
+=== Conformance Class: WIS2 Monitoring Event Message Encoding: WCMP2 Executable Test Suite Report
+
+include::../abstract_tests/ATS_class_monitoring-event-message-encoding-wcmp2-ets.adoc[]
+
+=== Conformance Class: WIS2 Monitoring Event Message Encoding: WCMP2 Key Performance Indicator Report
+
+include::../abstract_tests/ATS_class_monitoring-event-message-encoding-wcmp2-kpi.adoc[]
+
+=== Conformance Class: WIS2 Monitoring Event Message Encoding: WNM Validation Report
+
+include::../abstract_tests/ATS_class_monitoring-event-message-encoding-wnm.adoc[]

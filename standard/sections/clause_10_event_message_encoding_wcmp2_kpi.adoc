@@ -1,0 +1,29 @@
+== WIS2 Monitoring Event Message Encoding: WCMP2 Key Performance Indicator Report
+
+WCMP2 Executable Key Performance Indicator reports provide the results of quality assessment of WCMP2 discovery metadata by a GDC or validation service, in alignment with the requirements of WCMP2 KPIs.
+
+=== Requirements Class "WIS2 Monitoring Event Message Encoding: WCMP2 Key Performance Indicators Report"
+
+==== Overview
+
+This Requirements Class provides the requirements WCMP2 KPI reports.
+
+include::../requirements/requirements_class_monitoring-event-message-encoding-wcmp2-kpi.adoc[]
+
+==== Validation
+
+The WCMP2 KPI report schema is based on the Requirements Class WIS2 Monitoring Event Message Encoding: Core schema and the associated information model.
+
+include::../requirements/monitoring-event-message-encoding-wcmp2-kpi/REQ_validation.adoc[]
+
+==== Type
+
+The type of event related to the event message encoding, using a reverse DNS notation.
+
+Example:
+[source,json]
+----
+"type": "int.wmo.wis.wme.event.wcmp2.kpi"
+----
+
+include::../requirements/monitoring-event-message-encoding-wcmp2-kpi/REQ_type.adoc[]

@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-encoding-wcmp2-kpi_validation]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-wcmp2-kpi/validation*
+^|A |Each WCMP2 KPI report SHALL validate without error against the WCMP2 KPI report schema.
+|===

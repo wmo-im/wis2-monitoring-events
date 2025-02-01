@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-encoding-wnm_validation]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-wnm/validation*
+^|A |Each WNM Validation report SHALL validate without error against the WNM Validation report schema.
+|===

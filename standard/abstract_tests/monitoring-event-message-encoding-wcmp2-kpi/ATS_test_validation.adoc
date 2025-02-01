@@ -1,0 +1,15 @@
+[[ats_event-message-encoding-wcmp2-kpi_validation]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-wcmp2-kpi/validation
+subject:: /req/event-message-encoding-wcmp2-kpi/validation
+test-purpose:: Validate that a WCMP2 KPI report is valid to the authoritative WCMP2 KPI report schema.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Run JSON Schema validation on the WCMP2 KPI report against the WCMP2 KPI report authoritative schema.
+--
+=====
+====

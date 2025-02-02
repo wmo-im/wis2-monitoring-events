@@ -3,6 +3,5 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/data*
 ^|A |The `+data+` property SHALL be a JSON encoded payload of a given event.
-^|B |The `+data+` property SHALL NOT be escaped representation of JSON.
-^|C |The `+data+` property SHALL validate against the JSON Schema specified in the ``dataschema`` property.
+^|B |The `+data+` property SHALL NOT be an escaped representation of JSON.
 |===

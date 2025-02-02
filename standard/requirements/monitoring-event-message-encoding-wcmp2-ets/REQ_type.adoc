@@ -1,6 +1,0 @@
-[[req_monitoring-event-message-encoding-wcmp2-ets_type]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-wcmp2-ets/type*
-^|A |The `+type+` property SHALL be equal to `int.wmo.wis.wme.event.wcmp2.ets`
-|===

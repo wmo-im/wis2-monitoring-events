@@ -1,0 +1,70 @@
+== WIS2 Monitoring Event Message Encoding: System Alert Report
+
+WNM Validation reports provide the results of validating WIS2 Notification Messages a GB or validation service, in alignment with the requirements of WNM.
+
+=== Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert Report"
+
+==== Overview
+
+This Requirements Class provides the requirements for System Alert reports.
+
+include::../requirements/requirements_class_monitoring-event-message-encoding-system-alert.adoc[]
+
+==== Validation
+
+The System Alert report schema is based on the Requirements Class WIS2 Monitoring Event Message Encoding: Core schema and the associated information model, and applies to the ``data`` property of an event report.
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_validation.adoc[]
+
+==== Type
+
+The type of event related to the event message encoding, using a reverse DNS notation.
+
+Example:
+[source,json]
+----
+"type": "int.wmo.wis.wme.event.system.alert"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_type.adoc[]
+
+==== Data schema
+
+The ``dataschema`` property identifies the JSON Schema that is adhered to by event message payload.  This is the value of a given JSON Schema's `$id` property.
+
+Example:
+[source,json]
+----
+"dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-system-alert.json"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_dataschema.adoc[]
+
+==== Data
+
+The ``data`` property provides the event payload in JSON.
+
+Example:
+[source,json]
+----
+"data": {
+    "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
+    "report_type": "ets",
+    "summary": {
+        "PASSED": 12, 
+        "FAILED": 0,
+        "SKIPPED": 0
+    },  
+    "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
+    "tests": [
+        {   
+            "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
+            "code": "PASSED",
+            "message": "Passes given schema is compliant/valid"
+        },  
+        ... 
+    }   
+}
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data.adoc[]

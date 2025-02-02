@@ -1,6 +1,0 @@
-[[req_monitoring-event-message-encoding-core_dataschema]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/dataschema*
-^|A |The `+dataschema+` property SHALL be a URL to a JSON Schema that can be successfully derefenced by validating JSON Schema tools.
-|===

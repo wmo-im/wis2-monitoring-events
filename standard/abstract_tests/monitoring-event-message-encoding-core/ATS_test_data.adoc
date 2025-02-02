@@ -17,10 +17,5 @@ Check for the existence of a `+data+` property in the WEM.
 Parse the `+data+` property as a JSON object.
 --
 
-[.component,class=step]
---
-Validate the parsed JSON object against the JSON Schema defined in the `+dataschema+` property.
---
-
 =====
 ====

@@ -46,10 +46,6 @@ The table below provides an overview of the set of properties that are included 
 |**Required**
 |The media type of the data content encoding in the event message (`application/json`) (see <<_data_content_type>>)
 
-|``dataschema``
-|**Required**
-|The JSON schema which is adhered to by the data content encoding in the event message (see <<_data_schema>>)
-
 |``data``
 |**Required**
 |The event payload as JSON (see <<_data>>)
@@ -144,18 +140,6 @@ Example:
 ----
 
 include::../requirements/monitoring-event-message-encoding-core/REQ_datacontenttype.adoc[]
-
-==== Data schema
-
-The ``dataschema`` property identifies the JSON Schema that is adhered to by event message payload.  This is the value of a given JSON Schema's `$id` property.
-
-Example:
-[source,json]
-----
-"dataschema": "https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json"
-----
-
-include::../requirements/monitoring-event-message-encoding-core/REQ_dataschema.adoc[]
 
 ==== Data
 

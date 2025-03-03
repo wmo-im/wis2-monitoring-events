@@ -4,14 +4,14 @@ title: WIS2 Event Message Encoding
 description: WIS2 Event Message Encoding
 
 allOf:
-  - $ref: 'https://raw.githubusercontent.com/cloudevents/spec/refs/heads/main/cloudevents/formats/cloudevents.json'
+  - $ref: 'https://raw.githubusercontent.com/cloudevents/spec/refs/heads/v1.0.2/cloudevents/formats/json-format.md'
   - properties:
       type:
         type: string
         enum:
           - int.wmo.wis.wme.event.wcmp2.ets
           - int.wmo.wis.wme.event.wcmp2.kpi
-          - int.wmo.wis.wme.event.wnm
+          - int.wmo.wis.wme.event.wnm.schema
           - int.wmo.wis.wme.event.system.alert
     
   - required:

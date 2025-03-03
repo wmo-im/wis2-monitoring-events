@@ -1,6 +1,0 @@
-[[req_monitoring-event-topic_management]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-topic/management*
-^|A |Topic levels 2 and 3 SHALL be as specified by the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>.
-|===

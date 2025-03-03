@@ -14,8 +14,8 @@ Successful operation of the WIS2 infrastructure and monitoring events of same sh
 
 The WET is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WET levels:
 
-* _producer_: the centre identifier of the entity producing the event
-* _target_: the centre identifier of the intended target of the event
+* _producer_: the centre identifier of the entity producing the event notification
+* _target_: the centre identifier of the intended target of the event notification
 
 The representation is encoded as a simple text string of values in each topic level separated by a slash (``/``). 
 
@@ -57,9 +57,3 @@ The table below provides an overview of the primary topic levels.
 A simple ruleset is defined for publishing events to WET that enables the clear identification of the event producer and its intended target, to trigger corrective action.
 
 include::../requirements/monitoring-event-topic/REQ_publishing.adoc[]
-
-==== Management
-
-Primary levels are managed consistently to maintain stability.
-
-include::../requirements/monitoring-event-topic/REQ_management.adoc[]

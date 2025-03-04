@@ -606,10 +606,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Successful operation of WIS2 Global Services will depend on running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.  The WIS2 Guide defines service levels and performance indicators <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> for Global Services in order to monitor and maintain the health of the network.</p>
 </div>
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is also an encoding extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
-<p>WIS2 Monitoring Event topics shall extend the approach of the WIS2 Topic Hierarchy.  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.</p>
+<p>WIS2 Monitoring Event topics shall leverage various aspects of the WIS2 Topic Hierarchy (such as centre identifiers).  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">ii.    Keywords</strong></p>
@@ -635,7 +635,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is an extension of the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a> as well as the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is also an encoding extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
 <p>This specification defines the conformance requirements for WIS2 Monitoring Events (topic hierarchy and notification message).  Annex A defines the abstract test suite.</p>
@@ -649,10 +649,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document.</p>
 </div>
 <div class="paragraph">
-<p>The WIS2 Topic Hierarchy defines the topic hierarchy used by WIS message brokers to manage message delivery to subscribers and / or recipients.  This standard is an extension of the WIS2 Topic Hiearchy.</p>
+<p>The WIS2 Topic Hierarchy defines the topic hierarchy used by WIS message brokers to manage message delivery to subscribers and / or recipients.</p>
 </div>
 <div class="paragraph">
-<p>CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is an extension of CloudEvents.</p>
+<p>CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is also an encoding extension of CloudEvents.</p>
 </div>
 <div class="paragraph">
 <p>Global Service providers are required to comply with all conformance classes of this specification in support of providing highly available services for discovery, subscription, notification and download of data and metadata within WIS2.</p>
@@ -2957,7 +2957,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-04 08:30:48 UTC
+Last updated 2025-03-04 09:31:15 UTC
 </div>
 </div>
 </body>

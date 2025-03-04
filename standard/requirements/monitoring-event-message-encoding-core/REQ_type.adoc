@@ -3,5 +3,10 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/type*
 ^|A |The `+type+` property SHALL be encoded using a reverse DNS notation.
-^|A |The `+type+` property SHALL begin with `int.wmo.wis.wme.event.`
+^|B |The `+type+` property SHALL be one of the following values:
+
+* `int.wmo.wis.wme.event.wcmp2.ets`
+* `int.wmo.wis.wme.event.wcmp2.kpi`
+* `int.wmo.wis.wme.event.wnm`
+* `int.wmo.wis.wme.event.system.alert`
 |===

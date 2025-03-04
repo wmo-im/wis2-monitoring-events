@@ -21,11 +21,11 @@ Check that the first token is a value of `monitor`.
 --
 
 --
-Check that the second token is a valid WTH version value.
+Check that the second token is a value of `a`.
 --
 
 --
-Check that the third token is a valid WTH system value of `wis2`.
+Check that the third token is a value of `wis2`.
 --
 
 --

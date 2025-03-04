@@ -99,8 +99,10 @@
         "type": {
           "type": "string",
           "enum": [
-            "int.wmo.wis.wme.event.wcmp2",
-            "int.wmo.wis.wme.event.wnm"
+            "int.wmo.wis.wme.event.wcmp2.ets",
+            "int.wmo.wis.wme.event.wcmp2.kpi",
+            "int.wmo.wis.wme.event.wnm.schema",
+            "int.wmo.wis.wme.event.system.alert"
           ]
         }
       }

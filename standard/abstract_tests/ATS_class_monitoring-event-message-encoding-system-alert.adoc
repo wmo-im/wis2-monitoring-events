@@ -1,0 +1,23 @@
+[[ats_monitoring-event-message-encoding-system-alert]]
+====
+[%metadata]
+label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert
+subject:: Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert"
+classification:: Target Type:Event Metadata
+====
+
+==== Validation
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_validation.adoc[]
+
+==== Type
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_type.adoc[]
+
+==== Data schema
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_dataschema.adoc[]
+
+==== Data
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_data.adoc[]

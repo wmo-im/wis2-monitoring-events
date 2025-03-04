@@ -1,0 +1,15 @@
+[[ats_event-message-encoding-system-alert_validation]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-system-alert/validation
+subject:: /req/event-message-encoding-system-alert/validation
+test-purpose:: Validate that a System Alert report is valid to the authoritative System Alert report schema.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Run JSON Schema validation on the System Alert report against the System Alert report authoritative schema.
+--
+=====
+====

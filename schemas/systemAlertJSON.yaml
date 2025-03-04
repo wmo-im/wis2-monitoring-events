@@ -1,0 +1,24 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.wmo.int/wme/1/systemAlertJSON.yaml
+title: System Alert report
+description: System Alert report
+
+properties:
+    id:
+        type: string
+        format: uuid
+    level:
+        type: string
+        description: report level
+        enum:
+            - debug
+            - info
+            - warn
+            - error
+            - critical
+    message:
+       type: string
+required:
+    - id
+    - level
+    - message

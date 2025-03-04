@@ -38,10 +38,6 @@ include::./monitoring-event-message-encoding-core/ATS_test_time.adoc[]
 
 include::./monitoring-event-message-encoding-core/ATS_test_datacontenttype.adoc[]
 
-==== Data schema
-
-include::./monitoring-event-message-encoding-core/ATS_test_dataschema.adoc[]
-
 ==== Data
 
 include::./monitoring-event-message-encoding-core/ATS_test_data.adoc[]

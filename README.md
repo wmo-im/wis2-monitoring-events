@@ -3,5 +3,5 @@
 
 # wis2-monitoring-events
 
-WIS2 Monitoring and Alerting
+WIS2 Monitoring Events
 * View drafts: https://wmo-im.github.io/wis2-monitoring-events

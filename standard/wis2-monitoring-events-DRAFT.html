@@ -455,10 +455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-03-04</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-03-20</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2025-03-04</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2025-03-20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -986,7 +986,7 @@ development of this specification:</p>
 <h2 id="_the_wis2_monitoring_event_topic"><a class="anchor" href="#_the_wis2_monitoring_event_topic"></a>7. The WIS2 Monitoring Event Topic</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The WIS2 Monitoring Event Topic (WET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.</p>
+<p>The WIS2 Monitoring Event Topic (WMET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_class_wis2_monitoring_event_topic"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_topic"></a>7.1. Requirements Class "WIS2 Monitoring Event Topic"</h3>
@@ -1025,7 +1025,7 @@ development of this specification:</p>
 <p>Successful operation of the WIS2 infrastructure and monitoring events of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.</p>
 </div>
 <div class="paragraph">
-<p>The WET is composed of five levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WET levels:</p>
+<p>The WMET is composed of five levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WMET levels:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1033,7 +1033,7 @@ development of this specification:</p>
 <p><em>producer</em>: the centre identifier of the entity producing the event notification</p>
 </li>
 <li>
-<p><em>target</em>: the centre identifier of the intended target of the event notification</p>
+<p>_subject: the centre identifier of the subject of the event notification</p>
 </li>
 </ul>
 </div>
@@ -1053,7 +1053,7 @@ development of this specification:</p>
 <p>The table below provides an overview of the primary topic levels.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. WETprimary topic levels</caption>
+<caption class="title">Table 2. WMET primary topic levels</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1090,7 +1090,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">centre-id</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the intended target of the event (subject)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the subject of the event (subject)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1098,7 +1098,7 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_publishing"><a class="anchor" href="#_publishing"></a>7.1.2. Publishing</h4>
 <div class="paragraph">
-<p>A simple ruleset is defined for publishing events to WET that enables the clear identification of the event producer and its intended target, to trigger corrective action.</p>
+<p>A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event producer and its subject, to trigger corrective action.</p>
 </div>
 <table id="req_monitoring-event-topic_publishing" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1151,7 +1151,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Event topic level 5 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the intended target of the event.</p>
+<p>Event topic level 5 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the subject of the event.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1164,7 +1164,7 @@ development of this specification:</p>
 <h2 id="_wis2_monitoring_event_message_encoding"><a class="anchor" href="#_wis2_monitoring_event_message_encoding"></a>8. WIS2 Monitoring Event Message Encoding</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Event payloads published via the WIS2 Monitoring Event Topic (WET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
+<p>Event payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_class_wis2_monitoring_event_message_encoding_core"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_core"></a>8.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</h3>
@@ -1203,10 +1203,10 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WEM).</p>
+<p>The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WMEM).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. WEM core properties</caption>
+<caption class="title">Table 3. WMEM core properties</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1243,7 +1243,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>subject</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The centre identifier of the intended target of the event (see <a href="#_subject">Subject</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The centre identifier of the subject of the event (see <a href="#_subject">Subject</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>time</code></p></td>
@@ -1283,7 +1283,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WEM message SHALL NOT exceed 64 000 bytes.</p>
+<p>A WMEM message SHALL NOT exceed 64 000 bytes.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1436,7 +1436,7 @@ development of this specification:</p>
 <p><code>int.wmo.wis.wme.event.wcmp2.kpi</code></p>
 </li>
 <li>
-<p><code>int.wmo.wis.wme.event.wnm</code></p>
+<p><code>int.wmo.wis.wme.event.wnm.schema</code></p>
 </li>
 <li>
 <p><code>int.wmo.wis.wme.event.system.alert</code></p>
@@ -1450,7 +1450,7 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_subject"><a class="anchor" href="#_subject"></a>8.1.7. Subject</h4>
 <div class="paragraph">
-<p>The centre identifier of the intended target of the event (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
+<p>The centre identifier of the subject of the event (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1509,7 +1509,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WEM SHALL provide a <code>time</code> property.</p>
+<p>A WMEM SHALL provide a <code>time</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1625,7 +1625,7 @@ development of this specification:</p>
 <h2 id="_wis2_monitoring_event_message_encoding_system_alert_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_system_alert_report"></a>9. WIS2 Monitoring Event Message Encoding: System Alert Report</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>WNM Validation reports provide the results of validating WIS2 Notification Messages a GB or validation service, in alignment with the requirements of WNM.</p>
+<p>System Alert Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the associated requirements and schema described in this Requirements Class.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_class_wis2_monitoring_event_message_encoding_system_alert_report"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_system_alert_report"></a>9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert Report"</h3>
@@ -1758,53 +1758,8 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_data_2"><a class="anchor" href="#_data_2"></a>9.1.5. Data</h4>
 <div class="paragraph">
-<p>The <code>data</code> property provides the event payload in JSON.</p>
+<p>TODO</p>
 </div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"data": {
-    "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
-    "report_type": "ets",
-    "summary": {
-        "PASSED": 12,
-        "FAILED": 0,
-        "SKIPPED": 0
-    },
-    "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-    "tests": [
-        {
-            "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
-            "code": "PASSED",
-            "message": "Passes given schema is compliant/valid"
-        },
-        ...
-    }
-}</code></pre>
-</div>
-</div>
-<table id="req_monitoring-event-message-encoding-system-alert_data" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/data</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data</code> property SHALL be a JSON encoded payload of a given event.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
@@ -1850,7 +1805,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a given topic meets the conventions of WET.</p>
+<p>Validate that a given topic meets the conventions of WMET.</p>
 </dd>
 </dl>
 </div>
@@ -1949,7 +1904,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid message size.</p>
+<p>Validate that a WMEM has a valid message size.</p>
 </dd>
 </dl>
 </div>
@@ -1958,7 +1913,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the size of the complete WEM does not exceed 64000 bytes.</p>
+<p>Check that the size of the complete WMEM does not exceed 64000 bytes.</p>
 </div>
 </div>
 </div>
@@ -1983,7 +1938,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid identifier.</p>
+<p>Validate that a WMEM has a valid identifier.</p>
 </dd>
 </dl>
 </div>
@@ -1992,7 +1947,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of an <code>id</code> property in the WEM.</p>
+<p>Check for the existence of an <code>id</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2024,7 +1979,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid version.</p>
+<p>Validate that a WMEM has a valid version.</p>
 </dd>
 </dl>
 </div>
@@ -2033,7 +1988,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>specversion</code> property in the WEM.</p>
+<p>Check for the existence of a <code>specversion</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2065,7 +2020,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid source.</p>
+<p>Validate that a WMEM has a valid source.</p>
 </dd>
 </dl>
 </div>
@@ -2074,7 +2029,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>source</code> property in the WEM.</p>
+<p>Check for the existence of a <code>source</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2106,7 +2061,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid type.</p>
+<p>Validate that a WMEM has a valid type.</p>
 </dd>
 </dl>
 </div>
@@ -2115,7 +2070,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>type</code> property in the WEM.</p>
+<p>Check for the existence of a <code>type</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2147,7 +2102,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid subject.</p>
+<p>Validate that a WMEM has a valid subject.</p>
 </dd>
 </dl>
 </div>
@@ -2156,7 +2111,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>subject</code> property in the WEM.</p>
+<p>Check for the existence of a <code>subject</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2188,7 +2143,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid identifier.</p>
+<p>Validate that a WMEM has a valid identifier.</p>
 </dd>
 </dl>
 </div>
@@ -2236,7 +2191,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid data content type.</p>
+<p>Validate that a WMEM has a valid data content type.</p>
 </dd>
 </dl>
 </div>
@@ -2245,7 +2200,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>datacontenttype</code> property in the WEM.</p>
+<p>Check for the existence of a <code>datacontenttype</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2277,7 +2232,7 @@ development of this specification:</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WEM has a valid data payload.</p>
+<p>Validate that a WMEM has a valid data payload.</p>
 </dd>
 </dl>
 </div>
@@ -2286,7 +2241,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>data</code> property in the WEM.</p>
+<p>Check for the existence of a <code>data</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2384,7 +2339,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>type</code> property in the WEM.</p>
+<p>Check for the existence of a <code>type</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2425,7 +2380,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>dataschema</code> property in the WEM.</p>
+<p>Check for the existence of a <code>dataschema</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2457,50 +2412,8 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_4"><a class="anchor" href="#_data_4"></a>A.3.4. Data</h4>
-<div id="ats_event-message-encoding-system-alert_data" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-system-alert/data</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-system-alert/data</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that a System Alert report has a valid data payload.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>data</code> property in the WEM.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Parse the <code>data</code> property as a JSON object.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Validate the parsed JSON object against the JSON Schema defined in the <code>dataschema</code> property.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p>TODO</p>
 </div>
 </div>
 </div>
@@ -2957,7 +2870,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-04 09:31:15 UTC
+Last updated 2025-03-20 11:45:11 UTC
 </div>
 </div>
 </body>

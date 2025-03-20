@@ -9,7 +9,7 @@ test-purpose:: Validate that a System Alert report has a valid data schema.
 =====
 [.component,class=step]
 --
-Check for the existence of a `+dataschema+` property in the WEM.
+Check for the existence of a `+dataschema+` property in the WMEM.
 --
 
 [.component,class=step]

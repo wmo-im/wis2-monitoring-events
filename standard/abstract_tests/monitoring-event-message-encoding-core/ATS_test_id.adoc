@@ -3,13 +3,13 @@
 [%metadata]
 label:: /conf/event-message-encoding-core/id
 subject:: /req/event-message-encoding-core/id
-test-purpose:: Validate that a WEM has a valid identifier.
+test-purpose:: Validate that a WMEM has a valid identifier.
 
 [.component,class=test method]
 =====
 [.component,class=step]
 --
-Check for the existence of an `+id+` property in the WEM.
+Check for the existence of an `+id+` property in the WMEM.
 --
 
 [.component,class=step]

@@ -3,13 +3,13 @@
 [%metadata]
 label:: /conf/event-message-encoding-core/message_size
 subject:: /req/event-message-encoding-core/message_size
-test-purpose:: Validate that a WEM has a valid message size.
+test-purpose:: Validate that a WMEM has a valid message size.
 
 [.component,class=test method]
 =====
 [.component,class=step]
 --
-Check that the size of the complete WEM does not exceed 64000 bytes.
+Check that the size of the complete WMEM does not exceed 64000 bytes.
 --
 
 =====

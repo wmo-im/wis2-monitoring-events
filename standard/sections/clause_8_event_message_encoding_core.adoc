@@ -1,6 +1,6 @@
 == WIS2 Monitoring Event Message Encoding
 
-Event payloads published via the WIS2 Monitoring Event Topic (WET) are defined using the <<cloud-events,CloudEvents>> specification as a building block.
+Event payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the <<cloud-events,CloudEvents>> specification as a building block.
 
 === Requirements Class "WIS2 Monitoring Event Message Encoding: Core"
 
@@ -12,9 +12,9 @@ CloudEvents provides a standards-based encoding for all event data, and provides
 
 include::../requirements/requirements_class_monitoring-event-message-encoding-core.adoc[]
 
-The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WEM).
+The table below provides an overview of the set of properties that are included in a WIS2 Monitoring Event Message (WMEM).
 
-.WEM core properties
+.WMEM core properties
 |===
 |Property|Requirement|Description
 

@@ -3,13 +3,13 @@
 [%metadata]
 label:: /conf/event-message-encoding-core/type
 subject:: /req/event-message-encoding-core/type
-test-purpose:: Validate that a WEM has a valid type.
+test-purpose:: Validate that a WMEM has a valid type.
 
 [.component,class=test method]
 =====
 [.component,class=step]
 --
-Check for the existence of a `+type+` property in the WEM.
+Check for the existence of a `+type+` property in the WMEM.
 --
 
 [.component,class=step]

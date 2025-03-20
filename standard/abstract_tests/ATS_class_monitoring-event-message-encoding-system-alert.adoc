@@ -20,4 +20,4 @@ include::./monitoring-event-message-encoding-system-alert/ATS_test_dataschema.ad
 
 ==== Data
 
-include::./monitoring-event-message-encoding-system-alert/ATS_test_data.adoc[]
+TODO

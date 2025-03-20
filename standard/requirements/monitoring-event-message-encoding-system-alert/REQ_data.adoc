@@ -1,6 +1,0 @@
-[[req_monitoring-event-message-encoding-system-alert_data]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-system-alert/data*
-^|A |The `+data+` property SHALL be a JSON encoded payload of a given event.
-|===

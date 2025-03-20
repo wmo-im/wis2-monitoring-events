@@ -1,6 +1,6 @@
 == WIS2 Monitoring Event Message Encoding: System Alert Report
 
-WNM Validation reports provide the results of validating WIS2 Notification Messages a GB or validation service, in alignment with the requirements of WNM.
+System Alert Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the associated requirements and schema described in this Requirements Class.
 
 === Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert Report"
 
@@ -42,29 +42,4 @@ include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data
 
 ==== Data
 
-The ``data`` property provides the event payload in JSON.
-
-Example:
-[source,json]
-----
-"data": {
-    "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
-    "report_type": "ets",
-    "summary": {
-        "PASSED": 12, 
-        "FAILED": 0,
-        "SKIPPED": 0
-    },  
-    "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-    "tests": [
-        {   
-            "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
-            "code": "PASSED",
-            "message": "Passes given schema is compliant/valid"
-        },  
-        ... 
-    }   
-}
-----
-
-include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data.adoc[]
+TODO

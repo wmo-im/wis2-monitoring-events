@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/message_size*
-^|A |A WEM message SHALL NOT exceed 64 000 bytes.
+^|A |A WMEM message SHALL NOT exceed 64 000 bytes.
 |===

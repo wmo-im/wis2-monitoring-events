@@ -1,6 +1,6 @@
 == The WIS2 Monitoring Event Topic
 
-The WIS2 Monitoring Event Topic (WET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.
+The WIS2 Monitoring Event Topic (WMET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data/metadata reports for WIS2 Nodes to subscribe to and receive notifications.
 
 === Requirements Class "WIS2 Monitoring Event Topic"
 
@@ -12,7 +12,7 @@ include::../requirements/requirements_class_monitoring-event-topic.adoc[]
 
 Successful operation of the WIS2 infrastructure and monitoring events of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.
 
-The WET is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WET levels:
+The WMET is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WMET levels:
 
 * _producer_: the centre identifier of the entity producing the event notification
 * _subject: the centre identifier of the subject of the event notification
@@ -27,7 +27,7 @@ Examples:
 
 The table below provides an overview of the primary topic levels.
 
-.WETprimary topic levels
+.WMET primary topic levels
 |===
 |Level|Name|Description
 
@@ -54,6 +54,6 @@ The table below provides an overview of the primary topic levels.
 
 ==== Publishing
 
-A simple ruleset is defined for publishing events to WET that enables the clear identification of the event producer and its subject, to trigger corrective action.
+A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event producer and its subject, to trigger corrective action.
 
 include::../requirements/monitoring-event-topic/REQ_publishing.adoc[]

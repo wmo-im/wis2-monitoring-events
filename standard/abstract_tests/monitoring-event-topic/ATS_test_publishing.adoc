@@ -3,7 +3,7 @@
 [%metadata]
 label:: /conf/monitoring-event-topic/publishing
 subject:: /req/monitoring-event-topic/publishing
-test-purpose:: Validate that a given topic meets the conventions of WET.
+test-purpose:: Validate that a given topic meets the conventions of WMET.
 
 [.component,class=test method]
 =====

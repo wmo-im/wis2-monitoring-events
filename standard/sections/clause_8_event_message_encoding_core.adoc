@@ -36,7 +36,7 @@ The table below provides an overview of the set of properties that are included 
 
 |``subject``
 |**Required**
-|The centre identifier of the intended target of the event (see <<_subject>>)
+|The centre identifier of the subject of the event (see <<_subject>>)
 
 |``time``
 |**Required**
@@ -107,7 +107,7 @@ include::../requirements/monitoring-event-message-encoding-core/REQ_type.adoc[]
 
 ==== Subject
 
-The centre identifier of the intended target of the event (as defined in the <<wis2-topic-hierarchy>>).
+The centre identifier of the subject of the event (as defined in the <<wis2-topic-hierarchy>>).
 
 Example:
 [source,json]

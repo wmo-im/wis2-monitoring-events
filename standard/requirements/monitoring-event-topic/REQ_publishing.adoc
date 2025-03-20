@@ -8,5 +8,5 @@
 ^|D |Event topic level 2 SHALL be named ``a``.
 ^|E |Event topic level 3 SHALL be named ``wis2``.
 ^|F |Event topic level 4 SHALL be a centre identifier (as per the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>) based on the entity producing the event.
-^|G |Event topic level 5 SHALL be a centre identifier (as per the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>) based on the intended target of the event.
+^|G |Event topic level 5 SHALL be a centre identifier (as per the <<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>) based on the subject of the event.
 |===

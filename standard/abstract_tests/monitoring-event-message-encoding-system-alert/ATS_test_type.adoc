@@ -9,7 +9,7 @@ test-purpose:: Validate that a System Alert report has a valid type.
 =====
 [.component,class=step]
 --
-Check for the existence of a `+type+` property in the WEM.
+Check for the existence of a `+type+` property in the WMEM.
 --
 
 [.component,class=step]

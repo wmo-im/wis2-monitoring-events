@@ -1,31 +1,65 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.wmo.int/wme/1/eventMessageEncodingJSON.yaml",
-  "title": "WIS2 Event Message Encoding",
-  "description": "WIS2 Event Message Encoding",
+  "$id": "https://schemas.wmo.int/wme/1/systemAlertReportJSON.yaml",
+  "title": "WIS2 System Alert report Message Encoding",
+  "description": "WIS2 System Alert Message Encoding",
   "allOf": [
     {
-      "$ref": "#/definitions/Cloudevents-v1_0_2"
+      "$ref": "#/definitions/MonitoringEventMessageEncodingJSON"
     },
     {
       "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "int.wmo.wis.wme.event.wcmp2.ets",
-            "int.wmo.wis.wme.event.wcmp2.kpi",
-            "int.wmo.wis.wme.event.wnm.schema",
-            "int.wmo.wis.wme.event.system.alert"
+        "data": {
+          "allOf": [
+            {
+              "title": "Exception Schema",
+              "description": "JSON schema for exceptions based on RFC 7807",
+              "type": "object",
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "detail": {
+                  "type": "string"
+                },
+                "instance": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "properties": {
+                "wmem:severity": {
+                  "type": "string",
+                  "description": "Severity level of a System Alert",
+                  "enum": [
+                    "debug",
+                    "info",
+                    "warning",
+                    "error",
+                    "critical"
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "title",
+                "detail",
+                "wmem:severity"
+              ]
+            }
           ]
         }
-      },
-      "required": [
-        "datacontenttype",
-        "dataschema",
-        "subject",
-        "time",
-        "data"
-      ]
+      }
     }
   ],
   "definitions": {
@@ -182,6 +216,37 @@
     "Cloudevents-v1_0_2_Typedef": {
       "type": "string",
       "minLength": 1
+    },
+    "MonitoringEventMessageEncodingJSON": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://schemas.wmo.int/wme/1/eventMessageEncodingJSON.yaml",
+      "title": "WIS2 Event Message Encoding",
+      "description": "WIS2 Event Message Encoding",
+      "allOf": [
+        {
+          "$ref": "#/definitions/Cloudevents-v1_0_2"
+        },
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "int.wmo.wis.wme.event.wcmp2.ets",
+                "int.wmo.wis.wme.event.wcmp2.kpi",
+                "int.wmo.wis.wme.event.wnm.schema",
+                "int.wmo.wis.wme.event.system.alert"
+              ]
+            }
+          },
+          "required": [
+            "datacontenttype",
+            "dataschema",
+            "subject",
+            "time",
+            "data"
+          ]
+        }
+      ]
     }
   }
 }

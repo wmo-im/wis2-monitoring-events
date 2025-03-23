@@ -22,7 +22,7 @@ monitor/a/wis2/fr-meteofrance-global-broker/ar-smn
 .Example: WCMP2 compliance report event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)
 [source,json]
 ----
-include::../../examples/wme-gdc-wcmp2-ets.json[]
+include::../../examples/wmem-gdc-wcmp2-ets.json[]
 ----
 
 === WIS2 Monitoring Event Message Encoding: WCMP2 KPI Report
@@ -30,11 +30,21 @@ include::../../examples/wme-gdc-wcmp2-ets.json[]
 .Example: WCMP2 KPI event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)
 [source,json]
 ----
-include::../../examples/wme-gdc-wcmp2-kpi.json[]
+include::../../examples/wmem-gdc-wcmp2-kpi.json[]
 ----
+
+=== WIS2 Monitoring Event Message Encoding: WNM Schema Compliance Report
 
 .Example: WNM compliance report event notification from a WIS2 development Global Broker, concerning a WIS2 Notification message from a WIS2 Node in testing
 [source,json]
 ----
-include::../../examples/wme-gb-wnm-report.json[]
+include::../../examples/wmem-gb-wnm-report.json[]
+----
+
+=== WIS2 Monitoring Event Message Encoding: System Alert Report
+
+.Example: System Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
+[source,json]
+----
+include::../../examples/wmem-gc-system-alert.json[]
 ----

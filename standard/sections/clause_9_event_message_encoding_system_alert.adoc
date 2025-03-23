@@ -6,9 +6,15 @@ System Alert Report payloads published via the WIS2 Monitoring Event Topic (WMET
 
 ==== Overview
 
-This Requirements Class provides the requirements for System Alert reports.
+This Requirements Class provides the requirements for System Alert reports.  Metrics that are provided by WIS2 Global Services are used to trigger System Alerts that define the conditions and criteria to emit events.  System Alert reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.
 
 include::../requirements/requirements_class_monitoring-event-message-encoding-system-alert.adoc[]
+
+Examples of System Alert reports include (but are not limited to):
+
+- a WIS2 Global Discovery Catalogue's metadata archive is older than 24 hours
+- a WIS2 Node is disconnected from all Global Brokers
+- a WIS2 Node does not provide any data in the last 6 hours
 
 ==== Validation
 
@@ -42,4 +48,52 @@ include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data
 
 ==== Data
 
-TODO
+The System Alert report ``data`` property provides the event payload in JSON, using the "Problem Details" schema of <<ogcapi-common-part1,OGC API - Common - Part 1: Core>> as the content model.
+
+==== Data ``type``
+
+The ``data.type`` property defines a URN that is prefixed by ``wmem-alert`` and based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert names footnote:[https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts].
+
+Example:
+[source,json]
+----
+"type": "wmem-alert:Metadata_archive_older_than_24_hours"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data_type.adoc[]
+
+==== Data ``title``
+
+The ``data.title`` property defines a texual summary based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert summary annotations footnote:[https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts].
+
+Example:
+[source,json]
+----
+"title": "Metadata archive is older than 24 hours"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data_title.adoc[]
+
+==== Data ``detail``
+
+The ``data.detail`` property defines a detailed description of the problem, as defined by the issuer of the System Alert report.
+
+Example:
+[source,json]
+----
+"detail": "Metadata archive is older than 24 hours.  Please contact the administrator at admin@example.org for more information"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data_detail.adoc[]
+
+==== Data ``wmem:severity``
+
+The ``data.wmem:severity`` property defines a list of severity levels to describe the seriousness of an event.
+
+Example:
+[source,json]
+----
+"wmem:severity": "critical"
+----
+
+include::../requirements/monitoring-event-message-encoding-system-alert/REQ_data_wmem-severity.adoc[]

@@ -2,7 +2,7 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Requirements Class*
-2+|http://www.wmo.int/spec/wme/1/req/monitoring-event-topic
+2+|http://wis.wmo.int/spec/wme/1/req/monitoring-event-topic
 |Target type |Topic classification
 |Dependency |<<wis2-topic-hierarchy, WIS2 Topic Hierarchy>>
 |Pre-conditions |Topic levels 2-4 conform to the WIS2 Topic Hierarchy.

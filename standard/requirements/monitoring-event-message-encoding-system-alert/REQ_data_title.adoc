@@ -1,0 +1,7 @@
+[[req_monitoring-event-message-encoding-system-alert_data_title]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-system-alert/data_title*
+^|A |A WMEM SHALL provide a `+data.title+` property.
+^|B |The `+data.title+` property of a System Alert report SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert summary annotations.
+|===

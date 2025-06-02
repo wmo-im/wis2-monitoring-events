@@ -1,0 +1,26 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://schemas.wmo.int/wme/1/systemAlertReportJSON.yaml
+title: WIS2 System Alert report Message Encoding
+description: WIS2 System Alert Message Encoding
+
+allOf:
+  - $ref: 'monitoringEventMessageEncodingJSON.yaml'
+  - properties:
+      data:
+        allOf:
+          - $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/exception.yaml'
+          - properties:
+              wmem:severity:
+                type: string
+                description: Severity level of a System Alert
+                enum:
+                  - debug
+                  - info
+                  - warning
+                  - error
+                  - critical
+            required:
+              - type
+              - title
+              - detail
+              - wmem:severity

@@ -14,10 +14,22 @@ include::./monitoring-event-message-encoding-system-alert/ATS_test_validation.ad
 
 include::./monitoring-event-message-encoding-system-alert/ATS_test_type.adoc[]
 
-==== Data schema
+==== Data ``schema``
 
 include::./monitoring-event-message-encoding-system-alert/ATS_test_dataschema.adoc[]
 
-==== Data
+==== Data ``type``
 
-TODO
+include::./monitoring-event-message-encoding-system-alert/ATS_test_data_type.adoc[]
+
+==== Data ``title``
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_data_title.adoc[]
+
+==== Data ``detail``
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_data_detail.adoc[]
+
+==== Data ``wmem:severity``
+
+include::./monitoring-event-message-encoding-system-alert/ATS_test_data_wmem-severity.adoc[]

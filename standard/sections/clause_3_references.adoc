@@ -6,5 +6,7 @@
 * IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
 * [[cloud-events]] CloudEvents: CloudEvents specification (2025) footnote:[https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md]
+* [[ogcapi-common-part1]] OGC API - Common - Part 1: Core (2023) footnote:[https://docs.ogc.org/is/19-072/19-072.html]
 * [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
 * [[wis2-notification-message]] WMO: WIS2 Notification Message (2022) footnote:[https://github.com/wmo-im/wis2-notification-message]
+* [[wis2-metric-hierarchy]] WMO: WIS2 Metric Hierarchy (2025) footnote:[https://github.com/wmo-im/wis2-metric-hierarchy]

@@ -72,6 +72,9 @@ The following additional terms and definitions also apply.
 |URL
 |Uniform Resource Locator
 
+|URN
+|Uniform Resource Name
+
 |UUID
 |Universally Unique Identifier
 

@@ -1,0 +1,16 @@
+[[ats_event-message-encoding-system-alert_data_detail]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-system-alert/data_detail
+subject:: /req/event-message-encoding-system-alert/data_detail
+test-purpose:: Validate that a System Alert report has a valid data title.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+data.detail+` property in the WMEM.
+--
+
+=====
+====

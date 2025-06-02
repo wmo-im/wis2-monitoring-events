@@ -4,7 +4,7 @@ title: WIS2 Event Message Encoding
 description: WIS2 Event Message Encoding
 
 allOf:
-  - $ref: 'https://raw.githubusercontent.com/cloudevents/spec/refs/heads/v1.0.2/cloudevents/formats/json-format.md'
+  - $ref: 'cloudevents-v1.0.2.yaml'
   - properties:
       type:
         type: string
@@ -14,7 +14,7 @@ allOf:
           - int.wmo.wis.wme.event.wnm.schema
           - int.wmo.wis.wme.event.system.alert
     
-  - required:
+    required:
       - datacontenttype
       - dataschema
       - subject

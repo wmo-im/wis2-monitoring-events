@@ -2,8 +2,9 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Requirements Class*
-2+|http://www.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert
+2+|http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert
 |Target type |Event metadata
 |Dependency |<<rc_monitoring-event-message-encoding-core, WIS2 Monitoring Event Message Encoding: Core>>
+|Dependency |<<ogcapi-common-part1, OGC API - Common - Part 1: Core>>
 |Pre-conditions |The event message conforms to "WIS2 Monitoring Event Message Encoding: Core" Requirements Class.
 |===

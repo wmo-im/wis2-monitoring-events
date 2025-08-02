@@ -1,9 +1,9 @@
-[[ats_event-message-encoding-system-alert_data_title]]
+[[ats_event-message-encoding-report_data_title]]
 ====
 [%metadata]
-label:: /conf/event-message-encoding-system-alert/data_title
-subject:: /req/event-message-encoding-system-alert/data_title
-test-purpose:: Validate that a System Alert report has a valid data title.
+label:: /conf/event-message-encoding-report/data_title
+subject:: /req/event-message-encoding-report/data_title
+test-purpose:: Validate that a WMEM Report has a valid data title.
 
 [.component,class=test method]
 =====

@@ -3,13 +3,13 @@
 [%metadata]
 label:: /conf/event-message-encoding-alert/validation
 subject:: /req/event-message-encoding-alert/validation
-test-purpose:: Validate that a System Alert report is valid to the authoritative System Alert report schema.
+test-purpose:: Validate that an alert report is valid to the authoritative report schema.
 
 [.component,class=test method]
 =====
 [.component,class=step]
 --
-Run JSON Schema validation on the System Alert report against the System Alert report authoritative schema.
+Run JSON Schema validation on the alert report against the authoritative report schema.
 --
 =====
 ====

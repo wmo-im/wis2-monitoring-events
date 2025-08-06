@@ -8,7 +8,7 @@ Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined
 
 This Requirements Class provides the requirements for Reports.  Examples of Reports can include:
 
-- metrics that are provided by WIS2 Global Services are used to trigger system alerts that define the conditions and criteria to emit events.  System alert Reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.
+- metrics that are provided by WIS2 Global Services are used to trigger alerts that define the conditions and criteria to emit events.  Alert Reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.
 - notices that can be used for administrative messages about general operational and/or administrative matters or for service messages about operational status and/or problem resolution matters. Notices are used to provide information relating to interruptions of or changes to stable WIS2 operations.
 
 include::../requirements/requirements_class_monitoring-event-message-encoding-report.adoc[]

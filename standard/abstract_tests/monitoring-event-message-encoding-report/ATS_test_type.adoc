@@ -3,7 +3,7 @@
 [%metadata]
 label:: /conf/event-message-encoding-alert/type
 subject:: /req/event-message-encoding-alert/type
-test-purpose:: Validate that a System Alert report has a valid type.
+test-purpose:: Validate that an alert report has a valid type.
 
 [.component,class=test method]
 =====

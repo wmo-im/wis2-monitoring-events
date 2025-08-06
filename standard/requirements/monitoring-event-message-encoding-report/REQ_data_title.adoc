@@ -3,5 +3,5 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/data_title*
 ^|A |A WMEM SHALL provide a `+data.title+` property.
-^|B |For system alerts, the `+data.title+` property of a WMEM Report SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert summary annotations.
+^|B |For alerts, the `+data.title+` property of a WMEM Report SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert summary annotations.
 |===

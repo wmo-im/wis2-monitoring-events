@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/dataschema*
-^|A |The `+dataschema+` property SHALL be a URL to the System Alert JSON Schema.
+^|A |The `+dataschema+` property SHALL be a URL to the Report JSON Schema.
 |===
 

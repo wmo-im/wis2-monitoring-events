@@ -4,5 +4,5 @@
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/data_type*
 ^|A |A WMEM SHALL provide a `+data.type+` property.
 ^|B |The `+data.type+` property of a WMEM Report SHALL be prefixed by ``wmem:report:``.
-^|C |The `+data.type+` property of a WMEM Report based on a system alert SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert names OR have the fixed value of ``wmem:report:notice``.
+^|C |The `+data.type+` property of a WMEM Report for an alert SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert names OR have the fixed value of ``wmem:report:notice``.
 |===

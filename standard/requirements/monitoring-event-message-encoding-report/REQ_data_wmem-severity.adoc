@@ -3,7 +3,7 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/datawmem-severity*
 ^|A |A WMEM Report SHALL provide a `+data.wmem:severity+` property.
-^|B |The `+data.wmem:severity+` property of a Report report SHALL be one of the following values:
+^|B |The `+data.wmem:severity+` property of a Report SHALL be one of the following values:
 
 * ``debug``
 * ``info``

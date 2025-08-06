@@ -58,5 +58,5 @@ include::../../examples/wmem-wis2node-notice-report.json[]
 .Example: System Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
 [source,json]
 ----
-include::../../examples/wmem-gc-system-alert-report.json[]
+include::../../examples/wmem-gc-alert-report.json[]
 ----

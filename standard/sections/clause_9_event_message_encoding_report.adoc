@@ -33,7 +33,7 @@ The type of event related to the event message encoding, using a reverse DNS not
 Example:
 [source,json]
 ----
-"type": "int.wmo.wis.wme.event.system.alert"
+"type": "int.wmo.wis.wme.event.alert"
 ----
 
 include::../requirements/monitoring-event-message-encoding-report/REQ_type.adoc[]

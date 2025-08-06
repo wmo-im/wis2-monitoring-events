@@ -3,7 +3,7 @@
 [%metadata]
 label:: /conf/event-message-encoding-report/data_detail
 subject:: /req/event-message-encoding-report/data_detail
-test-purpose:: Validate that a WMEM Report report has a valid data title.
+test-purpose:: Validate that a WMEM Report has a valid data title.
 
 [.component,class=test method]
 =====

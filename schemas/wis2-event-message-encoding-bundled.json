@@ -16,7 +16,7 @@
             "int.wmo.wis.wme.event.wcmp2.kpi",
             "int.wmo.wis.wme.event.wnm.schema",
             "int.wmo.wis.wme.event.report.notice",
-            "int.wmo.wis.wme.event.report.system-alert"
+            "int.wmo.wis.wme.event.report.alert"
           ]
         }
       },

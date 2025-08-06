@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/validation*
-^|A |Each WMEM Report report SHALL validate without error against the Report report schema.
+^|A |Each WMEM Report SHALL validate without error against the Report schema.
 |===

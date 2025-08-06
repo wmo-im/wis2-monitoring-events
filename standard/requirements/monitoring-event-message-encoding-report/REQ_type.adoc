@@ -3,5 +3,5 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/type*
 ^|A |The `+type+` property of a notice report SHALL be equal to `int.wmo.wis.wme.event.report.notice`
-^|A |The `+type+` property of a system alert report SHALL be equal to `int.wmo.wis.wme.event.report.system-alert`
+^|A |The `+type+` property of a system alert report SHALL be equal to `int.wmo.wis.wme.event.report.alert`
 |===

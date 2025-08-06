@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.wmo.int/wme/1/reportJSON.yaml",
-  "title": "WIS2 Report report Message Encoding",
+  "title": "WIS2 Report Message Encoding",
   "description": "WIS2 Report Message Encoding",
   "allOf": [
     {
@@ -235,7 +235,7 @@
                 "int.wmo.wis.wme.event.wcmp2.kpi",
                 "int.wmo.wis.wme.event.wnm.schema",
                 "int.wmo.wis.wme.event.report.notice",
-                "int.wmo.wis.wme.event.report.system-alert"
+                "int.wmo.wis.wme.event.report.alert"
               ]
             }
           },

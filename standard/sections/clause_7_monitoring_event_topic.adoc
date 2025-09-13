@@ -15,7 +15,7 @@ Successful operation of the WIS2 infrastructure and monitoring events of same sh
 The WMET is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WMET levels:
 
 * _producer_: the centre identifier of the entity producing the event notification
-* _subject: the centre identifier of the subject of the event notification
+* _subject_: the centre identifier of the subject of the event notification
 
 The representation is encoded as a simple text string of values in each topic level separated by a slash (``/``). 
 

@@ -13,7 +13,7 @@ Split the topic by the `/` character, into tokens.
 --
 
 --
-Check that there are exactly 5 tokens.
+Check that there are exactly 4 tokens.
 --
 
 --
@@ -30,10 +30,6 @@ Check that the third token is a value of `wis2`.
 
 --
 Check that the fourth token is a valid centre identifier.
---
-
---
-Check that the fifth token is also a valid centre identifier.
 --
 
 =====

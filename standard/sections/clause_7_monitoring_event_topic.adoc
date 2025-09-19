@@ -12,18 +12,15 @@ include::../requirements/requirements_class_monitoring-event-topic.adoc[]
 
 Successful operation of the WIS2 infrastructure and monitoring events of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.
 
-The WMET is composed of five levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WMET levels:
-
-* _producer_: the centre identifier of the entity producing the event notification
-* _subject_: the centre identifier of the subject of the event notification
+The WMET is composed of four levels: A fixed channel of `monitor`, WTH primary topic levels 2 (version), 3 (system), and 4 (centre identifier).  Level 4 is the centre identifier of the subject of the event notification (the _subject_).
 
 The representation is encoded as a simple text string of values in each topic level separated by a slash (``/``). 
 
 Examples:
 
-``monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/de-dwd``
+``monitor/a/wis2/ca-eccc-msc``
 
-``monitor/a/wis2/fr-meteofrance-global-broker/cn-cma``
+``monitor/a/wis2/fr-meteofrance``
 
 The table below provides an overview of the primary topic levels.
 
@@ -45,15 +42,11 @@ The table below provides an overview of the primary topic levels.
 
 |4
 |centre-id
-|Acronym proposed by Member and endorsed by WMO Secretariat, of the entity producing the event (source)
-
-|5
-|centre-id
-|Acronym proposed by Member and endorsed by WMO Secretariat, of the subject of the event (subject)
+|Acronym proposed by Member and endorsed by WMO Secretariat, of the centre identifier of the subject of the event (target)
 |===
 
 ==== Publishing
 
-A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event producer and its subject, to trigger corrective action.
+A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event subject, to trigger corrective action or as informative notice.
 
 include::../requirements/monitoring-event-topic/REQ_publishing.adoc[]

@@ -1,9 +1,9 @@
-[[ats_event-message-encoding-system-alert_datawmem-severity]]
+[[ats_event-message-encoding-report_datawmem-severity]]
 ====
 [%metadata]
-label:: /conf/event-message-encoding-system-alert/datawmem-severity
-subject:: /req/event-message-encoding-system-alert/datawmem-severity
-test-purpose:: Validate that a System Alert report has a valid data severity.
+label:: /conf/event-message-encoding-report/datawmem-severity
+subject:: /req/event-message-encoding-report/datawmem-severity
+test-purpose:: Validate that a WMEM Report has a valid data severity.
 
 [.component,class=test method]
 =====

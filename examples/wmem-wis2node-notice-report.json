@@ -1,0 +1,23 @@
+{
+    "specversion": "1.0",
+    "type": "int.wmo.wis.wme.event.report.notice",
+    "source": "ar-smn",
+    "subject": "ar-smn",
+    "id": "6da24af0-b19f-4106-b583-73cc25a4435d",
+    "time": "2025-08-02T02:43:35Z",
+    "datacontenttype": "application/json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
+    "data": {
+        "type": "wmem:report",
+        "title": "Data outage notice",
+        "detail": "Surface synoptic observations will be missing until 22 July 2025, 09:00Z",
+        "channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop",
+        "time": {
+            "interval": [
+                "..",
+                "2025-07-25T09:00:00Z"
+            ]
+        },
+        "wmem:severity": "info"
+    }
+}

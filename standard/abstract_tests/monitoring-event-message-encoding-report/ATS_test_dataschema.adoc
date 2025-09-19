@@ -1,9 +1,9 @@
-[[ats_event-message-encoding-system-alert_dataschema]]
+[[ats_event-message-encoding-report_dataschema]]
 ====
 [%metadata]
-label:: /conf/event-message-encoding-system-alert/dataschema
-subject:: /req/event-message-encoding-system-alert/dataschema
-test-purpose:: Validate that a System Alert report has a valid data schema.
+label:: /conf/event-message-encoding-report/dataschema
+subject:: /req/event-message-encoding-report/dataschema
+test-purpose:: Validate that a WMEM Report has a valid data schema.
 
 [.component,class=test method]
 =====

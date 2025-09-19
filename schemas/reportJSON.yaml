@@ -10,6 +10,19 @@ allOf:
         allOf:
           - $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/exception.yaml'
           - properties:
+              ref:
+                type: string
+                format: uuid
+                description: Identifier of referenced event
+              channel:
+                type: string
+                description: WIS2 topic (can be used as part of reporting on data)
+              time:
+                type: object
+                description: Time window of report
+                properties:
+                    interval:
+                      $ref: https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/main/schemas/wcmpRecordGeoJSON.yaml#/properties/time/oneOf/1/properties/interval
               wmem:severity:
                 type: string
                 description: Severity level of a Report

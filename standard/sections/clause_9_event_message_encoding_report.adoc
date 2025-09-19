@@ -78,6 +78,16 @@ Example:
 
 include::../requirements/monitoring-event-message-encoding-report/REQ_data_title.adoc[]
 
+==== Data ``ref``
+
+The ``data.ref`` property defines an identifier that the Report is referencing (for example, to refer/follow up on a previous monitoring event).
+
+Example:
+[source,json]
+----
+"ref": "6da24af0-b19f-4106-b583-73cc25a4435d"
+----
+
 ==== Data ``detail``
 
 The ``data.detail`` property defines a detailed description of the problem, as defined by the issuer of the Report.
@@ -89,6 +99,57 @@ Example:
 ----
 
 include::../requirements/monitoring-event-message-encoding-report/REQ_data_detail.adoc[]
+
+==== Data ``channel``
+
+The ``data.channel`` property defines a WIS2 topic that the Report may be referring to (for example for a data outage notice).
+
+Example:
+[source,json]
+----
+"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"
+----
+
+include::../recommendations/monitoring-event-message-encoding-report/REC_data_channel.adoc[]
+
+==== Data ``time``
+
+The ``data.time`` property defines time interval that the Report may be referring to (for example for a data outage notice).
+
+Examples:
+
+[source,json]
+----
+"time": {
+  "interval": [
+      "2025-09-18T12:00:00Z",
+      "2025-09-18T16:00:00Z"
+  ]
+}
+----
+
+[source,json]
+----
+"time": {
+  "interval": [
+      "2025-09-18T12:00:00Z",
+      ".."
+  ]
+}
+----
+
+[source,json]
+----
+"time": {
+  "interval": [
+      "..",
+      "2025-09-18T16:00:00Z"
+  ]
+}
+----
+
+include::../recommendations/monitoring-event-message-encoding-report/REC_data_time.adoc[]
+include::../recommendations/monitoring-event-message-encoding-report/PER_data_time.adoc[]
 
 ==== Data ``wmem:severity``
 

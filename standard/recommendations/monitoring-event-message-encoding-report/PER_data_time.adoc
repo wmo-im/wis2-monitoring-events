@@ -1,0 +1,7 @@
+[[per_monitoring-event-message-encoding-report_data_time]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/monitoring-event-message-encoding-report/data_time*
+^|A |The `+time.interval+` array MAY be fully bounded (i.e. ``[t1, t2]``) or open ended (i.e. ``[t, ..]``, ``[.., t]``).
+|===
+

@@ -1,0 +1,7 @@
+[[rec_monitoring-event-message-encoding-report_data_channel]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-encoding-report/data_channel*
+^|A |The `+channel+` property SHOULD be used if the Report is based on data being published to a given topic.
+|===
+

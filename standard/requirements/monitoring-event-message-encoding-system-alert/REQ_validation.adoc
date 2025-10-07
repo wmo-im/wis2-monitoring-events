@@ -1,6 +1,0 @@
-[[req_monitoring-event-message-encoding-system-alert_validation]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-system-alert/validation*
-^|A |Each System Alert report SHALL validate without error against the System Alert report schema.
-|===

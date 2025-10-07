@@ -8,14 +8,18 @@
 .Example: Notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Météo-France (Toulouse)
 [source,text]
 ----
-monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/fr-meteofrance
+monitor/a/wis2/fr-meteofrance
 ----
+
+Here, the `source` is found in the WMEM (`ca-eccc-msc-global-discovery-catalogue`).
 
 .Example: Notification from Météo-France (Toulouse), Global Broker Service, concerning a WNM from Servicio Meteorológico Nacional (Argentina)
 [source,text]
 ----
-monitor/a/wis2/fr-meteofrance-global-broker/ar-smn
+monitor/a/wis2/ar-smn
 ----
+
+Here, the `source` is found in the WMEM (`fr-meteofrance-global-broker`).
 
 === WIS2 Monitoring Event Message Encoding: WCMP2 ETS Report
 
@@ -41,10 +45,18 @@ include::../../examples/wmem-gdc-wcmp2-kpi.json[]
 include::../../examples/wmem-gb-wnm-report.json[]
 ----
 
-=== WIS2 Monitoring Event Message Encoding: System Alert Report
+=== WIS2 Monitoring Event Message Encoding: Notice Report
 
-.Example: System Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
+.Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage
 [source,json]
 ----
-include::../../examples/wmem-gc-system-alert.json[]
+include::../../examples/wmem-wis2node-notice-report.json[]
+----
+
+=== WIS2 Monitoring Event Message Encoding: Alert Report
+
+.Example: Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
+[source,json]
+----
+include::../../examples/wmem-gc-alert-report.json[]
 ----

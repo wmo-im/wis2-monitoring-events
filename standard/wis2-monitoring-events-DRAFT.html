@@ -455,10 +455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-10-05</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-10-07</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2025-10-05</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2025-10-07</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -536,9 +536,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_wis2_monitoring_event_message_encoding_system_alert_report">9. WIS2 Monitoring Event Message Encoding: System Alert Report</a>
+<li><a href="#_wis2_monitoring_event_message_encoding_report">9. WIS2 Monitoring Event Message Encoding: Report</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_class_wis2_monitoring_event_message_encoding_system_alert_report">9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert Report"</a>
+<li><a href="#_requirements_class_wis2_monitoring_event_message_encoding_report">9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</a>
 <ul class="sectlevel3">
 <li><a href="#_overview_3">9.1.1. Overview</a></li>
 <li><a href="#_validation">9.1.2. Validation</a></li>
@@ -547,8 +547,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_data_2">9.1.5. Data</a></li>
 <li><a href="#_data_type">9.1.6. Data <code>type</code></a></li>
 <li><a href="#_data_title">9.1.7. Data <code>title</code></a></li>
-<li><a href="#_data_detail">9.1.8. Data <code>detail</code></a></li>
-<li><a href="#_data_wmemseverity">9.1.9. Data <code>wmem:severity</code></a></li>
+<li><a href="#_data_ref">9.1.8. Data <code>ref</code></a></li>
+<li><a href="#_data_detail">9.1.9. Data <code>detail</code></a></li>
+<li><a href="#_data_channel">9.1.10. Data <code>channel</code></a></li>
+<li><a href="#_data_time">9.1.11. Data <code>time</code></a></li>
+<li><a href="#_data_wmemseverity">9.1.12. Data <code>wmem:severity</code></a></li>
 </ul>
 </li>
 </ul>
@@ -573,7 +576,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_data_3">A.2.9. Data</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_wis2_monitoring_event_message_encoding_system_alert">A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: System Alert</a>
+<li><a href="#_conformance_class_wis2_monitoring_event_message_encoding_report">A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: Report</a>
 <ul class="sectlevel3">
 <li><a href="#_validation_2">A.3.1. Validation</a></li>
 <li><a href="#_type_4">A.3.2. Type</a></li>
@@ -589,7 +592,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#schemas">Annex B: Schemas (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_wis2_monitoring_event_message_encoding_schema">B.1. WIS2 Monitoring Event Message Encoding Schema</a></li>
-<li><a href="#_wis2_monitoring_event_message_system_alert_report_encoding_schema">B.2. WIS2 Monitoring Event Message System Alert Report Encoding Schema</a></li>
+<li><a href="#_wis2_monitoring_event_message_report_encoding_schema">B.2. WIS2 Monitoring Event Message Report Encoding Schema</a></li>
 </ul>
 </li>
 <li><a href="#examples">Annex C: Examples (Informative)</a>
@@ -598,7 +601,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_wis2_monitoring_event_message_encoding_wcmp2_ets_report">C.2. WIS2 Monitoring Event Message Encoding: WCMP2 ETS Report</a></li>
 <li><a href="#_wis2_monitoring_event_message_encoding_wcmp2_kpi_report">C.3. WIS2 Monitoring Event Message Encoding: WCMP2 KPI Report</a></li>
 <li><a href="#_wis2_monitoring_event_message_encoding_wnm_schema_compliance_report">C.4. WIS2 Monitoring Event Message Encoding: WNM Schema Compliance Report</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_system_alert_report_2">C.5. WIS2 Monitoring Event Message Encoding: System Alert Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_encoding_notice_report">C.5. WIS2 Monitoring Event Message Encoding: Notice Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_encoding_alert_report">C.6. WIS2 Monitoring Event Message Encoding: Alert Report</a></li>
 </ul>
 </li>
 <li><a href="#Bibliography">Annex D: Bibliography</a></li>
@@ -685,7 +689,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>"WIS2 Monitoring Event Message Encoding: Core"</p>
 </li>
 <li>
-<p>"WIS2 Monitoring Event Message Encoding: System Alert"</p>
+<p>"WIS2 Monitoring Event Message Encoding: Report"</p>
 </li>
 </ul>
 </div>
@@ -1037,7 +1041,7 @@ development of this specification:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Pre-conditions</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Topic levels 2-4 conform to the WIS2 Topic Hierarchy.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Topic levels 2-3 conform to the WIS2 Topic Hierarchy.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1045,17 +1049,7 @@ development of this specification:</p>
 <p>Successful operation of the WIS2 infrastructure and monitoring events of same should be information that is made available to all Global Services and WIS2 Nodes, and not designed for communication to external users or data consumers.  Global Services need to be able to report information to Global Services and WIS2 Nodes to trigger corrective action.</p>
 </div>
 <div class="paragraph">
-<p>The WMET is composed of five levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version) and 3 (system), as well as WTH primary topic level 4 (centre identifier) at two WMET levels:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>producer</em>: the centre identifier of the entity producing the event notification</p>
-</li>
-<li>
-<p><em>subject</em>: the centre identifier of the subject of the event notification</p>
-</li>
-</ul>
+<p>The WMET is composed of four levels: A fixed channel of <code>monitor</code>, WTH primary topic levels 2 (version), 3 (system), and 4 (centre identifier).  Level 4 is the centre identifier of the subject of the event notification (the <em>subject</em>).</p>
 </div>
 <div class="paragraph">
 <p>The representation is encoded as a simple text string of values in each topic level separated by a slash (<code>/</code>).</p>
@@ -1064,10 +1058,10 @@ development of this specification:</p>
 <p>Examples:</p>
 </div>
 <div class="paragraph">
-<p><code>monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/de-dwd</code></p>
+<p><code>monitor/a/wis2/ca-eccc-msc</code></p>
 </div>
 <div class="paragraph">
-<p><code>monitor/a/wis2/fr-meteofrance-global-broker/cn-cma</code></p>
+<p><code>monitor/a/wis2/fr-meteofrance</code></p>
 </div>
 <div class="paragraph">
 <p>The table below provides an overview of the primary topic levels.</p>
@@ -1105,12 +1099,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">centre-id</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the entity producing the event (source)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">centre-id</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the subject of the event (subject)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Acronym proposed by Member and endorsed by WMO Secretariat, of the centre identifier of the subject of the event (target)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1118,7 +1107,7 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_publishing"><a class="anchor" href="#_publishing"></a>7.1.2. Publishing</h4>
 <div class="paragraph">
-<p>A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event producer and its subject, to trigger corrective action.</p>
+<p>A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event subject, to trigger corrective action or as informative notice.</p>
 </div>
 <table id="req_monitoring-event-topic_publishing" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1141,7 +1130,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Events SHALL be published to exactly level 5.</p>
+<p>Events SHALL be published to exactly level 4.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1165,13 +1154,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Event topic level 4 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the entity producing the event.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Event topic level 5 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the subject of the event.</p>
+<p>Event topic level 4 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the subject of the event.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1303,7 +1286,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM message SHALL NOT exceed 64 000 bytes.</p>
+<p>A WMEM message SHALL NOT exceed 8192 bytes.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1459,7 +1442,10 @@ development of this specification:</p>
 <p><code>int.wmo.wis.wme.event.wnm.schema</code></p>
 </li>
 <li>
-<p><code>int.wmo.wis.wme.event.system.alert</code></p>
+<p><code>int.wmo.wis.wme.event.report.notice</code></p>
+</li>
+<li>
+<p><code>int.wmo.wis.wme.event.report.alert</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -1642,19 +1628,29 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wis2_monitoring_event_message_encoding_system_alert_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_system_alert_report"></a>9. WIS2 Monitoring Event Message Encoding: System Alert Report</h2>
+<h2 id="_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_report"></a>9. WIS2 Monitoring Event Message Encoding: Report</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>System Alert Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the associated requirements and schema described in this Requirements Class.</p>
+<p>Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the associated requirements and schema described in this Requirements Class.</p>
 </div>
 <div class="sect2">
-<h3 id="_requirements_class_wis2_monitoring_event_message_encoding_system_alert_report"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_system_alert_report"></a>9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert Report"</h3>
+<h3 id="_requirements_class_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_report"></a>9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</h3>
 <div class="sect3">
 <h4 id="_overview_3"><a class="anchor" href="#_overview_3"></a>9.1.1. Overview</h4>
 <div class="paragraph">
-<p>This Requirements Class provides the requirements for System Alert reports.  Metrics that are provided by WIS2 Global Services are used to trigger System Alerts that define the conditions and criteria to emit events.  System Alert reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.</p>
+<p>This Requirements Class provides the requirements for Reports.  Examples of Reports can include:</p>
 </div>
-<table id="rc_monitoring-event-message-encoding-system-alert" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="ulist">
+<ul>
+<li>
+<p>metrics that are provided by WIS2 Global Services are used to trigger alerts that define the conditions and criteria to emit events.  Alert Reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.</p>
+</li>
+<li>
+<p>notices that can be used for administrative messages about general operational and/or administrative matters or for service messages about operational status and/or problem resolution matters. Notices are used to provide information relating to interruptions of or changes to stable WIS2 operations.</p>
+</li>
+</ul>
+</div>
+<table id="rc_monitoring-event-message-encoding-report" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -1664,7 +1660,7 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -1685,7 +1681,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Examples of System Alert reports include (but are not limited to):</p>
+<p>Examples of Reports include (but are not limited to):</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1698,15 +1694,18 @@ development of this specification:</p>
 <li>
 <p>a WIS2 Node does not provide any data in the last 6 hours</p>
 </li>
+<li>
+<p>a WIS2 Node providing a notice on service interruption on a given date/time</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_validation"><a class="anchor" href="#_validation"></a>9.1.2. Validation</h4>
 <div class="paragraph">
-<p>The System Alert report schema is based on the Requirements Class WIS2 Monitoring Event Message Encoding: Core schema and the associated information model, and applies to the <code>data</code> property of an event report.</p>
+<p>The Report schema is based on the Requirements Class WIS2 Monitoring Event Message Encoding: Core schema and the associated information model, and applies to the <code>data</code> property of a Report.</p>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_validation" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_validation" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1715,13 +1714,13 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/validation</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/validation</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each System Alert report SHALL validate without error against the System Alert report schema.</p>
+<p>Each WMEM Report SHALL validate without error against the Report schema.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1737,10 +1736,10 @@ development of this specification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.system.alert"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.alert"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_type" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1749,13 +1748,19 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/type</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/type</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property of a System Alert report SHALL be equal to <code>int.wmo.wis.wme.event.system.alert</code></p>
+<p>The <code>type</code> property of a notice report SHALL be equal to <code>int.wmo.wis.wme.event.report.notice</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>type</code> property of an alert report SHALL be equal to <code>int.wmo.wis.wme.event.report.alert</code></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1771,10 +1776,10 @@ development of this specification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-system-alert.json"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1783,13 +1788,13 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/dataschema</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/dataschema</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>dataschema</code> property SHALL be a URL to the System Alert JSON Schema.</p>
+<p>The <code>dataschema</code> property SHALL be a URL to the Report JSON Schema.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1798,7 +1803,7 @@ development of this specification:</p>
 <div class="sect3">
 <h4 id="_data_2"><a class="anchor" href="#_data_2"></a>9.1.5. Data</h4>
 <div class="paragraph">
-<p>The System Alert report <code>data</code> property provides the event payload in JSON, using the "Problem Details" schema of <a href="#ogcapi-common-part1">OGC API - Common - Part 1: Core</a> as the content model.</p>
+<p>The Report <code>data</code> property provides the event payload in JSON, using the "Problem Details" schema of <a href="#ogcapi-common-part1">OGC API - Common - Part 1: Core</a> as the content model.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1814,7 +1819,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"type": "wmem-alert:Metadata_archive_older_than_24_hours"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_data_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_data_type" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1823,7 +1828,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/data_type</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/data_type</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1835,13 +1840,13 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.type</code> property of a System Alert report SHALL be prefixed by <code>wmem-alert</code>.</p>
+<p>The <code>data.type</code> property of a WMEM Report SHALL be prefixed by <code>wmem:report:</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.type</code> property of a System Alert report SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert names.</p>
+<p>The <code>data.type</code> property of a WMEM Report for an alert SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert names OR have the fixed value of <code>wmem:report:notice</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1860,7 +1865,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"title": "Metadata archive is older than 24 hours"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_data_title" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_data_title" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1869,7 +1874,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/data_title</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/data_title</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1881,16 +1886,30 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.title</code> property of a System Alert report SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations.</p>
+<p>For alerts, the <code>data.title</code> property of a WMEM Report SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_detail"><a class="anchor" href="#_data_detail"></a>9.1.8. Data <code>detail</code></h4>
+<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>9.1.8. Data <code>ref</code></h4>
 <div class="paragraph">
-<p>The <code>data.detail</code> property defines a detailed description of the problem, as defined by the issuer of the System Alert report.</p>
+<p>The <code>data.ref</code> property defines an identifier that the Report is referencing (for example, to refer/follow up on a previous monitoring event).</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"ref": "6da24af0-b19f-4106-b583-73cc25a4435d"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_detail"><a class="anchor" href="#_data_detail"></a>9.1.9. Data <code>detail</code></h4>
+<div class="paragraph">
+<p>The <code>data.detail</code> property defines a detailed description of the problem, as defined by the issuer of the Report.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1900,7 +1919,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"detail": "Metadata archive is older than 24 hours.  Please contact the administrator at admin@example.org for more information"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_data_detail" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_data_detail" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1909,22 +1928,135 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/data_detail</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/data_detail</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM SHALL provide a <code>data.detail</code> property.</p>
+<p>A WMEM Report SHALL provide a <code>data.detail</code> property.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_wmemseverity"><a class="anchor" href="#_data_wmemseverity"></a>9.1.9. Data <code>wmem:severity</code></h4>
+<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>9.1.10. Data <code>channel</code></h4>
 <div class="paragraph">
-<p>The <code>data.wmem:severity</code> property defines a list of severity levels to describe the seriousness of an event.</p>
+<p>The <code>data.channel</code> property defines a WIS2 topic that the Report may be referring to (for example for a data outage notice).</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"</code></pre>
+</div>
+</div>
+<table id="rec_monitoring-event-message-encoding-report_data_channel" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-encoding-report/data_channel</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>channel</code> property SHOULD be used if the Report is based on data being published to a given topic.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>9.1.11. Data <code>time</code></h4>
+<div class="paragraph">
+<p>The <code>data.time</code> property defines time interval that the Report may be referring to (for example for a data outage notice).</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval": [
+      "2025-09-18T12:00:00Z",
+      "2025-09-18T16:00:00Z"
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval": [
+      "2025-09-18T12:00:00Z",
+      ".."
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval": [
+      "..",
+      "2025-09-18T16:00:00Z"
+  ]
+}</code></pre>
+</div>
+</div>
+<table id="rec_monitoring-event-message-encoding-report_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-encoding-report/data_time</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>time</code> property SHOULD be used if the Report is based on a time window.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="per_monitoring-event-message-encoding-report_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/monitoring-event-message-encoding-report/data_time</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>time.interval</code> array MAY be fully bounded (i.e. <code>[t1, t2]</code>) or open ended (i.e. <code>[t, ..]</code>, <code>[.., t]</code>).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_data_wmemseverity"><a class="anchor" href="#_data_wmemseverity"></a>9.1.12. Data <code>wmem:severity</code></h4>
+<div class="paragraph">
+<p>The <code>data.wmem:severity</code> property defines a list of severity levels to describe the seriousness of a Report.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1934,7 +2066,7 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"wmem:severity": "critical"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-system-alert_datawmem-severity" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-encoding-report_datawmem-severity" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1943,19 +2075,19 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 17</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-system-alert/datawmem-severity</strong></p>
+<p><strong>/req/monitoring-event-message-encoding-report/datawmem-severity</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM SHALL provide a <code>data.wmem:severity</code> property.</p>
+<p>A WMEM Report SHALL provide a <code>data.wmem:severity</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.wmem:severity</code> property of a System Alert report SHALL be one of the following values:</p>
+<p>The <code>data.wmem:severity</code> property of a Report SHALL be one of the following values:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2040,7 +2172,7 @@ development of this specification:</p>
 <div class="openblock">
 <div class="content">
 <div class="paragraph">
-<p>Check that there are exactly 5 tokens.</p>
+<p>Check that there are exactly 4 tokens.</p>
 </div>
 </div>
 </div>
@@ -2069,13 +2201,6 @@ development of this specification:</p>
 <div class="content">
 <div class="paragraph">
 <p>Check that the fourth token is a valid centre identifier.</p>
-</div>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Check that the fifth token is also a valid centre identifier.</p>
 </div>
 </div>
 </div>
@@ -2132,7 +2257,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the size of the complete WMEM does not exceed 64000 bytes.</p>
+<p>Check that the size of the complete WMEM does not exceed 8192 bytes.</p>
 </div>
 </div>
 </div>
@@ -2478,18 +2603,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_wis2_monitoring_event_message_encoding_system_alert"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_encoding_system_alert"></a>A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: System Alert</h3>
-<div id="ats_monitoring-event-message-encoding-system-alert" class="exampleblock">
+<h3 id="_conformance_class_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_encoding_report"></a>A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: Report</h3>
+<div id="ats_monitoring-event-message-encoding-report" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-system-alert</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>Requirements Class "WIS2 Monitoring Event Message Encoding: System Alert"</p>
+<p>Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</p>
 </dd>
 <dt class="hdlist1">classification</dt>
 <dd>
@@ -2501,21 +2626,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_validation_2"><a class="anchor" href="#_validation_2"></a>A.3.1. Validation</h4>
-<div id="ats_event-message-encoding-system-alert_validation" class="exampleblock">
+<div id="ats_event-message-encoding-alert_validation" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/validation</p>
+<p>/conf/event-message-encoding-alert/validation</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/validation</p>
+<p>/req/event-message-encoding-alert/validation</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report is valid to the authoritative System Alert report schema.</p>
+<p>Validate that an alert report is valid to the authoritative report schema.</p>
 </dd>
 </dl>
 </div>
@@ -2524,7 +2649,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Run JSON Schema validation on the System Alert report against the System Alert report authoritative schema.</p>
+<p>Run JSON Schema validation on the alert report against the authoritative report schema.</p>
 </div>
 </div>
 </div>
@@ -2535,21 +2660,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_type_4"><a class="anchor" href="#_type_4"></a>A.3.2. Type</h4>
-<div id="ats_event-message-encoding-system-alert_type" class="exampleblock">
+<div id="ats_event-message-encoding-alert_type" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/type</p>
+<p>/conf/event-message-encoding-alert/type</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/type</p>
+<p>/req/event-message-encoding-alert/type</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid type.</p>
+<p>Validate that an alert report has a valid type.</p>
 </dd>
 </dl>
 </div>
@@ -2565,7 +2690,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>type</code> property is equal to <code>int.wmo.wis.wme.event.system.alert</code>.</p>
+<p>Check that the <code>type</code> property is equal to <code>int.wmo.wis.wme.event.report.alert</code>.</p>
 </div>
 </div>
 </div>
@@ -2576,21 +2701,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_schema_2"><a class="anchor" href="#_data_schema_2"></a>A.3.3. Data <code>schema</code></h4>
-<div id="ats_event-message-encoding-system-alert_dataschema" class="exampleblock">
+<div id="ats_event-message-encoding-report_dataschema" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/dataschema</p>
+<p>/conf/event-message-encoding-report/dataschema</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/dataschema</p>
+<p>/req/event-message-encoding-report/dataschema</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid data schema.</p>
+<p>Validate that a WMEM Report has a valid data schema.</p>
 </dd>
 </dl>
 </div>
@@ -2631,21 +2756,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_type_2"><a class="anchor" href="#_data_type_2"></a>A.3.4. Data <code>type</code></h4>
-<div id="ats_event-message-encoding-system-alert_data_type" class="exampleblock">
+<div id="ats_event-message-encoding-report_data_type" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/data_type</p>
+<p>/conf/event-message-encoding-report/data_type</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/data_type</p>
+<p>/req/event-message-encoding-report/data_type</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid data type.</p>
+<p>Validate that a WMEM Report has a valid data type.</p>
 </dd>
 </dl>
 </div>
@@ -2661,14 +2786,14 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>data.type</code> property has a prefix of <code>wmem:alert</code>.</p>
+<p>Check that the <code>data.type</code> property has a prefix of <code>wmem:report:</code>.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>data.type</code> property has a suffix equal to WIS2 Metric Hierarchy alert names (i.e. value of <code>groups[*].rules.alert</code>).</p>
+<p>Check that the <code>data.type</code> property has a suffix equal to WIS2 Metric Hierarchy alert names (i.e. value of <code>groups[*].rules.alert</code>) OR has the fixed value of <code>wmem:report:notice</code>.</p>
 </div>
 </div>
 </div>
@@ -2679,21 +2804,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_title_2"><a class="anchor" href="#_data_title_2"></a>A.3.5. Data <code>title</code></h4>
-<div id="ats_event-message-encoding-system-alert_data_title" class="exampleblock">
+<div id="ats_event-message-encoding-report_data_title" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/data_title</p>
+<p>/conf/event-message-encoding-report/data_title</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/data_title</p>
+<p>/req/event-message-encoding-report/data_title</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid data title.</p>
+<p>Validate that a WMEM Report has a valid data title.</p>
 </dd>
 </dl>
 </div>
@@ -2720,21 +2845,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_detail_2"><a class="anchor" href="#_data_detail_2"></a>A.3.6. Data <code>detail</code></h4>
-<div id="ats_event-message-encoding-system-alert_data_detail" class="exampleblock">
+<div id="ats_event-message-encoding-report_data_detail" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/data_detail</p>
+<p>/conf/event-message-encoding-report/data_detail</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/data_detail</p>
+<p>/req/event-message-encoding-report/data_detail</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid data title.</p>
+<p>Validate that a WMEM Report has a valid data title.</p>
 </dd>
 </dl>
 </div>
@@ -2754,21 +2879,21 @@ development of this specification:</p>
 </div>
 <div class="sect3">
 <h4 id="_data_wmemseverity_2"><a class="anchor" href="#_data_wmemseverity_2"></a>A.3.7. Data <code>wmem:severity</code></h4>
-<div id="ats_event-message-encoding-system-alert_datawmem-severity" class="exampleblock">
+<div id="ats_event-message-encoding-report_datawmem-severity" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-system-alert/datawmem-severity</p>
+<p>/conf/event-message-encoding-report/datawmem-severity</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-system-alert/datawmem-severity</p>
+<p>/req/event-message-encoding-report/datawmem-severity</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a System Alert report has a valid data severity.</p>
+<p>Validate that a WMEM Report has a valid data severity.</p>
 </dd>
 </dl>
 </div>
@@ -2848,7 +2973,8 @@ allOf:
           - int.wmo.wis.wme.event.wcmp2.ets
           - int.wmo.wis.wme.event.wcmp2.kpi
           - int.wmo.wis.wme.event.wnm.schema
-          - int.wmo.wis.wme.event.system.alert
+          - int.wmo.wis.wme.event.report.notice
+          - int.wmo.wis.wme.event.report.alert
     
     required:
       - datacontenttype
@@ -2860,13 +2986,13 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_system_alert_report_encoding_schema"><a class="anchor" href="#_wis2_monitoring_event_message_system_alert_report_encoding_schema"></a>B.2. WIS2 Monitoring Event Message System Alert Report Encoding Schema</h3>
+<h3 id="_wis2_monitoring_event_message_report_encoding_schema"><a class="anchor" href="#_wis2_monitoring_event_message_report_encoding_schema"></a>B.2. WIS2 Monitoring Event Message Report Encoding Schema</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wme/1/systemAlertReportJSON.yaml
-title: WIS2 System Alert report Message Encoding
-description: WIS2 System Alert Message Encoding
+$id: https://schemas.wmo.int/wme/1/reportJSON.yaml
+title: WIS2 Report Message Encoding
+description: WIS2 Report Message Encoding
 
 allOf:
   - $ref: 'monitoringEventMessageEncodingJSON.yaml'
@@ -2875,9 +3001,22 @@ allOf:
         allOf:
           - $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/exception.yaml'
           - properties:
+              ref:
+                type: string
+                format: uuid
+                description: Identifier of referenced event
+              channel:
+                type: string
+                description: WIS2 topic (can be used as part of reporting on data)
+              time:
+                type: object
+                description: Time window of report
+                properties:
+                    interval:
+                      $ref: https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/main/schemas/wcmpRecordGeoJSON.yaml#/properties/time/oneOf/1/properties/interval
               wmem:severity:
                 type: string
-                description: Severity level of a System Alert
+                description: Severity level of a Report
                 enum:
                   - debug
                   - info
@@ -2902,14 +3041,20 @@ allOf:
 <div class="listingblock">
 <div class="title">Example: Notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Météo-France (Toulouse)</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">monitor/a/wis2/ca-eccc-msc-global-discovery-catalogue/fr-meteofrance</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">monitor/a/wis2/fr-meteofrance</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Here, the <code>source</code> is found in the WMEM (<code>ca-eccc-msc-global-discovery-catalogue</code>).</p>
 </div>
 <div class="listingblock">
 <div class="title">Example: Notification from Météo-France (Toulouse), Global Broker Service, concerning a WNM from Servicio Meteorológico Nacional (Argentina)</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">monitor/a/wis2/fr-meteofrance-global-broker/ar-smn</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">monitor/a/wis2/ar-smn</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Here, the <code>source</code> is found in the WMEM (<code>fr-meteofrance-global-broker</code>).</p>
 </div>
 </div>
 <div class="sect2">
@@ -3206,21 +3351,52 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_system_alert_report_2"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_system_alert_report_2"></a>C.5. WIS2 Monitoring Event Message Encoding: System Alert Report</h3>
+<h3 id="_wis2_monitoring_event_message_encoding_notice_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_notice_report"></a>C.5. WIS2 Monitoring Event Message Encoding: Notice Report</h3>
 <div class="listingblock">
-<div class="title">Example: System Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC</div>
+<div class="title">Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.system.alert",
+    "type": "int.wmo.wis.wme.event.report.notice",
+    "source": "ar-smn",
+    "subject": "ar-smn",
+    "id": "6da24af0-b19f-4106-b583-73cc25a4435d",
+    "time": "2025-08-02T02:43:35Z",
+    "datacontenttype": "application/json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
+    "data": {
+        "type": "wmem:report",
+        "title": "Data outage notice",
+        "detail": "Surface synoptic observations will be missing until 22 July 2025, 09:00Z",
+        "channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop",
+        "time": {
+            "interval": [
+                "..",
+                "2025-07-25T09:00:00Z"
+            ]
+        },
+        "wmem:severity": "info"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wis2_monitoring_event_message_encoding_alert_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_alert_report"></a>C.6. WIS2 Monitoring Event Message Encoding: Alert Report</h3>
+<div class="listingblock">
+<div class="title">Example: Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "specversion": "1.0",
+    "type": "int.wmo.wis.wme.event.report.alert",
     "source": "de-dwd-global-cache",
     "subject": "ca-eccc-msc-global-discovery-catalogue",
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-system-alert.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
     "data": {
-        "type": "wmem-alert:Metadata_archive_older_than_24_hours",
+        "type": "wmem-report:notice",
         "title": "Metadata archive is older than 24 hours",
         "detail": "The metadata archive is older than 24 hours.  Please contact the administrator",
         "wmem:severity": "critical"
@@ -3338,7 +3514,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-05 14:09:33 UTC
+Last updated 2025-10-07 11:51:26 UTC
 </div>
 </div>
 </body>

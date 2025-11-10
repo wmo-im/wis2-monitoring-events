@@ -58,5 +58,5 @@ include::../../examples/wmem-wis2node-notice-report.json[]
 .Example: Alert report event notification from a WIS2 Global Broker, concerning a data notification missing a metadata identifier reference
 [source,json]
 ----
-include::../../examples/wmem-gc-alert-report.json[]
+include::../../examples/wmem-gb-alert-report.json[]
 ----

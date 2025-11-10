@@ -55,7 +55,7 @@ include::../../examples/wmem-wis2node-notice-report.json[]
 
 === WIS2 Monitoring Event Message Encoding: Alert Report
 
-.Example: Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
+.Example: Alert report event notification from a WIS2 Global Broker, concerning a data notification missing a metadata identifier reference
 [source,json]
 ----
 include::../../examples/wmem-gc-alert-report.json[]

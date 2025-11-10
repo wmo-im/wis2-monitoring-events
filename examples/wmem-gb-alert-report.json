@@ -1,0 +1,16 @@
+{
+  "specversion": "1.0",
+  "type": "int.wmo.wis.wme.event.report.alert",
+  "source": "fr-meteofrance-global-broker",
+  "subject": "us-noaa-synoptic",
+  "id": "7bdd817e-5f80-4d58-ab6e-fc5beaa9b99b",
+  "time": "2025-11-10T15:24:56.086Z",
+  "datacontenttype": "application/json",
+  "dataschema": "https://raw.githubusercontent.com/wmo-im/wis2-monitoring-events/refs/heads/main/schemas/wnm-report-bundled.json",
+  "data": {
+    "type": "wmem-report:notice",
+    "title": "missing-metadata",
+    "detail": "Missing Metadata record for data announced in WIS2 Notification Message",
+    "wmem:severity": "error"
+  }
+}

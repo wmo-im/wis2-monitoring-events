@@ -9,12 +9,56 @@ allOf:
       type:
         type: string
         enum:
-          - int.wmo.wis.wme.event.wcmp2.ets
-          - int.wmo.wis.wme.event.wcmp2.kpi
-          - int.wmo.wis.wme.event.wnm.schema
-          - int.wmo.wis.wme.event.report.notice
-          - int.wmo.wis.wme.event.report.alert
-    
+          - int.wmo.wis.wme.event
+      data:    
+        properties:
+          conformsTo:
+            type: array
+            contains:
+                const: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-encoding-core
+          severity:
+            type: string
+            description: Severity level
+            enum:
+              - DEBUG
+              - INFO
+              - WARNING
+              - ERROR
+              - CRITICAL
+          ref:
+            type: string
+            format: uuid
+            description: Identifier of referenced event
+          time:
+            type: object
+            description: Time instant or interval
+            $ref: 'https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/FT2025-2/schemas/wcmpRecordGeoJSON.yaml#/properties/time'
+          content:
+            type: object
+            description: inline content of event message
+            properties:
+              channel:
+                type: string
+                description: topic that link is based on
+              title:
+                $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/title'
+              description:
+                $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/description'
+            required:
+              - title
+          links:
+            type: array
+            $ref: 'https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/main/schemas/wcmpRecordGeoJSON.yaml#/properties/links'
+        anyOf:
+          - required:
+              - conformsTo
+              - severity
+              - content
+          - required:
+              - conformsTo
+              - severity
+              - links
+
     required:
       - datacontenttype
       - dataschema

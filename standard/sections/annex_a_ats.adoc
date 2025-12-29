@@ -9,7 +9,3 @@ include::../abstract_tests/ATS_class_monitoring-event-topic.adoc[]
 === Conformance Class: WIS2 Monitoring Event Message Encoding: Core
 
 include::../abstract_tests/ATS_class_monitoring-event-message-encoding-core.adoc[]
-
-=== Conformance Class: WIS2 Monitoring Event Message Encoding: Report
-
-include::../abstract_tests/ATS_class_monitoring-event-message-encoding-report.adoc[]

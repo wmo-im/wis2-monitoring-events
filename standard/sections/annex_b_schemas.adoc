@@ -11,10 +11,3 @@ NOTE: Schema documents will only be published on `schemas.wmo.int` once the stan
 ----
 include::../../schemas/monitoringEventMessageEncodingJSON.yaml[]
 ----
-
-=== WIS2 Monitoring Event Message Report Encoding Schema
-
-[source,yaml]
-----
-include::../../schemas/reportJSON.yaml[]
-----

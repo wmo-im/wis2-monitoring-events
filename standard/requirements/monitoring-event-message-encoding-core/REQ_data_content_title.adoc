@@ -1,0 +1,7 @@
+[[req_monitoring-event-message-encoding-core_data_content_title]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/data_content_title*
+^|A |A WMEM SHALL provide a `+data.content.title+` property.
+^|B |For alerts, the `+data.content.title+` property of a WMEM SHALL be based on <<wis2-metric-hierarchy,WIS2 Metric Hierarchy>> alert summary annotations.
+|===

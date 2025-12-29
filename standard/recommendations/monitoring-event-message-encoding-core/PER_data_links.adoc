@@ -1,0 +1,6 @@
+[[per_monitoring-event-message-encoding-core_data_links]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/monitoring-event-message-encoding-core/data_links*
+^|A |A WMEM MAY provide a `+data.links+` property while at the same time providing a `+data.content+` property..
+|===

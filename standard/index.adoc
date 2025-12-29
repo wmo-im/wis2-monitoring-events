@@ -52,8 +52,6 @@ include::sections/clause_7_monitoring_event_topic.adoc[]
 
 include::sections/clause_8_event_message_encoding_core.adoc[]
 
-include::sections/clause_9_event_message_encoding_report.adoc[]
-
 include::sections/annex_a_ats.adoc[]
 
 include::sections/annex_b_schemas.adoc[]

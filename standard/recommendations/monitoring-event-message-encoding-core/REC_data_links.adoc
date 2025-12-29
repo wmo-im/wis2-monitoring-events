@@ -1,0 +1,8 @@
+[[rec_monitoring-event-message-encoding-core_data_links]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-encoding-core/data_links*
+^|A |A WMEM SHOULD provide links using secure protocols such as HTTPS and SFTP, with HTTPS being the preferred option.
+^|B |The ``data.links`` array property SHOULD provide a `length` property to communicate the size of a given resource in advance, when the size of the link's content is known or can be easily derived.
+|===
+

@@ -6,6 +6,10 @@ subject:: Requirements Class "WIS2 Monitoring Event Message Encoding: Core"
 classification:: Target Type:Event Metadata
 ====
 
+==== Validation
+
+include::./monitoring-event-message-encoding-core/ATS_test_validation.adoc[]
+
 ==== Message size
 
 include::./monitoring-event-message-encoding-core/ATS_test_message_size.adoc[]
@@ -18,13 +22,13 @@ include::./monitoring-event-message-encoding-core/ATS_test_id.adoc[]
 
 include::./monitoring-event-message-encoding-core/ATS_test_version.adoc[]
 
-==== Source
-
-include::./monitoring-event-message-encoding-core/ATS_test_source.adoc[]
-
 ==== Type
 
 include::./monitoring-event-message-encoding-core/ATS_test_type.adoc[]
+
+==== Source
+
+include::./monitoring-event-message-encoding-core/ATS_test_source.adoc[]
 
 ==== Subject
 
@@ -38,6 +42,30 @@ include::./monitoring-event-message-encoding-core/ATS_test_time.adoc[]
 
 include::./monitoring-event-message-encoding-core/ATS_test_datacontenttype.adoc[]
 
+==== Data schema
+
+include::./monitoring-event-message-encoding-core/ATS_test_dataschema.adoc[]
+
 ==== Data
 
 include::./monitoring-event-message-encoding-core/ATS_test_data.adoc[]
+
+==== Data conformance
+
+include::./monitoring-event-message-encoding-core/ATS_test_data_conformance.adoc[]
+
+==== Data severity
+
+include::./monitoring-event-message-encoding-core/ATS_test_data_severity.adoc[]
+
+==== Data content
+
+include::./monitoring-event-message-encoding-core/ATS_test_data_content.adoc[]
+
+==== Data content title
+
+include::./monitoring-event-message-encoding-core/ATS_test_data_content_title.adoc[]
+
+==== Data links
+
+include::./monitoring-event-message-encoding-core/ATS_test_data_links.adoc[]

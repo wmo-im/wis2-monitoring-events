@@ -1,0 +1,20 @@
+[[ats_event-message-encoding-core_data_conformance]]
+====
+[%metadata]
+label:: /conf/event-message-encoding-core/data_conformance
+subject:: /req/event-message-encoding-core/data_conformance
+test-purpose:: Validate that a WMEM provides valid conformance information.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+data.conformsTo+` property in the WMEM.
+--
+
+[.component,class=step]
+--
+In the WMEM's `+data.conformsTo+` array property, check that ONE of the values is equal to `+http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-encoding-core+`.
+--
+=====
+====

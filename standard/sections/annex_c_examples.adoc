@@ -50,7 +50,7 @@ include::../../examples/wmem-gb-wnm-report.json[]
 .Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage
 [source,json]
 ----
-include::../../examples/wmem-wis2node-notice-report.json[]
+include::../../examples/wmem-wis2node-outage.json[]
 ----
 
 === WIS2 Monitoring Event Message Encoding: Alert Report
@@ -59,4 +59,12 @@ include::../../examples/wmem-wis2node-notice-report.json[]
 [source,json]
 ----
 include::../../examples/wmem-gc-alert-report.json[]
+----
+
+=== WIS2 Monitoring Event Message Encoding: Sensor Centre logs
+
+.Example: Event notification from a Sensor Centre Global Cache (SCGC), providing logs of Global Cache analysis
+[source,json]
+----
+include::../../examples/wmem-scgc-logs.json[]
 ----

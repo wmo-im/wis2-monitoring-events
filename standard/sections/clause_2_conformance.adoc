@@ -16,4 +16,3 @@ The mandatory Requirements Classes for this specification are:
 
 * "WIS2 Monitoring Event Topic"
 * "WIS2 Monitoring Event Message Encoding: Core"
-* "WIS2 Monitoring Event Message Encoding: Report"

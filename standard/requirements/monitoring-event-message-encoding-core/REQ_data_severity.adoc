@@ -1,0 +1,14 @@
+[[req_monitoring-event-message-encoding-core_data_severity]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-core/data_severity*
+^|A |A WMEM SHALL provide a `+data.severity+` property.
+^|B |The `+data.severity+` property SHALL be one of the following values:
+
+* ``DEBUG``
+* ``INFO``
+* ``WARNING``
+* ``ERROR``
+* ``CRITICAL``
+
+|===

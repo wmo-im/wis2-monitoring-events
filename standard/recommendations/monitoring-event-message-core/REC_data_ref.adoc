@@ -1,0 +1,7 @@
+[[rec_monitoring-event-message-core_data_ref]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-core/data_ref*
+^|A |The `+data.ref+` property SHOULD be used when following up based on a previous Event.
+|===
+

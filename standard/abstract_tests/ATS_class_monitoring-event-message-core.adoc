@@ -1,0 +1,71 @@
+[[ats_monitoring-event-message-core]]
+====
+[%metadata]
+label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core
+subject:: Requirements Class "WIS2 Monitoring Event Message: Core"
+classification:: Target Type:Event Metadata
+====
+
+==== Validation
+
+include::./monitoring-event-message-core/ATS_test_validation.adoc[]
+
+==== Message size
+
+include::./monitoring-event-message-core/ATS_test_message_size.adoc[]
+
+==== Identifier
+
+include::./monitoring-event-message-core/ATS_test_id.adoc[]
+
+==== Version
+
+include::./monitoring-event-message-core/ATS_test_version.adoc[]
+
+==== Type
+
+include::./monitoring-event-message-core/ATS_test_type.adoc[]
+
+==== Source
+
+include::./monitoring-event-message-core/ATS_test_source.adoc[]
+
+==== Subject
+
+include::./monitoring-event-message-core/ATS_test_subject.adoc[]
+
+==== Time
+
+include::./monitoring-event-message-core/ATS_test_time.adoc[]
+
+==== Data content type
+
+include::./monitoring-event-message-core/ATS_test_datacontenttype.adoc[]
+
+==== Data schema
+
+include::./monitoring-event-message-core/ATS_test_dataschema.adoc[]
+
+==== Data
+
+include::./monitoring-event-message-core/ATS_test_data.adoc[]
+
+==== Data conformance
+
+include::./monitoring-event-message-core/ATS_test_data_conformance.adoc[]
+
+==== Data severity
+
+include::./monitoring-event-message-core/ATS_test_data_severity.adoc[]
+
+==== Data content
+
+include::./monitoring-event-message-core/ATS_test_data_content.adoc[]
+
+==== Data content title
+
+include::./monitoring-event-message-core/ATS_test_data_content_title.adoc[]
+
+==== Data links
+
+include::./monitoring-event-message-core/ATS_test_data_links.adoc[]

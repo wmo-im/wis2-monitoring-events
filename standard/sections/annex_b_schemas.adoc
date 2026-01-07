@@ -5,9 +5,9 @@
 
 NOTE: Schema documents will only be published on `schemas.wmo.int` once the standard has been approved.
 
-=== WIS2 Monitoring Event Message Encoding Schema
+=== WIS2 Monitoring Event Message Schema
 
 [source,yaml]
 ----
-include::../../schemas/monitoringEventMessageEncodingJSON.yaml[]
+include::../../schemas/monitoringEventMessageJSON.yaml[]
 ----

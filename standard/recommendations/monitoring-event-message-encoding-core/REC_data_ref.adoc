@@ -1,7 +1,0 @@
-[[rec_monitoring-event-message-encoding-core_data_ref]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-encoding-core/data_ref*
-^|A |The `+data.ref+` property SHOULD be used when following up based on a previous Event.
-|===
-

@@ -1,0 +1,16 @@
+[[ats_event-message-core_data_content]]
+====
+[%metadata]
+label:: /conf/event-message-core/data_content
+subject:: /req/event-message-core/data_content
+test-purpose:: Validate that a WMEM has valid data content.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+If a `+data.links+` property does not exist, check for the existence of a `+data.content+` property in the WMEM.
+--
+
+=====
+====

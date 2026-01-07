@@ -1,0 +1,7 @@
+[[rec_monitoring-event-message-core_data_time]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-core/data_time*
+^|A |The `+time+` property SHOULD be used if the Event is based on a time interval.
+|===
+

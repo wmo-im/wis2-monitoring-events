@@ -1,0 +1,7 @@
+[[req_monitoring-event-message-core_dataschema]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/dataschema*
+^|A |The `+dataschema+` property SHALL be a URL to the WIS2 Monitoring Event Message JSON Schema.
+|===
+

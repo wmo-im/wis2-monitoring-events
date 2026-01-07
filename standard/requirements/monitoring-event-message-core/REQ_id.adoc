@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-core_id]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/id*
+^|A |The `+id+` property SHALL be a Universally Unique Identifier (UUID).
+|===

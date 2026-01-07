@@ -1,0 +1,6 @@
+[[rec_monitoring-event-message-core_data_content_description]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:req-id}* |*/rec/monitoring-event-message-core/data_content_description*
+^|A |A WMEM SHOULD provide a `+data.content.description+` property.
+|===

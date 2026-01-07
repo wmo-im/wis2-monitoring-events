@@ -1,0 +1,16 @@
+[[ats_event-message-core_data_content_title]]
+====
+[%metadata]
+label:: /conf/event-message-core/data_content_title
+subject:: /req/event-message-core/data_content_title
+test-purpose:: Validate that a WMEM has a valid data content title.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+data.content.title+` property in the WMEM.
+--
+
+=====
+====

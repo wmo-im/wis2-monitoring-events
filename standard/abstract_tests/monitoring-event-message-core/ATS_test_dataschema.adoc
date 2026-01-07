@@ -1,0 +1,31 @@
+[[ats_event-message-core_dataschema]]
+====
+[%metadata]
+label:: /conf/event-message-core/dataschema
+subject:: /req/event-message-core/dataschema
+test-purpose:: Validate that a WMEM has a valid data schema.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+dataschema+` property in the WMEM.
+--
+
+[.component,class=step]
+--
+Issue a HTTP GET request on the value of the `+dataschema+` property.
+--
+
+[.component,class=step]
+--
+Parse the HTTP response.
+--
+
+[.component,class=step]
+--
+Ensure the response is a valid JSON Schema.
+--
+
+=====
+====

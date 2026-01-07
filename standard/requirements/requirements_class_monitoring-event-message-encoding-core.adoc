@@ -1,9 +1,0 @@
-[[rc_monitoring-event-message-encoding-core]]
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core
-|Target type |Event metadata
-|Dependency |<<cloud-events, CloudEvents>>
-|Pre-conditions |The event message conforms to the CloudEvents specification.
-|===

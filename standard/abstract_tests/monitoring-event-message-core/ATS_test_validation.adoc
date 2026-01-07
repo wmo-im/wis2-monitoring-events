@@ -1,0 +1,15 @@
+[[ats_event-message-core_validation]]
+====
+[%metadata]
+label:: /conf/event-message-core/validation
+subject:: /req/event-message-core/validation
+test-purpose:: Validate that a WMEM is valid to the authoritative JSON schema.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Run JSON Schema validation on the WMEM against the authoritative JSON schema.
+--
+=====
+====

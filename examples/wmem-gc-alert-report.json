@@ -6,10 +6,10 @@
     "subject": "ca-eccc-msc-global-discovery-catalogue",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-report.json",
     "data": {
         "conformsTo": [
-            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-encoding-core"
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
         "severity": "CRITICAL",
         "content": {

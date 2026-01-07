@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-core-subject]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/subject*
+^|A |The `+subject+` property SHALL be a valid WIS2 centre identifier.
+|===

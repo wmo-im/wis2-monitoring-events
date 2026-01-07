@@ -83,7 +83,7 @@ The table below provides an overview of the set of properties that are included 
 
 |``data.content``
 |**Required** (any of `+data.content+` and/or `+data.links+`)
-|Inline content of event (see <<_data_content>>)
+|Inline content describing the event, including a human readable title of the event (see <<_data_content>>)
 
 |``data.links``
 |**Required** (any of `+data.content+` and/or `+data.links+`)

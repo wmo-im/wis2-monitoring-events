@@ -1,8 +1,8 @@
 == WIS2 Monitoring Event Message
 
-Event payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the <<cloud-events,CloudEvents>> specification as a building block.
+Event messages published via the WIS2 Monitoring Event Topic (WMET) are defined using the <<cloud-events,CloudEvents>> specification as a building block.
 
-Examples of Event Messages, include, but are not limited to:
+Examples of event messages, include, but are not limited to:
 
 * a WIS2 Global Discovery Catalogue’s metadata archive being older than 24 hours
 * a WIS2 Node being disconnected from all Global Brokers
@@ -13,7 +13,7 @@ Examples of Event Messages, include, but are not limited to:
 
 ==== Overview
 
-This Requirements Class provides baseline requirements for all WIS2 event and report types.
+This Requirements Class provides baseline requirements for all WIS2 event message types.
 
 CloudEvents provides a standards-based encoding for all event data, and provides mechanisms for extensibility.
 
@@ -63,15 +63,15 @@ The table below provides an overview of the set of properties that are included 
 
 |``data.conformsTo``
 |**Required**
-|The version of WME associated to which the Event conforms (see <<_data_conformance>>)
+|The version of WME associated to which the event message conforms (see <<_data_conformance>>)
 
 |``data.severity``
 |**Required**
-|The severity level of the Event (see <<_data_severity>>)
+|The severity level of the event (see <<_data_severity>>)
 
 |``data.ref``
 |Optional
-|The identifier that the Event is referencing (see <<_data_ref>>)
+|The identifier that the event is referencing (see <<_data_ref>>)
 
 |``data.channel``
 |Optional
@@ -79,11 +79,11 @@ The table below provides an overview of the set of properties that are included 
 
 |``data.time``
 |Optional
-|The date/time associated with the Event (see <<_data_time>>)
+|The date/time associated with the event (see <<_data_time>>)
 
 |``data.content``
 |**Required** (any of `+data.content+` and/or `+data.links+`)
-|Inline content of event A human readable title of the Event (see <<_data_content>>)
+|Inline content of event (see <<_data_content>>)
 
 |``data.links``
 |**Required** (any of `+data.content+` and/or `+data.links+`)
@@ -239,7 +239,7 @@ include::../recommendations/monitoring-event-message-core/PER_data.adoc[]
 
 ==== Data conformance
 
-The ``conformsTo`` property identifies the version of the WME standard to which the Event conforms. Conformance identification is valuable for version detection and handling of content.
+The ``conformsTo`` property identifies the version of the WME standard to which the event message conforms. Conformance identification is valuable for version detection and handling of content.
 
 [source,json]
 ----
@@ -252,7 +252,7 @@ include::../requirements/monitoring-event-message-core/REQ_data_conformance.adoc
 
 ==== Data severity
 
-The ``data.severity`` property defines a list of severity levels to describe the seriousness of an Event.
+The ``data.severity`` property defines a list of severity levels to describe the seriousness of an event.
 
 Example:
 [source,json]
@@ -264,7 +264,7 @@ include::../requirements/monitoring-event-message-core/REQ_data_severity.adoc[]
 
 ==== Data ref
 
-The ``data.ref`` property defines an identifier that the Event is referencing (for example, to refer/follow up on a previous monitoring event).
+The ``data.ref`` property defines an identifier that the event is referencing (for example, to refer/follow up on a previous monitoring event).
 
 Example:
 [source,json]
@@ -274,7 +274,7 @@ Example:
 
 ==== Data channel
 
-The ``data.channel`` property defines a WIS2 topic that the Event may be referring to (for example for a data outage notice).
+The ``data.channel`` property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).
 
 Example:
 [source,json]
@@ -325,7 +325,7 @@ include::../recommendations/monitoring-event-message-core/PER_data_time.adoc[]
 
 ==== Data content
 
-The ``data.content`` property provides an inline description and summary of the Event.
+The ``data.content`` property provides an inline description and summary of the event.
 
 Example:
 [source,json]
@@ -368,7 +368,7 @@ include::../requirements/monitoring-event-message-core/REQ_data_content_title.ad
 
 ===== Data content description
 
-The ``data.content.description`` property defines a detailed description of the problem, as defined by the issuer of the Event.
+The ``data.content.description`` property defines a detailed description of the problem, as defined by the issuer of the event.
 
 Example:
 [source,json]

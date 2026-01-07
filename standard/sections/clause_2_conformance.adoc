@@ -8,7 +8,7 @@ CloudEvents is a specification for describing event data in common formats to pr
 
 Global Service providers are required to comply with all conformance classes of this specification in support of providing highly available services for discovery, subscription, notification and download of data and metadata within WIS2.
 
-WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topic and Event Messages.
+WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topics and Event Messages.
 
 This standard identifies numerous Requirements Classes which define the functional requirements.
 

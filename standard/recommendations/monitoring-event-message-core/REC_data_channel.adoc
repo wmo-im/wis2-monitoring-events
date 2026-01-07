@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-core/data_channel*
-^|A |The `+channel+` property SHOULD be used if the Event is based on data being published to a given topic.
+^|A |The `+channel+` property SHOULD be used if the event is based on data being published to a given topic.
 |===
 

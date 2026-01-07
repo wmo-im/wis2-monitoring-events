@@ -6,7 +6,7 @@ WIS2 Global Services provide high availability capabilities in support of discov
 
 Once connected to the WIS2 infrastructure, all Global Services will be monitored by the WIS2 Global Monitor.  This will allow for the detection of service anomalies, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 operations.
 
-WIS2 Nodes may plan for data and/or service outages, and may wish to provide a notice to WIS2 Operations for planning and recovery.
+WIS2 Nodes may plan for data and/or service outages, and may wish to provide a notice to WIS2 operations for planning and recovery.
 
 A mechanism to notify on and describe such events in support of WIS2 operations and corrective action.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.
 

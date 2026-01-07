@@ -4,7 +4,7 @@
 
 WIS2 Global Services provide high availability capabilities in support of discovery, access and exchange of weather/climate/water/environmental data on WIS2.
 
-Once connected to the WIS2 infrastructure, any Global Service will be monitored by the WIS2 Global Monitor.  Monitoring of WIS2 Global Services will allow for detection of service anomalities, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 Operations.
+Once connected to the WIS2 infrastructure, all Global Services will be monitored by the WIS2 Global Monitor.  This will allow for the detection of service anomalies, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 operations.
 
 WIS2 Nodes may plan for data and/or service outages, and may wish to provide a notice to WIS2 Operations for planning and recovery.
 

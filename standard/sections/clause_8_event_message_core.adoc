@@ -142,7 +142,7 @@ include::../requirements/monitoring-event-message-core/REQ_type.adoc[]
 
 ==== Source
 
-The centre identifier of the event producer (as defined in the <<wis2-topic-hierarchy>>).
+The centre identifier of the event originator or producer (as defined in the <<wis2-topic-hierarchy>>).
 
 Example:
 [source,json]
@@ -154,7 +154,7 @@ include::../requirements/monitoring-event-message-core/REQ_source.adoc[]
 
 ==== Subject
 
-The centre identifier of the subject of the event (as defined in the <<wis2-topic-hierarchy>>).
+The centre identifier associated with the description of the event (as defined in the <<wis2-topic-hierarchy>>).
 
 Example:
 [source,json]

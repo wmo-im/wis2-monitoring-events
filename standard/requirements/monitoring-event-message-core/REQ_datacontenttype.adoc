@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-core_datacontenttype]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/datacontenttype*
+^|A |The `+datacontenttype+` property SHALL be fixed to `application/json`.
+|===

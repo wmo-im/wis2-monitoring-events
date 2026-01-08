@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-core_validation]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/validation*
+^|A |Each WMEM SHALL validate without error against the Event Message schema.
+|===

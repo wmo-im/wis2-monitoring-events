@@ -4,16 +4,15 @@ Conformance with this standard shall be checked using the tests specified in Ann
 
 The WIS2 Topic Hierarchy defines the topic hierarchy used by WIS message brokers to manage message delivery to subscribers and / or recipients.
 
-CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is also an encoding extension of CloudEvents.
+CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is also an extension of CloudEvents.
 
 Global Service providers are required to comply with all conformance classes of this specification in support of providing highly available services for discovery, subscription, notification and download of data and metadata within WIS2.
 
-WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topic and Event Messages.
+WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topics and Event Messages.
 
 This standard identifies numerous Requirements Classes which define the functional requirements.
 
 The mandatory Requirements Classes for this specification are:
 
 * "WIS2 Monitoring Event Topic"
-* "WIS2 Monitoring Event Message Encoding: Core"
-* "WIS2 Monitoring Event Message Encoding: Report"
+* "WIS2 Monitoring Event Message: Core"

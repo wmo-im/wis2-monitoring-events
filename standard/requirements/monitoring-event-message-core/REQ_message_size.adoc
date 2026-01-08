@@ -1,0 +1,6 @@
+[[req_monitoring-event-message-core_messsage_size]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/message_size*
+^|A |A WMEM message SHALL NOT exceed 8192 bytes.
+|===

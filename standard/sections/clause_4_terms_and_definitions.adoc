@@ -100,5 +100,8 @@ The following additional terms and definitions also apply.
 |World Meteorological Organization
 
 |WNM
-|WIS2 notification message
+|WIS2 Notification Message
+
+|WTH
+|WIS2 Topic Hierarchy
 |===

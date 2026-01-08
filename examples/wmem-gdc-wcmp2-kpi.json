@@ -1,99 +1,106 @@
 {
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.wcmp2.kpi",
+    "type": "int.wmo.wis.wme.event",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
-    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2025-02-01T18:19:37Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wcmp2-ets-bundled.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
     "data": {
-        "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
-        "report_type": "kpi",
-        "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL",
-        "datetime": "2025-02-01T18:17:24Z",
-        "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-        "tests": [
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/contacts",
-                "title": "Contacts",
-                "total": 3,
-                "score": 3,
-                "comments": [],
-                "percentage": 100.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_description",
-                "title": ": Good quality description",
-                "total": 4,
-                "score": 3,
-                "comments": [
-                    "Description contains spelling errors ['eps', 'deg', '180h', 'lat', '6h', 'utc', 'lon']"
-                ],
-                "percentage": 75.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/graphic_overview_for_metadata_records",
-                "title": "Graphic overview for metadata records",
-                "total": 0,
-                "score": 0,
-                "comments": [],
-                "percentage": null
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/links_health",
-                "title": "Links health",
-                "total": 22,
-                "score": 22,
-                "comments": [],
-                "percentage": 100.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/persistent_identifiers",
-                "title": "Persistent identifiers",
-                "total": 3,
-                "score": 1,
-                "comments": [
-                    "No DOI/ARK/HDL schema found"
-                ],
-                "percentage": 33.333
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/time_intervals",
-                "title": "Time intervals",
-                "total": 6,
-                "score": 5,
-                "comments": [
-                    "No temporal resolution found"
-                ],
-                "percentage": 83.333
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
-                "title": "Global Ensemble Prediction Model",
-                "total": 8,
-                "score": 7,
-                "comments": [
-                    "Title is not sentence case"
-                ],
-                "percentage": 87.5
-            }
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "summary": {
-            "total": 46,
-            "score": 41,
-            "comments": {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
-                "title": "Global Ensemble Prediction Model",
-                "total": 8,
-                "score": 7,
-                "comments": [
-                    "Title is not sentence case"
-                ],
-                "percentage": 87.5
-            },
-            "percentage": 89.13,
-            "grade": "A"
+        "severity": "INFO",
+        "content": {
+            "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
+            "title": "WCMP2 KPI report",
+            "report_type": "kpi",
+            "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL",
+            "datetime": "2025-02-01T18:17:24Z",
+            "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
+            "tests": [
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/contacts",
+                    "title": "Contacts",
+                    "total": 3,
+                    "score": 3,
+                    "comments": [],
+                    "percentage": 100.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_description",
+                    "title": ": Good quality description",
+                    "total": 4,
+                    "score": 3,
+                    "comments": [
+                        "Description contains spelling errors ['eps', 'deg', '180h', 'lat', '6h', 'utc', 'lon']"
+                    ],
+                    "percentage": 75.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/graphic_overview_for_metadata_records",
+                    "title": "Graphic overview for metadata records",
+                    "total": 0,
+                    "score": 0,
+                    "comments": [],
+                    "percentage": null
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/links_health",
+                    "title": "Links health",
+                    "total": 22,
+                    "score": 22,
+                    "comments": [],
+                    "percentage": 100.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/persistent_identifiers",
+                    "title": "Persistent identifiers",
+                    "total": 3,
+                    "score": 1,
+                    "comments": [
+                        "No DOI/ARK/HDL schema found"
+                    ],
+                    "percentage": 33.333
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/time_intervals",
+                    "title": "Time intervals",
+                    "total": 6,
+                    "score": 5,
+                    "comments": [
+                        "No temporal resolution found"
+                    ],
+                    "percentage": 83.333
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
+                    "title": "Global Ensemble Prediction Model",
+                    "total": 8,
+                    "score": 7,
+                    "comments": [
+                        "Title is not sentence case"
+                    ],
+                    "percentage": 87.5
+                }
+            ],
+            "summary": {
+                "total": 46,
+                "score": 41,
+                "comments": {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
+                    "title": "Global Ensemble Prediction Model",
+                    "total": 8,
+                    "score": 7,
+                    "comments": [
+                        "Title is not sentence case"
+                    ],
+                    "percentage": 87.5
+                },
+                "percentage": 89.13,
+                "grade": "A"
+            }
         }
     }
 }

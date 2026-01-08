@@ -1,0 +1,26 @@
+[[ats_event-message-core_time]]
+====
+[%metadata]
+label:: /conf/event-message-core/time
+subject:: /req/event-message-core/time
+test-purpose:: Validate that a WMEM has a valid identifier.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of an `+time+` property.
+--
+
+[.component,class=step]
+--
+Check that the `+time+` property is in RFC3339 format.
+--
+
+[.component,class=step]
+--
+Check that the `+time+` property is in the UTC timezone.
+--
+
+=====
+====

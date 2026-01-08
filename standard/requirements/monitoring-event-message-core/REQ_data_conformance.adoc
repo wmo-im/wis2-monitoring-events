@@ -1,0 +1,7 @@
+[[req_monitoring-event-message-core_data_conformance]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/data_conformance*
+^|A |A WMEM SHALL provide information on conformance via the OGC API – Records (OARec) record `+conformsTo+` property.
+^|B |The `+conformsTo+` property SHALL advertise conformance to WMEM.
+|===

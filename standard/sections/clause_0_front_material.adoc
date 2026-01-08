@@ -4,7 +4,7 @@ WIS2 is comprised of a network of Global Services which provide highly available
 
 Successful operation of WIS2 Global Services will depend on running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.  The WIS2 Guide defines service levels and performance indicators footnote:[https://wmo-im.github.io/wis2-guide/wis2-guide-DRAFT.html#_2_7_2_2_service_levels_performance_indicators_and_fair_usage_policies] for Global Services in order to monitor and maintain the health of the network.
 
-This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is also an encoding extension of the <<cloud-events, CloudEvents specification>>.
+This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is also an extension of the <<cloud-events, CloudEvents specification>>.
 
 WIS2 Monitoring Event topics shall leverage various aspects of the WIS2 Topic Hierarchy (such as centre identifiers).  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.
 

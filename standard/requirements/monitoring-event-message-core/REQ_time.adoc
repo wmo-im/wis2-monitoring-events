@@ -1,0 +1,8 @@
+[[req_monitoring-event-message-core_time]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/time*
+^|A |A WMEM SHALL provide a `+time+` property.
+^|B |The `+time+` property SHALL be in RFC3339 format.
+^|C |The `+time+` property SHALL be in UTC timezone.
+|===

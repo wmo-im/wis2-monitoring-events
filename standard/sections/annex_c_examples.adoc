@@ -21,7 +21,7 @@ monitor/a/wis2/ar-smn
 
 Here, the `source` is found in the WMEM (`fr-meteofrance-global-broker`).
 
-=== WIS2 Monitoring Event Message Encoding: WCMP2 ETS Report
+=== WIS2 Monitoring Event Message: WCMP2 ETS Report
 
 .Example: WCMP2 compliance report event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)
 [source,json]
@@ -29,7 +29,7 @@ Here, the `source` is found in the WMEM (`fr-meteofrance-global-broker`).
 include::../../examples/wmem-gdc-wcmp2-ets.json[]
 ----
 
-=== WIS2 Monitoring Event Message Encoding: WCMP2 KPI Report
+=== WIS2 Monitoring Event Message: WCMP2 KPI Report
 
 .Example: WCMP2 KPI event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)
 [source,json]
@@ -37,7 +37,7 @@ include::../../examples/wmem-gdc-wcmp2-ets.json[]
 include::../../examples/wmem-gdc-wcmp2-kpi.json[]
 ----
 
-=== WIS2 Monitoring Event Message Encoding: WNM Schema Compliance Report
+=== WIS2 Monitoring Event Message: WNM Schema Compliance Report
 
 .Example: WNM compliance report event notification from a WIS2 development Global Broker, concerning a WIS2 Notification message from a WIS2 Node in testing
 [source,json]
@@ -45,18 +45,26 @@ include::../../examples/wmem-gdc-wcmp2-kpi.json[]
 include::../../examples/wmem-gb-wnm-report.json[]
 ----
 
-=== WIS2 Monitoring Event Message Encoding: Notice Report
+=== WIS2 Monitoring Event Message: Notice Report
 
 .Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage
 [source,json]
 ----
-include::../../examples/wmem-wis2node-notice-report.json[]
+include::../../examples/wmem-wis2node-outage.json[]
 ----
 
-=== WIS2 Monitoring Event Message Encoding: Alert Report
+=== WIS2 Monitoring Event Message: Alert Report
 
 .Example: Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC
 [source,json]
 ----
 include::../../examples/wmem-gc-alert-report.json[]
+----
+
+=== WIS2 Monitoring Event Message: Sensor Centre logs
+
+.Example: Event notification from a Sensor Centre Global Cache (SCGC), providing logs of Global Cache analysis
+[source,json]
+----
+include::../../examples/wmem-scgc-logs.json[]
 ----

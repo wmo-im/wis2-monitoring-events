@@ -28,5 +28,5 @@ jobs:
         pip3 install check-jsonschema
     - name: Run JSON Schema validation
       run: |
-        check-jsonschema --check-metaschema schemas/wis2-event-message-encoding-bundled.json
-        for e in examples/*.json; do check-jsonschema --schemafile schemas/wis2-event-message-encoding-bundled.json $e; done
+        check-jsonschema --check-metaschema schemas/wis2-event-message-bundled.json
+        for e in examples/*.json; do check-jsonschema --schemafile schemas/wis2-event-message-bundled.json $e; done

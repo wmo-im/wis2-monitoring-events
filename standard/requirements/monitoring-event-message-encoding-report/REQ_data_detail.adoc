@@ -1,6 +1,0 @@
-[[req_monitoring-event-message-encoding-report_data_detail]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-encoding-report/data_detail*
-^|A |A WMEM Report SHALL provide a `+data.detail+` property.
-|===

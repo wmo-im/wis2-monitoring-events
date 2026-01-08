@@ -1,0 +1,7 @@
+[[rec_monitoring-event-message-core_id]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-core/id*
+^|A |The `+id+` property SHOULD use UUIDv4 for truly random or pseudorandom values.
+|===
+

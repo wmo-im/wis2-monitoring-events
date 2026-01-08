@@ -39,7 +39,7 @@ The table below provides an overview of the set of properties that are included 
 
 |``source``
 |**Required**
-|The centre identifier producing the event (see <<_source>>)
+|The centre identifier of the event message originator or producer (see <<_source>>)
 
 |``subject``
 |**Required**
@@ -142,7 +142,7 @@ include::../requirements/monitoring-event-message-core/REQ_type.adoc[]
 
 ==== Source
 
-The centre identifier of the event originator or producer (as defined in the <<wis2-topic-hierarchy>>).
+The centre identifier of the event message originator or producer (as defined in the <<wis2-topic-hierarchy>>).
 
 Example:
 [source,json]

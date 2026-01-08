@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <meta name="copyright" content="Copyright © 2024 World Meteorological Organization (WMO)">
 <title>WMO WIS2 Monitoring Events</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -117,7 +117,6 @@ h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title str
 :not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
 pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
@@ -220,6 +219,7 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
 .listingblock:hover code[data-lang]::before{display:block}
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
@@ -455,10 +455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-10-07</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-01-08</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2025-10-07</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-01-08</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -518,40 +518,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_wis2_monitoring_event_message_encoding">8. WIS2 Monitoring Event Message Encoding</a>
+<li><a href="#_wis2_monitoring_event_message">8. WIS2 Monitoring Event Message</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_class_wis2_monitoring_event_message_encoding_core">8.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</a>
+<li><a href="#_requirements_class_wis2_monitoring_event_message_core">8.1. Requirements Class "WIS2 Monitoring Event Message: Core"</a>
 <ul class="sectlevel3">
 <li><a href="#_overview_2">8.1.1. Overview</a></li>
-<li><a href="#_message_size">8.1.2. Message size</a></li>
-<li><a href="#_identifier">8.1.3. Identifier</a></li>
-<li><a href="#_version">8.1.4. Version</a></li>
-<li><a href="#_source">8.1.5. Source</a></li>
+<li><a href="#_validation">8.1.2. Validation</a></li>
+<li><a href="#_message_size">8.1.3. Message size</a></li>
+<li><a href="#_identifier">8.1.4. Identifier</a></li>
+<li><a href="#_version">8.1.5. Version</a></li>
 <li><a href="#_type">8.1.6. Type</a></li>
-<li><a href="#_subject">8.1.7. Subject</a></li>
-<li><a href="#_time">8.1.8. Time</a></li>
-<li><a href="#_data_content_type">8.1.9. Data content type</a></li>
-<li><a href="#_data">8.1.10. Data</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_wis2_monitoring_event_message_encoding_report">9. WIS2 Monitoring Event Message Encoding: Report</a>
-<ul class="sectlevel2">
-<li><a href="#_requirements_class_wis2_monitoring_event_message_encoding_report">9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</a>
-<ul class="sectlevel3">
-<li><a href="#_overview_3">9.1.1. Overview</a></li>
-<li><a href="#_validation">9.1.2. Validation</a></li>
-<li><a href="#_type_2">9.1.3. Type</a></li>
-<li><a href="#_data_schema">9.1.4. Data schema</a></li>
-<li><a href="#_data_2">9.1.5. Data</a></li>
-<li><a href="#_data_type">9.1.6. Data <code>type</code></a></li>
-<li><a href="#_data_title">9.1.7. Data <code>title</code></a></li>
-<li><a href="#_data_ref">9.1.8. Data <code>ref</code></a></li>
-<li><a href="#_data_detail">9.1.9. Data <code>detail</code></a></li>
-<li><a href="#_data_channel">9.1.10. Data <code>channel</code></a></li>
-<li><a href="#_data_time">9.1.11. Data <code>time</code></a></li>
-<li><a href="#_data_wmemseverity">9.1.12. Data <code>wmem:severity</code></a></li>
+<li><a href="#_source">8.1.7. Source</a></li>
+<li><a href="#_subject">8.1.8. Subject</a></li>
+<li><a href="#_time">8.1.9. Time</a></li>
+<li><a href="#_data_content_type">8.1.10. Data content type</a></li>
+<li><a href="#_data_schema">8.1.11. Data schema</a></li>
+<li><a href="#_data">8.1.12. Data</a></li>
+<li><a href="#_data_conformance">8.1.13. Data conformance</a></li>
+<li><a href="#_data_severity">8.1.14. Data severity</a></li>
+<li><a href="#_data_ref">8.1.15. Data ref</a></li>
+<li><a href="#_data_channel">8.1.16. Data channel</a></li>
+<li><a href="#_data_time">8.1.17. Data time</a></li>
+<li><a href="#_data_content">8.1.18. Data content</a></li>
+<li><a href="#_data_links">8.1.19. Data links</a></li>
 </ul>
 </li>
 </ul>
@@ -563,46 +552,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_publishing_2">A.1.1. Publishing</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_wis2_monitoring_event_message_encoding_core">A.2. Conformance Class: WIS2 Monitoring Event Message Encoding: Core</a>
+<li><a href="#_conformance_class_wis2_monitoring_event_message_core">A.2. Conformance Class: WIS2 Monitoring Event Message: Core</a>
 <ul class="sectlevel3">
-<li><a href="#_message_size_2">A.2.1. Message size</a></li>
-<li><a href="#_identifier_2">A.2.2. Identifier</a></li>
-<li><a href="#_version_2">A.2.3. Version</a></li>
-<li><a href="#_source_2">A.2.4. Source</a></li>
-<li><a href="#_type_3">A.2.5. Type</a></li>
-<li><a href="#_subject_2">A.2.6. Subject</a></li>
-<li><a href="#_time_2">A.2.7. Time</a></li>
-<li><a href="#_data_content_type_2">A.2.8. Data content type</a></li>
-<li><a href="#_data_3">A.2.9. Data</a></li>
-</ul>
-</li>
-<li><a href="#_conformance_class_wis2_monitoring_event_message_encoding_report">A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: Report</a>
-<ul class="sectlevel3">
-<li><a href="#_validation_2">A.3.1. Validation</a></li>
-<li><a href="#_type_4">A.3.2. Type</a></li>
-<li><a href="#_data_schema_2">A.3.3. Data <code>schema</code></a></li>
-<li><a href="#_data_type_2">A.3.4. Data <code>type</code></a></li>
-<li><a href="#_data_title_2">A.3.5. Data <code>title</code></a></li>
-<li><a href="#_data_detail_2">A.3.6. Data <code>detail</code></a></li>
-<li><a href="#_data_wmemseverity_2">A.3.7. Data <code>wmem:severity</code></a></li>
+<li><a href="#_validation_2">A.2.1. Validation</a></li>
+<li><a href="#_message_size_2">A.2.2. Message size</a></li>
+<li><a href="#_identifier_2">A.2.3. Identifier</a></li>
+<li><a href="#_version_2">A.2.4. Version</a></li>
+<li><a href="#_type_2">A.2.5. Type</a></li>
+<li><a href="#_source_2">A.2.6. Source</a></li>
+<li><a href="#_subject_2">A.2.7. Subject</a></li>
+<li><a href="#_time_2">A.2.8. Time</a></li>
+<li><a href="#_data_content_type_2">A.2.9. Data content type</a></li>
+<li><a href="#_data_schema_2">A.2.10. Data schema</a></li>
+<li><a href="#_data_2">A.2.11. Data</a></li>
+<li><a href="#_data_conformance_2">A.2.12. Data conformance</a></li>
+<li><a href="#_data_severity_2">A.2.13. Data severity</a></li>
+<li><a href="#_data_content_2">A.2.14. Data content</a></li>
+<li><a href="#_data_content_title_2">A.2.15. Data content title</a></li>
+<li><a href="#_data_links_2">A.2.16. Data links</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#schemas">Annex B: Schemas (Normative)</a>
 <ul class="sectlevel2">
-<li><a href="#_wis2_monitoring_event_message_encoding_schema">B.1. WIS2 Monitoring Event Message Encoding Schema</a></li>
-<li><a href="#_wis2_monitoring_event_message_report_encoding_schema">B.2. WIS2 Monitoring Event Message Report Encoding Schema</a></li>
+<li><a href="#_wis2_monitoring_event_message_schema">B.1. WIS2 Monitoring Event Message Schema</a></li>
 </ul>
 </li>
 <li><a href="#examples">Annex C: Examples (Informative)</a>
 <ul class="sectlevel2">
 <li><a href="#_wis2_monitoring_topic">C.1. WIS2 Monitoring Topic</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_wcmp2_ets_report">C.2. WIS2 Monitoring Event Message Encoding: WCMP2 ETS Report</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_wcmp2_kpi_report">C.3. WIS2 Monitoring Event Message Encoding: WCMP2 KPI Report</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_wnm_schema_compliance_report">C.4. WIS2 Monitoring Event Message Encoding: WNM Schema Compliance Report</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_notice_report">C.5. WIS2 Monitoring Event Message Encoding: Notice Report</a></li>
-<li><a href="#_wis2_monitoring_event_message_encoding_alert_report">C.6. WIS2 Monitoring Event Message Encoding: Alert Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_wcmp2_ets_report">C.2. WIS2 Monitoring Event Message: WCMP2 ETS Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_wcmp2_kpi_report">C.3. WIS2 Monitoring Event Message: WCMP2 KPI Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_wnm_schema_compliance_report">C.4. WIS2 Monitoring Event Message: WNM Schema Compliance Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_notice_report">C.5. WIS2 Monitoring Event Message: Notice Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_alert_report">C.6. WIS2 Monitoring Event Message: Alert Report</a></li>
+<li><a href="#_wis2_monitoring_event_message_sensor_centre_logs">C.7. WIS2 Monitoring Event Message: Sensor Centre logs</a></li>
 </ul>
 </li>
 <li><a href="#Bibliography">Annex D: Bibliography</a></li>
@@ -620,7 +605,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Successful operation of WIS2 Global Services will depend on running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.  The WIS2 Guide defines service levels and performance indicators <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> for Global Services in order to monitor and maintain the health of the network.</p>
 </div>
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is also an encoding extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 monitoring events. This standard is also an extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
 <p>WIS2 Monitoring Event topics shall leverage various aspects of the WIS2 Topic Hierarchy (such as centre identifiers).  WIS2 Monitoring Events messages shall be encoded using CloudEvents along with a domain specific model for WIS2.</p>
@@ -649,7 +634,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is also an encoding extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
+<p>This document defines the content, structure, and encoding for WIS2 Monitoring Events. This standard is also an extension of the <a href="#cloud-events">CloudEvents specification</a>.</p>
 </div>
 <div class="paragraph">
 <p>This specification defines the conformance requirements for WIS2 Monitoring Events (topic hierarchy and notification message).  Annex A defines the abstract test suite.</p>
@@ -666,13 +651,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The WIS2 Topic Hierarchy defines the topic hierarchy used by WIS message brokers to manage message delivery to subscribers and / or recipients.</p>
 </div>
 <div class="paragraph">
-<p>CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is also an encoding extension of CloudEvents.</p>
+<p>CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.  This standard is also an extension of CloudEvents.</p>
 </div>
 <div class="paragraph">
 <p>Global Service providers are required to comply with all conformance classes of this specification in support of providing highly available services for discovery, subscription, notification and download of data and metadata within WIS2.</p>
 </div>
 <div class="paragraph">
-<p>WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topic and Event Messages.</p>
+<p>WMO shall publish guidance material to assist data providers in constructing WIS2 Monitoring Event Topics and Event Messages.</p>
 </div>
 <div class="paragraph">
 <p>This standard identifies numerous Requirements Classes which define the functional requirements.</p>
@@ -686,10 +671,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>"WIS2 Monitoring Event Topic"</p>
 </li>
 <li>
-<p>"WIS2 Monitoring Event Message Encoding: Core"</p>
-</li>
-<li>
-<p>"WIS2 Monitoring Event Message Encoding: Report"</p>
+<p>"WIS2 Monitoring Event Message: Core"</p>
 </li>
 </ul>
 </div>
@@ -719,16 +701,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a id="cloud-events"></a> CloudEvents: CloudEvents specification (2025) <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup></p>
 </li>
 <li>
-<p><a id="ogcapi-common-part1"></a> OGC API - Common - Part 1: Core (2023) <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
+<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
 </li>
 <li>
-<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
+<p><a id="wis2-notification-message"></a> WMO: WIS2 Notification Message (2022) <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
 </li>
 <li>
-<p><a id="wis2-notification-message"></a> WMO: WIS2 Notification Message (2022) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
-</li>
-<li>
-<p><a id="wis2-metric-hierarchy"></a> WMO: WIS2 Metric Hierarchy (2025) <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
+<p><a id="wis2-metric-hierarchy"></a> WMO: WIS2 Metric Hierarchy (2025) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -879,7 +858,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WNM</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 notification message</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Notification Message</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WTH</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Topic Hierarchy</p></td>
 </tr>
 </tbody>
 </table>
@@ -907,13 +890,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_examples"><a class="anchor" href="#_examples"></a>5.2. Examples</h3>
 <div class="paragraph">
-<p>Monitoring event topics examples provided in this specification are encoded as <code>plain text strings</code>.</p>
+<p>Monitoring event topic examples provided in this specification are encoded as <code>plain text strings</code>.</p>
 </div>
 <div class="paragraph">
 <p>Monitoring event message examples provided in this specification are encoded as JSON.</p>
 </div>
 <div class="paragraph">
-<p>Complete examples can be found at <a href="https://schemas.wmo.int/wme/1.0/examples" class="bare">https://schemas.wmo.int/wme/1.0/examples</a></p>
+<p>Complete examples can be found at <a href="https://schemas.wmo.int/wme/1.0.0/examples" class="bare">https://schemas.wmo.int/wme/1.0.0/examples</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -925,14 +908,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.4. Schemas</h3>
 <div class="paragraph">
-<p>Monitoring event message schemas can be found at <a href="https://schemas.wmo.int/wme/1.0" class="bare">https://schemas.wmo.int/wme/1.0</a></p>
+<p>Monitoring event message schemas can be found at <a href="https://schemas.wmo.int/wme/1.0.0" class="bare">https://schemas.wmo.int/wme/1.0.0</a></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.5. Schema representation</h3>
 <div class="paragraph">
-<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup> objects are used throughout this standard to define the structure
-of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.
+<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup> objects are used throughout this standard to define the structure
+of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>.
 YAML is a superset of JSON, and in this standard is regarded as equivalent.</p>
 </div>
 <div class="paragraph">
@@ -961,11 +944,13 @@ YAML is a superset of JSON, and in this standard is regarded as equivalent.</p>
 <p>WIS2 Global Services provide high availability capabilities in support of discovery, access and exchange of weather/climate/water/environmental data on WIS2.</p>
 </div>
 <div class="paragraph">
-<p>Once connected to the WIS2 infrastructure, any Global Service will be monitored by the WIS2 Global Monitor.  Monitoring of WIS2 Global Services will allow
-for detection of service anomalities, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 Operations.</p>
+<p>Once connected to the WIS2 infrastructure, all Global Services will be monitored by the WIS2 Global Monitor.  This will allow for the detection of service anomalies, interruptions or quality assessments of metadata.  These "events" can jeopardize normal WIS2 operations.</p>
 </div>
 <div class="paragraph">
-<p>A mechanism to notify on and describe such events is required in support of Global Service communication and corrective action.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.</p>
+<p>WIS2 Nodes may plan for data and/or service outages, and may wish to provide a notice to WIS2 operations for planning and recovery.</p>
+</div>
+<div class="paragraph">
+<p>A mechanism to notify on and describe such events in support of WIS2 operations and corrective action.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.</p>
 </div>
 </div>
 <div class="sect2">
@@ -991,6 +976,16 @@ development of this specification:</p>
 </li>
 <li>
 <p>a WIS2 Node may provide correct notifications but no data</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>WIS2 Node data/service outages</em>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a WIS2 Node may be down for maintenance for a given date/time window</p>
 </li>
 </ul>
 </div>
@@ -1154,7 +1149,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Event topic level 4 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) based on the subject of the event.</p>
+<p>Event topic level 4 SHALL be a centre identifier (as per the <a href="#wis2-topic-hierarchy">WIS2 Topic Hierarchy</a>) of the subject of the event.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1164,22 +1159,41 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wis2_monitoring_event_message_encoding"><a class="anchor" href="#_wis2_monitoring_event_message_encoding"></a>8. WIS2 Monitoring Event Message Encoding</h2>
+<h2 id="_wis2_monitoring_event_message"><a class="anchor" href="#_wis2_monitoring_event_message"></a>8. WIS2 Monitoring Event Message</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Event payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
+<p>Event messages published via the WIS2 Monitoring Event Topic (WMET) are defined using the <a href="#cloud-events">CloudEvents</a> specification as a building block.</p>
+</div>
+<div class="paragraph">
+<p>Examples of event messages, include, but are not limited to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a WIS2 Global Discovery Catalogue’s metadata archive being older than 24 hours</p>
+</li>
+<li>
+<p>a WIS2 Node being disconnected from all Global Brokers</p>
+</li>
+<li>
+<p>a WIS2 Node not providing any data in the last 6 hours</p>
+</li>
+<li>
+<p>a WIS2 Node providing a notice on service interruptions during a given date/time window</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="_requirements_class_wis2_monitoring_event_message_encoding_core"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_core"></a>8.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</h3>
+<h3 id="_requirements_class_wis2_monitoring_event_message_core"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_core"></a>8.1. Requirements Class "WIS2 Monitoring Event Message: Core"</h3>
 <div class="sect3">
 <h4 id="_overview_2"><a class="anchor" href="#_overview_2"></a>8.1.1. Overview</h4>
 <div class="paragraph">
-<p>This Requirements Class provides baseline requirements for all WIS2 event and report types.</p>
+<p>This Requirements Class provides baseline requirements for all WIS2 event message types.</p>
 </div>
 <div class="paragraph">
 <p>CloudEvents provides a standards-based encoding for all event data, and provides mechanisms for extensibility.</p>
 </div>
-<table id="rc_monitoring-event-message-encoding-core" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rc_monitoring-event-message-core" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -1189,7 +1203,7 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -1234,14 +1248,14 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The CloudEvents specification version (see <a href="#_version">Version</a>)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>source</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The centre identifier producing the event (see <a href="#_source">Source</a>)</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>type</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The event type related to the message (see <a href="#_type">Type</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>source</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The centre identifier of the event message originator or producer (see <a href="#_source">Source</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>subject</code></p></td>
@@ -1259,19 +1273,59 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The media type of the data content encoding in the event message (<code>application/json</code>) (see <a href="#_data_content_type">Data content type</a>)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>dataschema</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The JSON Schema that is adhered to by the event message (see <a href="#_data_schema">Data schema</a>)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The event payload as JSON (see <a href="#_data">Data</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.conformsTo</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WME associated to which the event message conforms (see <a href="#_data_conformance">Data conformance</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.severity</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The severity level of the event (see <a href="#_data_severity">Data severity</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.ref</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The identifier that the event is referencing (see <a href="#_data_ref">Data ref</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.channel</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The WIS2 channel related to the event (see <a href="#_data_channel">Data channel</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.time</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date/time associated with the event (see <a href="#_data_time">Data time</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.content</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong> (any of <code>data.content</code> and/or <code>data.links</code>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Inline content describing the event, including a human readable title of the event (see <a href="#_data_content">Data content</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.links</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong> (any of <code>data.content</code> and/or <code>data.links</code>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages for message retrieval or additional resources associated with the event (see <a href="#_data_links">Data links</a>)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_message_size"><a class="anchor" href="#_message_size"></a>8.1.2. Message size</h4>
+<h4 id="_validation"><a class="anchor" href="#_validation"></a>8.1.2. Validation</h4>
 <div class="paragraph">
-<p>The WIS2 Monitoring Event Message Encoding allows for the transmission of event messages in a compact manner.</p>
+<p>The WIS2 Monitoring Event Message schema is based on the Requirements Class WIS2 Monitoring Event Message: Core schema and the associated information model.</p>
 </div>
-<table id="req_monitoring-event-message-encoding-core_messsage_size" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_validation" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1280,7 +1334,33 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/message_size</strong></p>
+<p><strong>/req/monitoring-event-message-core/validation</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each WMEM SHALL validate without error against the Event Message schema.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_message_size"><a class="anchor" href="#_message_size"></a>8.1.3. Message size</h4>
+<div class="paragraph">
+<p>The WIS2 Monitoring Event Message allows for the transmission of event messages in a compact manner.</p>
+</div>
+<table id="req_monitoring-event-message-core_messsage_size" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/monitoring-event-message-core/message_size</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1293,9 +1373,9 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>8.1.3. Identifier</h4>
+<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>8.1.4. Identifier</h4>
 <div class="paragraph">
-<p>A universally unique identifier of the event using the UUID standard (<a href="https://datatracker.ietf.org/doc/html/rfc4122">RFC4122</a>). The identifier is generated by the originator of the event.</p>
+<p>A universally unique identifier of the event using the UUID standard (<a href="https://datatracker.ietf.org/doc/html/rfc9562">RFC9562</a>). The identifier is generated by the originator of the event.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1305,16 +1385,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core_id" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_id" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/id</strong></p>
+<p><strong>/req/monitoring-event-message-core/id</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1325,11 +1405,31 @@ development of this specification:</p>
 </tr>
 </tbody>
 </table>
+<table id="rec_monitoring-event-message-core_id" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-core/id</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>id</code> property SHOULD use UUIDv4 for truly random or pseudorandom values.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_version"><a class="anchor" href="#_version"></a>8.1.4. Version</h4>
+<h4 id="_version"><a class="anchor" href="#_version"></a>8.1.5. Version</h4>
 <div class="paragraph">
-<p>The CloudEvents specification version of the event message encoding.</p>
+<p>The CloudEvents specification version of the event message.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1339,16 +1439,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"specversion": "1.0"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core-version" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core-version" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/version</strong></p>
+<p><strong>/req/monitoring-event-message-core/version</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1361,9 +1461,49 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_source"><a class="anchor" href="#_source"></a>8.1.5. Source</h4>
+<h4 id="_type"><a class="anchor" href="#_type"></a>8.1.6. Type</h4>
 <div class="paragraph">
-<p>The centre identifier of the event producer (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
+<p>The type of event related to the event message, using a reverse DNS notation.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event"</code></pre>
+</div>
+</div>
+<table id="req_monitoring-event-message-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 6</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/monitoring-event-message-core/type</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>type</code> property SHALL be encoded using a reverse DNS notation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>type</code> property SHALL be equal to <code>int.wmo.wis.wme.event</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_source"><a class="anchor" href="#_source"></a>8.1.7. Source</h4>
+<div class="paragraph">
+<p>The centre identifier of the event message originator or producer (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1373,16 +1513,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"source": "ca-eccc-msc-global-discovery-catalogue"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core-source" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core-source" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/source</strong></p>
+<p><strong>/req/monitoring-event-message-core/source</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1395,68 +1535,9 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_type"><a class="anchor" href="#_type"></a>8.1.6. Type</h4>
+<h4 id="_subject"><a class="anchor" href="#_subject"></a>8.1.8. Subject</h4>
 <div class="paragraph">
-<p>The type of event related to the event message encoding, using a reverse DNS notation.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.wcmp2"</code></pre>
-</div>
-</div>
-<table id="req_monitoring-event-message-encoding-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 6</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/type</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property SHALL be encoded using a reverse DNS notation.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property SHALL be one of the following values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>int.wmo.wis.wme.event.wcmp2.ets</code></p>
-</li>
-<li>
-<p><code>int.wmo.wis.wme.event.wcmp2.kpi</code></p>
-</li>
-<li>
-<p><code>int.wmo.wis.wme.event.wnm.schema</code></p>
-</li>
-<li>
-<p><code>int.wmo.wis.wme.event.report.notice</code></p>
-</li>
-<li>
-<p><code>int.wmo.wis.wme.event.report.alert</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_subject"><a class="anchor" href="#_subject"></a>8.1.7. Subject</h4>
-<div class="paragraph">
-<p>The centre identifier of the subject of the event (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
+<p>The centre identifier associated with the description of the event (as defined in the <a href="#wis2-topic-hierarchy">[wis2-topic-hierarchy]</a>).</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1466,16 +1547,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"subject": "de-dwd"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core-subject" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core-subject" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/subject</strong></p>
+<p><strong>/req/monitoring-event-message-core/subject</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1488,7 +1569,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_time"><a class="anchor" href="#_time"></a>8.1.8. Time</h4>
+<h4 id="_time"><a class="anchor" href="#_time"></a>8.1.9. Time</h4>
 <div class="paragraph">
 <p>The <code>time</code> property identifies the date/time when the notification was first posted or published by the originator. The date/time is encoded in RFC3339 format with the Coordinated Universal Time (UTC) timezone (<code>Z</code>).</p>
 </div>
@@ -1500,16 +1581,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"time": "2024-10-17T03:42:23Z"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_time" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/time</strong></p>
+<p><strong>/req/monitoring-event-message-core/time</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1534,7 +1615,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_content_type"><a class="anchor" href="#_data_content_type"></a>8.1.9. Data content type</h4>
+<h4 id="_data_content_type"><a class="anchor" href="#_data_content_type"></a>8.1.10. Data content type</h4>
 <div class="paragraph">
 <p>The <code>datacontenttype</code> property identifies the media type associated with the event message payload.  <code>application/json</code> (JSON) is the required media type for all data specific encodings.</p>
 </div>
@@ -1546,16 +1627,16 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"datacontenttype": "application/json"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core_datacontenttype" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_datacontenttype" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/datacontenttype</strong></p>
+<p><strong>/req/monitoring-event-message-core/datacontenttype</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1568,7 +1649,41 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data"><a class="anchor" href="#_data"></a>8.1.10. Data</h4>
+<h4 id="_data_schema"><a class="anchor" href="#_data_schema"></a>8.1.11. Data schema</h4>
+<div class="paragraph">
+<p>The <code>dataschema</code> property identifies the JSON Schema that is adhered to by event message payload.  This is the value of a given JSON Schema&#8217;s <code>$id</code> property.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json"</code></pre>
+</div>
+</div>
+<table id="req_monitoring-event-message-core_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/monitoring-event-message-core/dataschema</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>dataschema</code> property SHALL be a URL to the WIS2 Monitoring Event Message JSON Schema.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_data"><a class="anchor" href="#_data"></a>8.1.12. Data</h4>
 <div class="paragraph">
 <p>The <code>data</code> property provides the event payload in JSON.</p>
 </div>
@@ -1578,35 +1693,42 @@ development of this specification:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"data": {
-    "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
-    "report_type": "ets",
-    "summary": {
-        "PASSED": 12,
-        "FAILED": 0,
-        "SKIPPED": 0
-    },
-    "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-    "tests": [
-        {
-            "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
-            "code": "PASSED",
-            "message": "Passes given schema is compliant/valid"
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+    ],
+    "severity": "INFO",
+    "content": {
+        "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
+        "title": "WCMP2 ETS report",
+        "report_type": "ets",
+        "summary": {
+            "PASSED": 12,
+            "FAILED": 0,
+            "SKIPPED": 0
         },
-        ...
+        "generated_by": "pywcmp 0.13.1 (https://github.com/wmo-im/pywcmp)",
+        "tests": [
+            {
+                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
+                "code": "PASSED",
+                "message": "Passes given schema is compliant/valid"
+            },
+            ...
+        }
     }
 }</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-core_data" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_data" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-core/data</strong></p>
+<p><strong>/req/monitoring-event-message-core/data</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1621,165 +1743,48 @@ development of this specification:</p>
 <p>The <code>data</code> property SHALL NOT be an escaped representation of JSON.</p>
 </div></div></td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_report"></a>9. WIS2 Monitoring Event Message Encoding: Report</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Report payloads published via the WIS2 Monitoring Event Topic (WMET) are defined using the associated requirements and schema described in this Requirements Class.</p>
-</div>
-<div class="sect2">
-<h3 id="_requirements_class_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_requirements_class_wis2_monitoring_event_message_encoding_report"></a>9.1. Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</h3>
-<div class="sect3">
-<h4 id="_overview_3"><a class="anchor" href="#_overview_3"></a>9.1.1. Overview</h4>
-<div class="paragraph">
-<p>This Requirements Class provides the requirements for Reports.  Examples of Reports can include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>metrics that are provided by WIS2 Global Services are used to trigger alerts that define the conditions and criteria to emit events.  Alert Reports are used to trigger corrective action to ensure healthly and stable WIS2 operations.</p>
-</li>
-<li>
-<p>notices that can be used for administrative messages about general operational and/or administrative matters or for service messages about operational status and/or problem resolution matters. Notices are used to provide information relating to interruptions of or changes to stable WIS2 operations.</p>
-</li>
-</ul>
-</div>
-<table id="rc_monitoring-event-message-encoding-report" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Event metadata</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_monitoring-event-message-encoding-core">WIS2 Monitoring Event Message Encoding: Core</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ogcapi-common-part1">OGC API - Common - Part 1: Core</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Pre-conditions</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The event message conforms to "WIS2 Monitoring Event Message Encoding: Core" Requirements Class.</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>data</code> property SHALL have at least a <code>content</code> or <code>links</code> property.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Examples of Reports include (but are not limited to):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>a WIS2 Global Discovery Catalogue&#8217;s metadata archive is older than 24 hours</p>
-</li>
-<li>
-<p>a WIS2 Node is disconnected from all Global Brokers</p>
-</li>
-<li>
-<p>a WIS2 Node does not provide any data in the last 6 hours</p>
-</li>
-<li>
-<p>a WIS2 Node providing a notice on service interruption on a given date/time</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_validation"><a class="anchor" href="#_validation"></a>9.1.2. Validation</h4>
-<div class="paragraph">
-<p>The Report schema is based on the Requirements Class WIS2 Monitoring Event Message Encoding: Core schema and the associated information model, and applies to the <code>data</code> property of a Report.</p>
-</div>
-<table id="req_monitoring-event-message-encoding-report_validation" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="per_monitoring-event-message-core_data" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/validation</strong></p>
+<p><strong>/per/monitoring-event-message-core/data</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each WMEM Report SHALL validate without error against the Report schema.</p>
+<p>The <code>data</code> property MAY have both a <code>content</code> and <code>links</code> property.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_type_2"><a class="anchor" href="#_type_2"></a>9.1.3. Type</h4>
+<h4 id="_data_conformance"><a class="anchor" href="#_data_conformance"></a>8.1.13. Data conformance</h4>
 <div class="paragraph">
-<p>The type of event related to the event message encoding, using a reverse DNS notation.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
+<p>The <code>conformsTo</code> property identifies the version of the WME standard to which the event message conforms. Conformance identification is valuable for version detection and handling of content.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.alert"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"conformsTo": [
+    "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+]</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-report_type" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/type</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property of a notice report SHALL be equal to <code>int.wmo.wis.wme.event.report.notice</code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property of an alert report SHALL be equal to <code>int.wmo.wis.wme.event.report.alert</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_data_schema"><a class="anchor" href="#_data_schema"></a>9.1.4. Data schema</h4>
-<div class="paragraph">
-<p>The <code>dataschema</code> property identifies the JSON Schema that is adhered to by event message payload.  This is the value of a given JSON Schema&#8217;s <code>$id</code> property.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json"</code></pre>
-</div>
-</div>
-<table id="req_monitoring-event-message-encoding-report_dataschema" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_data_conformance" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1788,38 +1793,38 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/dataschema</strong></p>
+<p><strong>/req/monitoring-event-message-core/data_conformance</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>dataschema</code> property SHALL be a URL to the Report JSON Schema.</p>
+<p>A WMEM SHALL provide information on conformance via the OGC API – Records (OARec) record <code>conformsTo</code> property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>conformsTo</code> property SHALL advertise conformance to WMEM.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_2"><a class="anchor" href="#_data_2"></a>9.1.5. Data</h4>
+<h4 id="_data_severity"><a class="anchor" href="#_data_severity"></a>8.1.14. Data severity</h4>
 <div class="paragraph">
-<p>The Report <code>data</code> property provides the event payload in JSON, using the "Problem Details" schema of <a href="#ogcapi-common-part1">OGC API - Common - Part 1: Core</a> as the content model.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_data_type"><a class="anchor" href="#_data_type"></a>9.1.6. Data <code>type</code></h4>
-<div class="paragraph">
-<p>The <code>data.type</code> property defines a URN that is prefixed by <code>wmem-alert</code> and based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert names <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>.</p>
+<p>The <code>data.severity</code> property defines a list of severity levels to describe the seriousness of an event.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "wmem-alert:Metadata_archive_older_than_24_hours"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"severity": "CRITICAL"</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-report_data_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_data_severity" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1828,74 +1833,47 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/data_type</strong></p>
+<p><strong>/req/monitoring-event-message-core/data_severity</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM SHALL provide a <code>data.type</code> property.</p>
+<p>A WMEM SHALL provide a <code>data.severity</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.type</code> property of a WMEM Report SHALL be prefixed by <code>wmem:report:</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.type</code> property of a WMEM Report for an alert SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert names OR have the fixed value of <code>wmem:report:notice</code>.</p>
+<p>The <code>data.severity</code> property SHALL be one of the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DEBUG</code></p>
+</li>
+<li>
+<p><code>INFO</code></p>
+</li>
+<li>
+<p><code>WARNING</code></p>
+</li>
+<li>
+<p><code>ERROR</code></p>
+</li>
+<li>
+<p><code>CRITICAL</code></p>
+</li>
+</ul>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_title"><a class="anchor" href="#_data_title"></a>9.1.7. Data <code>title</code></h4>
+<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>8.1.15. Data ref</h4>
 <div class="paragraph">
-<p>The <code>data.title</code> property defines a texual summary based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup>.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"title": "Metadata archive is older than 24 hours"</code></pre>
-</div>
-</div>
-<table id="req_monitoring-event-message-encoding-report_data_title" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/data_title</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM SHALL provide a <code>data.title</code> property.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>For alerts, the <code>data.title</code> property of a WMEM Report SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>9.1.8. Data <code>ref</code></h4>
-<div class="paragraph">
-<p>The <code>data.ref</code> property defines an identifier that the Report is referencing (for example, to refer/follow up on a previous monitoring event).</p>
+<p>The <code>data.ref</code> property defines an identifier that the event is referencing (for example, to refer/follow up on a previous monitoring event).</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1907,43 +1885,9 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_detail"><a class="anchor" href="#_data_detail"></a>9.1.9. Data <code>detail</code></h4>
+<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>8.1.16. Data channel</h4>
 <div class="paragraph">
-<p>The <code>data.detail</code> property defines a detailed description of the problem, as defined by the issuer of the Report.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"detail": "Metadata archive is older than 24 hours.  Please contact the administrator at admin@example.org for more information"</code></pre>
-</div>
-</div>
-<table id="req_monitoring-event-message-encoding-report_data_detail" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/data_detail</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM Report SHALL provide a <code>data.detail</code> property.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>9.1.10. Data <code>channel</code></h4>
-<div class="paragraph">
-<p>The <code>data.channel</code> property defines a WIS2 topic that the Report may be referring to (for example for a data outage notice).</p>
+<p>The <code>data.channel</code> property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -1953,31 +1897,31 @@ development of this specification:</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"</code></pre>
 </div>
 </div>
-<table id="rec_monitoring-event-message-encoding-report_data_channel" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rec_monitoring-event-message-core_data_channel" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/monitoring-event-message-encoding-report/data_channel</strong></p>
+<p><strong>/rec/monitoring-event-message-core/data_channel</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>channel</code> property SHOULD be used if the Report is based on data being published to a given topic.</p>
+<p>The <code>channel</code> property SHOULD be used if the event is based on data being published to a given topic.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>9.1.11. Data <code>time</code></h4>
+<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.17. Data time</h4>
 <div class="paragraph">
-<p>The <code>data.time</code> property defines time interval that the Report may be referring to (for example for a data outage notice).</p>
+<p>The <code>data.time</code> property defines time interval that the WMEM may be referring to (for example for a data outage notice).</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -2012,105 +1956,349 @@ development of this specification:</p>
 }</code></pre>
 </div>
 </div>
-<table id="rec_monitoring-event-message-encoding-report_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rec_monitoring-event-message-core_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/monitoring-event-message-encoding-report/data_time</strong></p>
+<p><strong>/rec/monitoring-event-message-core/data_time</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>time</code> property SHOULD be used if the Report is based on a time window.</p>
+<p>The <code>time</code> property SHOULD be used if the event is based on a time interval.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<table id="per_monitoring-event-message-encoding-report_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="per_monitoring-event-message-core_data_time" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/per/monitoring-event-message-encoding-report/data_time</strong></p>
+<p><strong>/per/monitoring-event-message-core/data_time</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>time.interval</code> array MAY be fully bounded (i.e. <code>[t1, t2]</code>) or open ended (i.e. <code>[t, ..]</code>, <code>[.., t]</code>).</p>
+<p>The <code>data.time.interval</code> array MAY be fully bounded (i.e. <code>[t1, t2]</code>) or open ended (i.e. <code>[t, ..]</code>, <code>[.., t]</code>).</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_wmemseverity"><a class="anchor" href="#_data_wmemseverity"></a>9.1.12. Data <code>wmem:severity</code></h4>
+<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.18. Data content</h4>
 <div class="paragraph">
-<p>The <code>data.wmem:severity</code> property defines a list of severity levels to describe the seriousness of a Report.</p>
+<p>The <code>data.content</code> property provides an inline description and summary of the event.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"wmem:severity": "critical"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"content": {
+    "id": "ab7cd199-ffa3-4909-80be-c78e99791435",
+    "title": "WCMP2 ETS report",
+    "report_type": "ets",
+    "summary": {
+        "PASSED": 12,
+        "FAILED": 0,
+        "SKIPPED": 0
+    },
+    "generated_by": "pywcmp 0.13.1 (https://github.com/wmo-im/pywcmp)",
+    "tests": [
+        {
+            "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
+            "code": "PASSED",
+            "message": "Passes given schema is compliant/valid"
+        },
+        ...
+    }
+}</code></pre>
 </div>
 </div>
-<table id="req_monitoring-event-message-encoding-report_datawmem-severity" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_monitoring-event-message-core_data_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 17</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/monitoring-event-message-encoding-report/datawmem-severity</strong></p>
+<p><strong>/req/monitoring-event-message-core/data_content</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WMEM Report SHALL provide a <code>data.wmem:severity</code> property.</p>
+<p>A WMEM SHALL provide a <code>data.content</code> property, when a <code>data.links</code> property is not provided.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="per_monitoring-event-message-core_data_content" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/monitoring-event-message-core/data_content</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM MAY provide a <code>data.content</code> property while at the same time providing a <code>data.links</code> property..</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_data_content_title"><a class="anchor" href="#_data_content_title"></a>8.1.18.1. Data content title</h5>
+<div class="paragraph">
+<p>The <code>data.content.title</code> property defines a texual summary of the <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"title": "Metadata archive is older than 24 hours"</code></pre>
+</div>
+</div>
+<table id="req_monitoring-event-message-core_data_content_title" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/monitoring-event-message-core/data_content_title</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM SHALL provide a <code>data.content.title</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>data.wmem:severity</code> property of a Report SHALL be one of the following values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>debug</code></p>
-</li>
-<li>
-<p><code>info</code></p>
-</li>
-<li>
-<p><code>warning</code></p>
-</li>
-<li>
-<p><code>error</code></p>
-</li>
-<li>
-<p><code>critical</code></p>
-</li>
-</ul>
+<p>For alerts, the <code>data.content.title</code> property of a WMEM SHALL be based on <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect4">
+<h5 id="_data_content_description"><a class="anchor" href="#_data_content_description"></a>8.1.18.2. Data content description</h5>
+<div class="paragraph">
+<p>The <code>data.content.description</code> property defines a detailed description of the problem, as defined by the issuer of the event.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"description": "Metadata archive is older than 24 hours.  Please contact the administrator at admin@example.org for more information"</code></pre>
+</div>
+</div>
+<table id="rec_monitoring-event-message-core_data_content_description" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 17</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-core/data_content_description</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM SHOULD provide a <code>data.content.description</code> property.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_links"><a class="anchor" href="#_data_links"></a>8.1.19. Data links</h4>
+<div class="paragraph">
+<p>The <code>data.links</code> array property consists of one or more objects providing URLs to access data.</p>
+</div>
+<div class="paragraph">
+<p>Each link object provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An <code>href</code> property with a fully qualified link to access the data;</p>
+</li>
+<li>
+<p>A <code>rel</code> property providing an <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation</a> or <a href="http://codes.wmo.int/wis/link-type">WIS link type</a> describing the relationship between the link and the message;</p>
+</li>
+<li>
+<p>A <code>type</code> property providing the media type of the data;</p>
+</li>
+<li>
+<p>A <code>length</code> property providing the length (in bytes) indicating the size of the data;</p>
+</li>
+<li>
+<p>A <code>security</code> property providing a description of the access control mechanism applied (for example, recommended data with restrictions).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Links can be used when including inline messages via <code>data.content</code> is not required, desired, or feasible.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example: Canonical link</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"links": [{
+  "href": "https://example.org/global-cache-2025-12-21-13.log.gz",
+  "rel": "canonical",
+  "type": "application/gzip"
+}]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: Multiple links</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"links": [{
+  "href": "https://example.org/global-cache-2025-12-21-13.log.gz",
+  "rel": "canonical",
+  "type": "application/gzip"
+}, {
+  "href": "https://example.org/global-cache-log-dashboard/2025-12-21-13",
+  "rel": "alternate",
+  "type": "text/html"
+}]</code></pre>
+</div>
+</div>
+<table id="req_monitoring-event-message-core_data_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 18</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/monitoring-event-message-core/data_links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM SHALL provide a <code>data.links</code> array property, when a <code>data.content</code> property is not provided.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>links</code> array property SHALL contain at least one link with, at a minimum, the <code>href</code> and <code>rel</code> properties.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The links SHALL be HTTP, HTTPS, FTP or SFTP.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_monitoring-event-message-core_data_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-core/data_links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM SHOULD provide links using secure protocols such as HTTPS and SFTP, with HTTPS being the preferred option.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>data.links</code> array property SHOULD provide a <code>length</code> property to communicate the size of a given resource in advance, when the size of the link&#8217;s content is known or can be easily derived.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="per_monitoring-event-message-core_data_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 4</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/monitoring-event-message-core/data_links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM MAY provide a <code>data.links</code> property while at the same time providing a <code>data.content</code> property.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>8.1.19.1. Access control</h5>
+<div class="paragraph">
+<p>WMEM links may also provide links to resources that implement access control in support of authentication and authorization. The example demonstrates how to express access control using HTTP Basic authentication for a given Global Cache logging dashboard.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example: Access controlled link</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"links": [{
+  "href": "https://example.org/global-cache-log-dashboard/2025-12-21-13",
+  "rel": "alternate",
+  "type": "text/html",
+  "title": "link to Global Cache logging dashboard",
+  "security": {
+    "default": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "Please contact the service provider for accessing this secured resource."
+    }
+  }
+}]</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2211,18 +2399,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_wis2_monitoring_event_message_encoding_core"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_encoding_core"></a>A.2. Conformance Class: WIS2 Monitoring Event Message Encoding: Core</h3>
-<div id="ats_monitoring-event-message-encoding-core" class="exampleblock">
+<h3 id="_conformance_class_wis2_monitoring_event_message_core"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_core"></a>A.2. Conformance Class: WIS2 Monitoring Event Message: Core</h3>
+<div id="ats_monitoring-event-message-core" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-core</a></p>
+<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>Requirements Class "WIS2 Monitoring Event Message Encoding: Core"</p>
+<p>Requirements Class "WIS2 Monitoring Event Message: Core"</p>
 </dd>
 <dt class="hdlist1">classification</dt>
 <dd>
@@ -2233,18 +2421,52 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_message_size_2"><a class="anchor" href="#_message_size_2"></a>A.2.1. Message size</h4>
-<div id="ats_event-message-encoding-core_message_size" class="exampleblock">
+<h4 id="_validation_2"><a class="anchor" href="#_validation_2"></a>A.2.1. Validation</h4>
+<div id="ats_event-message-core_validation" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/message_size</p>
+<p>/conf/event-message-core/validation</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/message_size</p>
+<p>/req/event-message-core/validation</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WMEM is valid to the authoritative JSON schema.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Run JSON Schema validation on the WMEM against the authoritative JSON schema.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_message_size_2"><a class="anchor" href="#_message_size_2"></a>A.2.2. Message size</h4>
+<div id="ats_event-message-core_message_size" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/event-message-core/message_size</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/event-message-core/message_size</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2267,18 +2489,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_identifier_2"><a class="anchor" href="#_identifier_2"></a>A.2.2. Identifier</h4>
-<div id="ats_event-message-encoding-core_id" class="exampleblock">
+<h4 id="_identifier_2"><a class="anchor" href="#_identifier_2"></a>A.2.3. Identifier</h4>
+<div id="ats_event-message-core_id" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/id</p>
+<p>/conf/event-message-core/id</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/id</p>
+<p>/req/event-message-core/id</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2308,18 +2530,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_version_2"><a class="anchor" href="#_version_2"></a>A.2.3. Version</h4>
-<div id="ats_event-message-encoding-core_version" class="exampleblock">
+<h4 id="_version_2"><a class="anchor" href="#_version_2"></a>A.2.4. Version</h4>
+<div id="ats_event-message-core_version" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/version</p>
+<p>/conf/event-message-core/version</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/version</p>
+<p>/req/event-message-core/version</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2349,59 +2571,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_source_2"><a class="anchor" href="#_source_2"></a>A.2.4. Source</h4>
-<div id="ats_event-message-encoding-core_source" class="exampleblock">
+<h4 id="_type_2"><a class="anchor" href="#_type_2"></a>A.2.5. Type</h4>
+<div id="ats_event-message-core_type" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/source</p>
+<p>/conf/event-message-core/type</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/source</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that a WMEM has a valid source.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check for the existence of a <code>source</code> property in the WMEM.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check that the <code>source</code> property is a valid WIS2 centre identifier.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_type_3"><a class="anchor" href="#_type_3"></a>A.2.5. Type</h4>
-<div id="ats_event-message-encoding-core_type" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-core/type</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-core/type</p>
+<p>/req/event-message-core/type</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2431,18 +2612,59 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_subject_2"><a class="anchor" href="#_subject_2"></a>A.2.6. Subject</h4>
-<div id="ats_event-message-encoding-core_subject" class="exampleblock">
+<h4 id="_source_2"><a class="anchor" href="#_source_2"></a>A.2.6. Source</h4>
+<div id="ats_event-message-core_source" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/subject</p>
+<p>/conf/event-message-core/source</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/subject</p>
+<p>/req/event-message-core/source</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WMEM has a valid source.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check for the existence of a <code>source</code> property in the WMEM.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>source</code> property is a valid WIS2 centre identifier.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_subject_2"><a class="anchor" href="#_subject_2"></a>A.2.7. Subject</h4>
+<div id="ats_event-message-core_subject" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/event-message-core/subject</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/event-message-core/subject</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2472,18 +2694,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_time_2"><a class="anchor" href="#_time_2"></a>A.2.7. Time</h4>
-<div id="ats_event-message-encoding-core_time" class="exampleblock">
+<h4 id="_time_2"><a class="anchor" href="#_time_2"></a>A.2.8. Time</h4>
+<div id="ats_event-message-core_time" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/time</p>
+<p>/conf/event-message-core/time</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/time</p>
+<p>/req/event-message-core/time</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2520,18 +2742,18 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_content_type_2"><a class="anchor" href="#_data_content_type_2"></a>A.2.8. Data content type</h4>
-<div id="ats_event-message-encoding-core_datacontenttype" class="exampleblock">
+<h4 id="_data_content_type_2"><a class="anchor" href="#_data_content_type_2"></a>A.2.9. Data content type</h4>
+<div id="ats_event-message-core_datacontenttype" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/datacontenttype</p>
+<p>/conf/event-message-core/datacontenttype</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/datacontenttype</p>
+<p>/req/event-message-core/datacontenttype</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -2561,161 +2783,22 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_3"><a class="anchor" href="#_data_3"></a>A.2.9. Data</h4>
-<div id="ats_event-message-encoding-core_data" class="exampleblock">
+<h4 id="_data_schema_2"><a class="anchor" href="#_data_schema_2"></a>A.2.10. Data schema</h4>
+<div id="ats_event-message-core_dataschema" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-core/data</p>
+<p>/conf/event-message-core/dataschema</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-core/data</p>
+<p>/req/event-message-core/dataschema</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WMEM has a valid data payload.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check for the existence of a <code>data</code> property in the WMEM.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Parse the <code>data</code> property as a JSON object.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_conformance_class_wis2_monitoring_event_message_encoding_report"><a class="anchor" href="#_conformance_class_wis2_monitoring_event_message_encoding_report"></a>A.3. Conformance Class: WIS2 Monitoring Event Message Encoding: Report</h3>
-<div id="ats_monitoring-event-message-encoding-report" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p><a href="http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report" class="bare">http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-encoding-report</a></p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>Requirements Class "WIS2 Monitoring Event Message Encoding: Report"</p>
-</dd>
-<dt class="hdlist1">classification</dt>
-<dd>
-<p>Target Type:Event Metadata</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_validation_2"><a class="anchor" href="#_validation_2"></a>A.3.1. Validation</h4>
-<div id="ats_event-message-encoding-alert_validation" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-alert/validation</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-alert/validation</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that an alert report is valid to the authoritative report schema.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Run JSON Schema validation on the alert report against the authoritative report schema.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_type_4"><a class="anchor" href="#_type_4"></a>A.3.2. Type</h4>
-<div id="ats_event-message-encoding-alert_type" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-alert/type</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-alert/type</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that an alert report has a valid type.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check for the existence of a <code>type</code> property in the WMEM.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check that the <code>type</code> property is equal to <code>int.wmo.wis.wme.event.report.alert</code>.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_data_schema_2"><a class="anchor" href="#_data_schema_2"></a>A.3.3. Data <code>schema</code></h4>
-<div id="ats_event-message-encoding-report_dataschema" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-report/dataschema</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-report/dataschema</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that a WMEM Report has a valid data schema.</p>
+<p>Validate that a WMEM has a valid data schema.</p>
 </dd>
 </dl>
 </div>
@@ -2755,22 +2838,22 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_type_2"><a class="anchor" href="#_data_type_2"></a>A.3.4. Data <code>type</code></h4>
-<div id="ats_event-message-encoding-report_data_type" class="exampleblock">
+<h4 id="_data_2"><a class="anchor" href="#_data_2"></a>A.2.11. Data</h4>
+<div id="ats_event-message-core_data" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-report/data_type</p>
+<p>/conf/event-message-core/data</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-report/data_type</p>
+<p>/req/event-message-core/data</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WMEM Report has a valid data type.</p>
+<p>Validate that a WMEM has a valid data payload.</p>
 </dd>
 </dl>
 </div>
@@ -2779,21 +2862,14 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>data.type</code> property in the WMEM.</p>
+<p>Check for the existence of a <code>data</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>data.type</code> property has a prefix of <code>wmem:report:</code>.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check that the <code>data.type</code> property has a suffix equal to WIS2 Metric Hierarchy alert names (i.e. value of <code>groups[*].rules.alert</code>) OR has the fixed value of <code>wmem:report:notice</code>.</p>
+<p>Parse the <code>data</code> property as a JSON object.</p>
 </div>
 </div>
 </div>
@@ -2803,22 +2879,22 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_title_2"><a class="anchor" href="#_data_title_2"></a>A.3.5. Data <code>title</code></h4>
-<div id="ats_event-message-encoding-report_data_title" class="exampleblock">
+<h4 id="_data_conformance_2"><a class="anchor" href="#_data_conformance_2"></a>A.2.12. Data conformance</h4>
+<div id="ats_event-message-core_data_conformance" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-report/data_title</p>
+<p>/conf/event-message-core/data_conformance</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-report/data_title</p>
+<p>/req/event-message-core/data_conformance</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WMEM Report has a valid data title.</p>
+<p>Validate that a WMEM provides valid conformance information.</p>
 </dd>
 </dl>
 </div>
@@ -2827,14 +2903,14 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>data.title</code> property in the WMEM.</p>
+<p>Check for the existence of a <code>data.conformsTo</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>data.type</code> property has a value equal to WIS2 Metric Hierarchy alert summary annotations (i.e. value of <code>groups[*].rules.annotations.summary</code>).</p>
+<p>In the WMEM&#8217;s <code>data.conformsTo</code> array property, check that ONE of the values is equal to <code>http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core</code>.</p>
 </div>
 </div>
 </div>
@@ -2844,22 +2920,22 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_detail_2"><a class="anchor" href="#_data_detail_2"></a>A.3.6. Data <code>detail</code></h4>
-<div id="ats_event-message-encoding-report_data_detail" class="exampleblock">
+<h4 id="_data_severity_2"><a class="anchor" href="#_data_severity_2"></a>A.2.13. Data severity</h4>
+<div id="ats_event-message-core_data_severity" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/event-message-encoding-report/data_detail</p>
+<p>/conf/event-message-core/data_severity</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/event-message-encoding-report/data_detail</p>
+<p>/req/event-message-core/data_severity</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WMEM Report has a valid data title.</p>
+<p>Validate that a WMEM has a valid data severity.</p>
 </dd>
 </dl>
 </div>
@@ -2868,41 +2944,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>data.detail</code> property in the WMEM.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_data_wmemseverity_2"><a class="anchor" href="#_data_wmemseverity_2"></a>A.3.7. Data <code>wmem:severity</code></h4>
-<div id="ats_event-message-encoding-report_datawmem-severity" class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">label</dt>
-<dd>
-<p>/conf/event-message-encoding-report/datawmem-severity</p>
-</dd>
-<dt class="hdlist1">subject</dt>
-<dd>
-<p>/req/event-message-encoding-report/datawmem-severity</p>
-</dd>
-<dt class="hdlist1">test-purpose</dt>
-<dd>
-<p>Validate that a WMEM Report has a valid data severity.</p>
-</dd>
-</dl>
-</div>
-<div class="exampleblock component">
-<div class="content">
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check for the existence of a <code>data.wmem:severity</code> property in the WMEM.</p>
+<p>Check for the existence of a <code>data.severity</code> property in the WMEM.</p>
 </div>
 </div>
 </div>
@@ -2914,21 +2956,137 @@ development of this specification:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>debug</code></p>
+<p><code>DEBUG</code></p>
 </li>
 <li>
-<p><code>info</code></p>
+<p><code>INFO</code></p>
 </li>
 <li>
-<p><code>warning</code></p>
+<p><code>WARNING</code></p>
 </li>
 <li>
-<p><code>error</code></p>
+<p><code>ERROR</code></p>
 </li>
 <li>
-<p><code>critical</code></p>
+<p><code>CRITICAL</code></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_content_2"><a class="anchor" href="#_data_content_2"></a>A.2.14. Data content</h4>
+<div id="ats_event-message-core_data_content" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/event-message-core/data_content</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/event-message-core/data_content</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WMEM has valid data content.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>If a <code>data.links</code> property does not exist, check for the existence of a <code>data.content</code> property in the WMEM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_content_title_2"><a class="anchor" href="#_data_content_title_2"></a>A.2.15. Data content title</h4>
+<div id="ats_event-message-core_data_content_title" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/event-message-core/data_content_title</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/event-message-core/data_content_title</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WMEM has a valid data content title.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check for the existence of a <code>data.content.title</code> property in the WMEM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_links_2"><a class="anchor" href="#_data_links_2"></a>A.2.16. Data links</h4>
+<div id="ats_event-message-core_data_links" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/event-message-core/data_links</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/event-message-core/data_links</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WMEM has valid data links.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>If a <code>data.content</code> property does not exist, check for the existence of a <code>data.links</code> array property in the WMEM.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>data.links</code> array property provides a minimum of one link object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>For each link object, check that the <code>href</code> property contains a valid protocol scheme of one of 'http', 'https', 'ftp', 'sftp'.</p>
 </div>
 </div>
 </div>
@@ -2956,13 +3114,13 @@ Schema documents will only be published on <code>schemas.wmo.int</code> once the
 </table>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_schema"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_schema"></a>B.1. WIS2 Monitoring Event Message Encoding Schema</h3>
+<h3 id="_wis2_monitoring_event_message_schema"><a class="anchor" href="#_wis2_monitoring_event_message_schema"></a>B.1. WIS2 Monitoring Event Message Schema</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wme/1/eventMessageEncodingJSON.yaml
-title: WIS2 Event Message Encoding
-description: WIS2 Event Message Encoding
+$id: https://schemas.wmo.int/wme/1/eventMessageJSON.yaml
+title: WIS2 Event Message 
+description: WIS2 Event Message 
 
 allOf:
   - $ref: 'cloudevents-v1.0.2.yaml'
@@ -2970,64 +3128,62 @@ allOf:
       type:
         type: string
         enum:
-          - int.wmo.wis.wme.event.wcmp2.ets
-          - int.wmo.wis.wme.event.wcmp2.kpi
-          - int.wmo.wis.wme.event.wnm.schema
-          - int.wmo.wis.wme.event.report.notice
-          - int.wmo.wis.wme.event.report.alert
-    
+          - int.wmo.wis.wme.event
+      data:    
+        properties:
+          conformsTo:
+            type: array
+            contains:
+                const: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core
+          severity:
+            type: string
+            description: Severity level
+            enum:
+              - DEBUG
+              - INFO
+              - WARNING
+              - ERROR
+              - CRITICAL
+          ref:
+            type: string
+            format: uuid
+            description: Identifier of referenced event
+          time:
+            type: object
+            description: Time instant or interval
+            $ref: 'https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/FT2025-2/schemas/wcmpRecordGeoJSON.yaml#/properties/time'
+          content:
+            type: object
+            description: inline content of event message
+            properties:
+              channel:
+                type: string
+                description: topic that link is based on
+              title:
+                $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/title'
+              description:
+                $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/description'
+            required:
+              - title
+          links:
+            type: array
+            $ref: 'https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/main/schemas/wcmpRecordGeoJSON.yaml#/properties/links'
+        anyOf:
+          - required:
+              - conformsTo
+              - severity
+              - content
+          - required:
+              - conformsTo
+              - severity
+              - links
+
     required:
       - datacontenttype
       - dataschema
       - subject
       - time
       - data</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wis2_monitoring_event_message_report_encoding_schema"><a class="anchor" href="#_wis2_monitoring_event_message_report_encoding_schema"></a>B.2. WIS2 Monitoring Event Message Report Encoding Schema</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: https://json-schema.org/draft/2020-12/schema
-$id: https://schemas.wmo.int/wme/1/reportJSON.yaml
-title: WIS2 Report Message Encoding
-description: WIS2 Report Message Encoding
-
-allOf:
-  - $ref: 'monitoringEventMessageEncodingJSON.yaml'
-  - properties:
-      data:
-        allOf:
-          - $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/exception.yaml'
-          - properties:
-              ref:
-                type: string
-                format: uuid
-                description: Identifier of referenced event
-              channel:
-                type: string
-                description: WIS2 topic (can be used as part of reporting on data)
-              time:
-                type: object
-                description: Time window of report
-                properties:
-                    interval:
-                      $ref: https://raw.githubusercontent.com/wmo-im/wcmp2/refs/heads/main/schemas/wcmpRecordGeoJSON.yaml#/properties/time/oneOf/1/properties/interval
-              wmem:severity:
-                type: string
-                description: Severity level of a Report
-                enum:
-                  - debug
-                  - info
-                  - warning
-                  - error
-                  - critical
-            required:
-              - type
-              - title
-              - detail
-              - wmem:severity</code></pre>
 </div>
 </div>
 </div>
@@ -3058,190 +3214,204 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_wcmp2_ets_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_wcmp2_ets_report"></a>C.2. WIS2 Monitoring Event Message Encoding: WCMP2 ETS Report</h3>
+<h3 id="_wis2_monitoring_event_message_wcmp2_ets_report"><a class="anchor" href="#_wis2_monitoring_event_message_wcmp2_ets_report"></a>C.2. WIS2 Monitoring Event Message: WCMP2 ETS Report</h3>
 <div class="listingblock">
 <div class="title">Example: WCMP2 compliance report event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.wcmp2.ets",
+    "type": "int.wmo.wis.wme.event",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
-    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wcmp2-ets-bundled.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
     "data": {
-        "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
-        "report_type": "ets",
-        "summary": {
-            "PASSED": 12,
-            "FAILED": 0,
-            "SKIPPED": 0
-        },
-        "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-        "tests": [
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
-                "code": "PASSED",
-                "message": "Passes given schema is compliant/valid"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/contacts",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/record_created_datetime",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/data_policy",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/description",
-                "code": "PASSED",
-                "message": "Passes given schema is compliant/valid"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/extent_geospatial",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/extent_temporal",
-                "code": "PASSED",
-                "message": "Passes given schema is compliant/valid"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/identifier",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/links",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/themes",
-                "code": "PASSED"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/title",
-                "code": "PASSED",
-                "message": "Passes given schema is compliant/valid"
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/type",
-                "code": "PASSED"
-            }
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "datetime": "2024-10-02T13:55:00Z",
-        "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL"
+        "severity": "INFO",
+        "content": {
+            "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
+            "title": "WCMP2 ETS report",
+            "report_type": "ets",
+            "summary": {
+                "PASSED": 12,
+                "FAILED": 0,
+                "SKIPPED": 0
+            },
+            "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
+            "tests": [
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/conformance",
+                    "code": "PASSED",
+                    "message": "Passes given schema is compliant/valid"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/contacts",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/record_created_datetime",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/data_policy",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/description",
+                    "code": "PASSED",
+                    "message": "Passes given schema is compliant/valid"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/extent_geospatial",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/extent_temporal",
+                    "code": "PASSED",
+                    "message": "Passes given schema is compliant/valid"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/identifier",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/links",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/themes",
+                    "code": "PASSED"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/title",
+                    "code": "PASSED",
+                    "message": "Passes given schema is compliant/valid"
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/conf/core/type",
+                    "code": "PASSED"
+                }
+            ],
+            "datetime": "2024-10-02T13:55:00Z",
+            "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL"
+        }
     }
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_wcmp2_kpi_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_wcmp2_kpi_report"></a>C.3. WIS2 Monitoring Event Message Encoding: WCMP2 KPI Report</h3>
+<h3 id="_wis2_monitoring_event_message_wcmp2_kpi_report"><a class="anchor" href="#_wis2_monitoring_event_message_wcmp2_kpi_report"></a>C.3. WIS2 Monitoring Event Message: WCMP2 KPI Report</h3>
 <div class="listingblock">
 <div class="title">Example: WCMP2 KPI event notification from Environment and Climate Change Canada, Meteorological Service of Canada, Global Discovery Catalogue Service, concerning a WCMP2 record from Deutscher Wetterdienst (Germany)</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.wcmp2.kpi",
+    "type": "int.wmo.wis.wme.event",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
-    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "time": "2025-02-01T18:19:37Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wcmp2-ets-bundled.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
     "data": {
-        "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
-        "report_type": "kpi",
-        "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL",
-        "datetime": "2025-02-01T18:17:24Z",
-        "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
-        "tests": [
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/contacts",
-                "title": "Contacts",
-                "total": 3,
-                "score": 3,
-                "comments": [],
-                "percentage": 100.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_description",
-                "title": ": Good quality description",
-                "total": 4,
-                "score": 3,
-                "comments": [
-                    "Description contains spelling errors ['eps', 'deg', '180h', 'lat', '6h', 'utc', 'lon']"
-                ],
-                "percentage": 75.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/graphic_overview_for_metadata_records",
-                "title": "Graphic overview for metadata records",
-                "total": 0,
-                "score": 0,
-                "comments": [],
-                "percentage": null
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/links_health",
-                "title": "Links health",
-                "total": 22,
-                "score": 22,
-                "comments": [],
-                "percentage": 100.0
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/persistent_identifiers",
-                "title": "Persistent identifiers",
-                "total": 3,
-                "score": 1,
-                "comments": [
-                    "No DOI/ARK/HDL schema found"
-                ],
-                "percentage": 33.333
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/time_intervals",
-                "title": "Time intervals",
-                "total": 6,
-                "score": 5,
-                "comments": [
-                    "No temporal resolution found"
-                ],
-                "percentage": 83.333
-            },
-            {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
-                "title": "Global Ensemble Prediction Model",
-                "total": 8,
-                "score": 7,
-                "comments": [
-                    "Title is not sentence case"
-                ],
-                "percentage": 87.5
-            }
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "summary": {
-            "total": 46,
-            "score": 41,
-            "comments": {
-                "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
-                "title": "Global Ensemble Prediction Model",
-                "total": 8,
-                "score": 7,
-                "comments": [
-                    "Title is not sentence case"
-                ],
-                "percentage": 87.5
-            },
-            "percentage": 89.13,
-            "grade": "A"
+        "severity": "INFO",
+        "content": {
+            "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
+            "title": "WCMP2 KPI report",
+            "report_type": "kpi",
+            "metadata_id": "urn:wmo:md:de-dwd:icon-eps.ALL",
+            "datetime": "2025-02-01T18:17:24Z",
+            "generated_by": "pywcmp 0.10.1 (https://github.com/wmo-im/pywcmp)",
+            "tests": [
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/contacts",
+                    "title": "Contacts",
+                    "total": 3,
+                    "score": 3,
+                    "comments": [],
+                    "percentage": 100.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_description",
+                    "title": ": Good quality description",
+                    "total": 4,
+                    "score": 3,
+                    "comments": [
+                        "Description contains spelling errors ['eps', 'deg', '180h', 'lat', '6h', 'utc', 'lon']"
+                    ],
+                    "percentage": 75.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/graphic_overview_for_metadata_records",
+                    "title": "Graphic overview for metadata records",
+                    "total": 0,
+                    "score": 0,
+                    "comments": [],
+                    "percentage": null
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/links_health",
+                    "title": "Links health",
+                    "total": 22,
+                    "score": 22,
+                    "comments": [],
+                    "percentage": 100.0
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/persistent_identifiers",
+                    "title": "Persistent identifiers",
+                    "total": 3,
+                    "score": 1,
+                    "comments": [
+                        "No DOI/ARK/HDL schema found"
+                    ],
+                    "percentage": 33.333
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/time_intervals",
+                    "title": "Time intervals",
+                    "total": 6,
+                    "score": 5,
+                    "comments": [
+                        "No temporal resolution found"
+                    ],
+                    "percentage": 83.333
+                },
+                {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
+                    "title": "Global Ensemble Prediction Model",
+                    "total": 8,
+                    "score": 7,
+                    "comments": [
+                        "Title is not sentence case"
+                    ],
+                    "percentage": 87.5
+                }
+            ],
+            "summary": {
+                "total": 46,
+                "score": 41,
+                "comments": {
+                    "id": "http://wis.wmo.int/spec/wcmp/2/kpi/core/good_quality_title",
+                    "title": "Global Ensemble Prediction Model",
+                    "total": 8,
+                    "score": 7,
+                    "comments": [
+                        "Title is not sentence case"
+                    ],
+                    "percentage": 87.5
+                },
+                "percentage": 89.13,
+                "grade": "A"
+            }
         }
     }
 }</code></pre>
@@ -3249,101 +3419,108 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_wnm_schema_compliance_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_wnm_schema_compliance_report"></a>C.4. WIS2 Monitoring Event Message Encoding: WNM Schema Compliance Report</h3>
+<h3 id="_wis2_monitoring_event_message_wnm_schema_compliance_report"><a class="anchor" href="#_wis2_monitoring_event_message_wnm_schema_compliance_report"></a>C.4. WIS2 Monitoring Event Message: WNM Schema Compliance Report</h3>
 <div class="listingblock">
 <div class="title">Example: WNM compliance report event notification from a WIS2 development Global Broker, concerning a WIS2 Notification message from a WIS2 Node in testing</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.wnm.schema",
+    "type": "int.wmo.wis.wme.event",
     "source": "io-wis2dev-global-broker",
     "subject": "io-wis2dev-12-test",
-    "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
     "time": "2024-12-11T12:54:40.605Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wnm-exception.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
     "data": {
-        "topic": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl",
-        "wnm": {
-            "id": "885f789e-b724-11ef-bede-e43d1a214826",
-            "conformsTo": [
-                "http://wis.wmo.int/spec/wnm/1/conf/core"
-            ],
-            "type": "Feature",
-            "geometry": null,
-            "properties": {
-                "data_id": "wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/kddl/UANT99KDDL101828",
-                "metadata_id": "",
-                "gts": {
-                    "ttaaii": "UANT99",
-                    "cccc": "kddl"
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+        ],
+        "severity": "ERROR",
+        "content": {
+            "channel": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/KDDL",
+            "title": "Global Broker WMN report",
+            "wnm": {
+                "id": "885f789e-b724-11ef-bede-e43d1a214826",
+                "conformsTo": [
+                    "http://wis.wmo.int/spec/wnm/1/conf/core"
+                ],
+                "type": "Feature",
+                "geometry": null,
+                "properties": {
+                    "data_id": "wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/KDDL/UANT99KDDL101828",
+                    "metadata_id": "",
+                    "gts": {
+                        "ttaaii": "UANT99",
+                        "cccc": "KDDL"
+                    },
+                    "pubtime": "2024-12-10T18:28:20.643304Z",
+                    "integrity": {
+                        "method": "sha512",
+                        "value": "o0JGIwEbv4XGDPhxc7vf1dcX8BJb6tYl+xogVxENgYZ8ddVxnLxwPfhCqkmnuGqRP4jYpr5FZ3z0RHH9IcmLag=="
+                    }
                 },
-                "pubtime": "2024-12-10T18:28:20.643304Z",
-                "integrity": {
-                    "method": "sha512",
-                    "value": "o0JGIwEbv4XGDPhxc7vf1dcX8BJb6tYl+xogVxENgYZ8ddVxnLxwPfhCqkmnuGqRP4jYpr5FZ3z0RHH9IcmLag=="
-                }
+                "links": [
+                    {
+                        "href": "https://wis2.dwd.de/recommended/gts/KDDL/A_UANT99KDDL101828_C_EDZW_20241210182815_25486915",
+                        "rel": "canonical",
+                        "type": "application/octet-stream",
+                        "security": {
+                            "default": {
+                                "type": "http",
+                                "scheme": "basic",
+                                "description": "Please contact DWD Team for WIS2 Global Cache via wis@dwd.de for accessing this secured resource."
+                            }
+                        },
+                        "length": 122
+                    },
+                    {
+                        "href": "https://gisc.dwd.de/angular-frontend/xmlProductDetails;pid=urn:x-wmo:md:int.wmo.wis::UANT99KDDL",
+                        "rel": "about",
+                        "type": "text/html"
+                    }
+                ]
             },
-            "links": [
-                {
-                    "href": "https://wis2.dwd.de/recommended/gts/kddl/A_UANT99KDDL101828_C_EDZW_20241210182815_25486915",
-                    "rel": "canonical",
-                    "type": "application/octet-stream",
-                    "security": {
-                        "default": {
-                            "type": "http",
-                            "scheme": "basic",
-                            "description": "Please contact DWD Team for WIS2 Global Cache via wis@dwd.de for accessing this secured resource."
-                        }
+            "exception": {
+                "code": "invalid-schema",
+                "description": "WIS2 Notification Message not compliant with the defined schema",
+                "errors": [
+                    {
+                        "keyword": "required",
+                        "dataPath": ".properties",
+                        "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                        "params": {
+                            "missingProperty": "start_datetime"
+                        },
+                        "message": "should have required property 'start_datetime'"
                     },
-                    "length": 122
-                },
-                {
-                    "href": "https://gisc.dwd.de/angular-frontend/xmlProductDetails;pid=urn:x-wmo:md:int.wmo.wis::UANT99KDDL",
-                    "rel": "about",
-                    "type": "text/html"
-                }
-            ]
-        },
-        "exception": {
-            "code": "invalid-schema",
-            "description": "WIS2 Notification Message not compliant with the defined schema",
-            "errors": [
-                {
-                    "keyword": "required",
-                    "dataPath": ".properties",
-                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
-                    "params": {
-                        "missingProperty": "start_datetime"
+                    {
+                        "keyword": "required",
+                        "dataPath": ".properties",
+                        "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
+                        "params": {
+                            "missingProperty": "end_datetime"
+                        },
+                        "message": "should have required property 'end_datetime'"
                     },
-                    "message": "should have required property 'start_datetime'"
-                },
-                {
-                    "keyword": "required",
-                    "dataPath": ".properties",
-                    "schemaPath": "#/properties/properties/oneOf/0/allOf/0/required",
-                    "params": {
-                        "missingProperty": "end_datetime"
+                    {
+                        "keyword": "required",
+                        "dataPath": ".properties",
+                        "schemaPath": "#/properties/properties/oneOf/1/allOf/0/required",
+                        "params": {
+                            "missingProperty": "datetime"
+                        },
+                        "message": "should have required property 'datetime'"
                     },
-                    "message": "should have required property 'end_datetime'"
-                },
-                {
-                    "keyword": "required",
-                    "dataPath": ".properties",
-                    "schemaPath": "#/properties/properties/oneOf/1/allOf/0/required",
-                    "params": {
-                        "missingProperty": "datetime"
-                    },
-                    "message": "should have required property 'datetime'"
-                },
-                {
-                    "keyword": "oneOf",
-                    "dataPath": ".properties",
-                    "schemaPath": "#/properties/properties/oneOf",
-                    "params": {},
-                    "message": "should match exactly one schema in oneOf"
-                }
-            ]
+                    {
+                        "keyword": "oneOf",
+                        "dataPath": ".properties",
+                        "schemaPath": "#/properties/properties/oneOf",
+                        "params": {},
+                        "message": "should match exactly one schema in oneOf"
+                    }
+                ]
+            }
         }
     }
 }</code></pre>
@@ -3351,55 +3528,100 @@ allOf:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_notice_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_notice_report"></a>C.5. WIS2 Monitoring Event Message Encoding: Notice Report</h3>
+<h3 id="_wis2_monitoring_event_message_notice_report"><a class="anchor" href="#_wis2_monitoring_event_message_notice_report"></a>C.5. WIS2 Monitoring Event Message: Notice Report</h3>
 <div class="listingblock">
 <div class="title">Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.report.notice",
-    "source": "ar-smn",
-    "subject": "ar-smn",
-    "id": "6da24af0-b19f-4106-b583-73cc25a4435d",
-    "time": "2025-08-02T02:43:35Z",
+    "type": "int.wmo.wis.wme.event",
+    "source": "ca-eccc-msc",
+    "subject": "ca-eccc-msc",
+    "time": "2025-12-29T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
     "data": {
-        "type": "wmem:report",
-        "title": "Data outage notice",
-        "detail": "Surface synoptic observations will be missing until 22 July 2025, 09:00Z",
-        "channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop",
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+        ],
+        "severity": "INFO",
         "time": {
             "interval": [
-                "..",
-                "2025-07-25T09:00:00Z"
+                "2026-01-05T14:00:00Z",
+                "2026-01-05T17:00:00Z"
             ]
         },
-        "wmem:severity": "info"
+        "content": {
+            "title": "Data outage notice",
+            "description": "Surface synoptic observations will be missing on 05 January 2026 at 14h UTC for a 3 hour period",
+            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop"
+        }
     }
 }</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_wis2_monitoring_event_message_encoding_alert_report"><a class="anchor" href="#_wis2_monitoring_event_message_encoding_alert_report"></a>C.6. WIS2 Monitoring Event Message Encoding: Alert Report</h3>
+<h3 id="_wis2_monitoring_event_message_alert_report"><a class="anchor" href="#_wis2_monitoring_event_message_alert_report"></a>C.6. WIS2 Monitoring Event Message: Alert Report</h3>
 <div class="listingblock">
 <div class="title">Example: Alert report event notification from a WIS2 Global Cache, concerning a missing metadata archive from a GDC</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
-    "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event.report.alert",
-    "source": "de-dwd-global-cache",
-    "subject": "ca-eccc-msc-global-discovery-catalogue",
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
+    "specversion": "1.0",
+    "type": "int.wmo.wis.wme.event",
+    "source": "ca-eccc-msc-global-discovery-catalogue",
+    "subject": "ca-eccc-msc-global-discovery-catalogue",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
-    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-encoding-report.json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-report.json",
     "data": {
-        "type": "wmem-report:notice",
-        "title": "Metadata archive is older than 24 hours",
-        "detail": "The metadata archive is older than 24 hours.  Please contact the administrator",
-        "wmem:severity": "critical"
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+        ],
+        "severity": "CRITICAL",
+        "content": {
+            "title": "Metadata archive is older than 24 hours",
+            "description": "The metadata archive is older than 24 hours.  Please contact the administrator"
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wis2_monitoring_event_message_sensor_centre_logs"><a class="anchor" href="#_wis2_monitoring_event_message_sensor_centre_logs"></a>C.7. WIS2 Monitoring Event Message: Sensor Centre logs</h3>
+<div class="listingblock">
+<div class="title">Example: Event notification from a Sensor Centre Global Cache (SCGC), providing logs of Global Cache analysis</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "specversion": "1.0",
+    "type": "int.wmo.wis.wme.event",
+    "source": "fr-meteofrance-sensor-centre-global-cache",
+    "subject": "fr-meteofrance-sensor-centre-global-cache",
+    "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
+    "time": "2025-10-31T22:03:04Z",
+    "datacontenttype": "application/json",
+    "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
+    "data": {
+        "severity": "INFO",
+        "conformsTo": [
+            "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
+        ],
+        "time": {
+            "interval": [
+                "2025-10-31T21:00:00Z",
+                "2025-10-30T22:00:00Z"
+            ]
+        },
+        "links": [
+            {
+                "rel": "canonical",
+                "type": "text/plain",
+                "href": "https://example.org/logs.txt"
+            }
+        ]
     }
 }</code></pre>
 </div>
@@ -3488,33 +3710,27 @@ allOf:
 <a href="#_footnoteref_9">9</a>. <a href="https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md" class="bare">https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md</a>
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. <a href="https://docs.ogc.org/is/19-072/19-072.html" class="bare">https://docs.ogc.org/is/19-072/19-072.html</a>
+<a href="#_footnoteref_10">10</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
+<a href="#_footnoteref_11">11</a>. <a href="https://github.com/wmo-im/wis2-notification-message" class="bare">https://github.com/wmo-im/wis2-notification-message</a>
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. <a href="https://github.com/wmo-im/wis2-notification-message" class="bare">https://github.com/wmo-im/wis2-notification-message</a>
+<a href="#_footnoteref_12">12</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy</a>
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy</a>
+<a href="#_footnoteref_13">13</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_14">14</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
-</div>
-<div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts</a>
-</div>
-<div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts</a>
+<a href="#_footnoteref_15">15</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy/tree/main/alerts</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-07 11:55:41 UTC
+Last updated 2026-01-08 13:36:09 UTC
 </div>
 </div>
 </body>

@@ -5,7 +5,7 @@ on:
     branches:
     - main
     paths:
-#    - 'standard/**'
+    - 'standard/**'
 
 env:
   SPEC_FILE_BASENAME: wis2-monitoring-events-DRAFT

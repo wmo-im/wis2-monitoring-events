@@ -65,6 +65,10 @@ The table below provides an overview of the set of properties that are included 
 |**Required**
 |The version of WME associated to which the event message conforms (see <<_data_conformance>>)
 
+|``data.subtype``
+|Optional
+|A string further describing the event type (see <<_data_subtype>>)
+
 |``data.severity``
 |**Required**
 |The severity level of the event (see <<_data_severity>>)
@@ -249,6 +253,15 @@ The ``conformsTo`` property identifies the version of the WME standard to which 
 ----
 
 include::../requirements/monitoring-event-message-core/REQ_data_conformance.adoc[]
+
+==== Data subtype
+
+The ``subtype`` property further describes a given event type.  This value can be useful for deeper observability and filtering of monotiring messages for dedicated workflows.
+
+[source,json]
+----
+"subtype": "wcmp2-ets"
+----
 
 ==== Data severity
 

@@ -11,6 +11,7 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "wcmp2-ets",
         "severity": "INFO",
         "content": {
             "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",

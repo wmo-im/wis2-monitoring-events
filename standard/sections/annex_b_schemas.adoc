@@ -1,4 +1,4 @@
-[[schemas]]
+[schemas]]
 [appendix]
 :appendix-caption: Annex
 == Schemas (Normative)

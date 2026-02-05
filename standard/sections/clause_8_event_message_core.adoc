@@ -256,7 +256,7 @@ include::../requirements/monitoring-event-message-core/REQ_data_conformance.adoc
 
 ==== Data subtype
 
-The ``subtype`` property further describes a given event type.  This value can be useful for deeper observability and filtering of monotiring messages for dedicated workflows.
+The ``subtype`` property further describes a given event type.  This value can be useful for deeper observability and filtering of monitoring messages for dedicated workflows.
 
 [source,json]
 ----

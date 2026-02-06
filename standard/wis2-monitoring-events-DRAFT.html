@@ -96,10 +96,10 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-01-20</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-02-06</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-01-20</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-02-06</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -176,12 +176,13 @@ body {
 <li><a href="#_data_schema">8.1.11. Data schema</a></li>
 <li><a href="#_data">8.1.12. Data</a></li>
 <li><a href="#_data_conformance">8.1.13. Data conformance</a></li>
-<li><a href="#_data_severity">8.1.14. Data severity</a></li>
-<li><a href="#_data_ref">8.1.15. Data ref</a></li>
-<li><a href="#_data_channel">8.1.16. Data channel</a></li>
-<li><a href="#_data_time">8.1.17. Data time</a></li>
-<li><a href="#_data_content">8.1.18. Data content</a></li>
-<li><a href="#_data_links">8.1.19. Data links</a></li>
+<li><a href="#_data_subtype">8.1.14. Data subtype</a></li>
+<li><a href="#_data_severity">8.1.15. Data severity</a></li>
+<li><a href="#_data_ref">8.1.16. Data ref</a></li>
+<li><a href="#_data_channel">8.1.17. Data channel</a></li>
+<li><a href="#_data_time">8.1.18. Data time</a></li>
+<li><a href="#_data_content">8.1.19. Data content</a></li>
+<li><a href="#_data_links">8.1.20. Data links</a></li>
 </ul>
 </li>
 </ul>
@@ -215,7 +216,7 @@ body {
 </li>
 </ul>
 </li>
-<li><a href="#schemas">Annex B: Schemas (Normative)</a>
+<li><a href="#_schemas_normative">Annex B: Schemas (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_wis2_monitoring_event_message_schema">B.1. WIS2 Monitoring Event Message Schema</a></li>
 </ul>
@@ -929,6 +930,11 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WME associated to which the event message conforms (see <a href="#_data_conformance">Data conformance</a>)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.subtype</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A string further describing the event type (see <a href="#_data_subtype">Data subtype</a>)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.severity</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The severity level of the event (see <a href="#_data_severity">Data severity</a>)</p></td>
@@ -1453,7 +1459,18 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_severity"><a class="anchor" href="#_data_severity"></a>8.1.14. Data severity</h4>
+<h4 id="_data_subtype"><a class="anchor" href="#_data_subtype"></a>8.1.14. Data subtype</h4>
+<div class="paragraph">
+<p>The <code>subtype</code> property further describes a given event type.  This value can be useful for deeper observability and filtering of monitoring messages for dedicated workflows.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"subtype": "wcmp2-ets"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_severity"><a class="anchor" href="#_data_severity"></a>8.1.15. Data severity</h4>
 <div class="paragraph">
 <p>The <code>data.severity</code> property defines a list of severity levels to describe the seriousness of an event.</p>
 </div>
@@ -1512,7 +1529,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>8.1.15. Data ref</h4>
+<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>8.1.16. Data ref</h4>
 <div class="paragraph">
 <p>The <code>data.ref</code> property defines an identifier that the event is referencing (for example, to refer/follow up on a previous monitoring event).</p>
 </div>
@@ -1526,7 +1543,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>8.1.16. Data channel</h4>
+<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>8.1.17. Data channel</h4>
 <div class="paragraph">
 <p>The <code>data.channel</code> property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).</p>
 </div>
@@ -1560,7 +1577,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.17. Data time</h4>
+<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.18. Data time</h4>
 <div class="paragraph">
 <p>The <code>data.time</code> property defines time interval that the WMEM may be referring to (for example for a data outage notice).</p>
 </div>
@@ -1639,7 +1656,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.18. Data content</h4>
+<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.19. Data content</h4>
 <div class="paragraph">
 <p>The <code>data.content</code> property provides an inline description and summary of the event.</p>
 </div>
@@ -1710,7 +1727,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_data_content_title"><a class="anchor" href="#_data_content_title"></a>8.1.18.1. Data content title</h5>
+<h5 id="_data_content_title"><a class="anchor" href="#_data_content_title"></a>8.1.19.1. Data content title</h5>
 <div class="paragraph">
 <p>The <code>data.content.title</code> property defines a texual summary of the <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
 </div>
@@ -1750,7 +1767,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_content_description"><a class="anchor" href="#_data_content_description"></a>8.1.18.2. Data content description</h5>
+<h5 id="_data_content_description"><a class="anchor" href="#_data_content_description"></a>8.1.19.2. Data content description</h5>
 <div class="paragraph">
 <p>The <code>data.content.description</code> property defines a detailed description of the problem, as defined by the issuer of the event.</p>
 </div>
@@ -1785,7 +1802,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_links"><a class="anchor" href="#_data_links"></a>8.1.19. Data links</h4>
+<h4 id="_data_links"><a class="anchor" href="#_data_links"></a>8.1.20. Data links</h4>
 <div class="paragraph">
 <p>The <code>data.links</code> array property consists of one or more objects providing URLs to access data.</p>
 </div>
@@ -1917,7 +1934,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>8.1.19.1. Access control</h5>
+<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>8.1.20.1. Access control</h5>
 <div class="paragraph">
 <p>WMEM links may also provide links to resources that implement access control in support of authentication and authorization. The example demonstrates how to express access control using HTTP Basic authentication for a given Global Cache logging dashboard.</p>
 </div>
@@ -2740,7 +2757,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="schemas"><a class="anchor" href="#schemas"></a>Annex B: Schemas (Normative)</h2>
+<h2 id="_schemas_normative"><a class="anchor" href="#_schemas_normative"></a>Annex B: Schemas (Normative)</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -2776,6 +2793,9 @@ allOf:
             type: array
             contains:
                 const: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core
+          subtype:
+            type: string
+            description: A string further describing the event type
           severity:
             type: string
             description: Severity level
@@ -2872,6 +2892,7 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "wcmp2-ets",
         "severity": "INFO",
         "content": {
             "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
@@ -2963,6 +2984,7 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "wcmp2-kpi",
         "severity": "INFO",
         "content": {
             "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
@@ -3077,6 +3099,7 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "wnm-report",
         "severity": "ERROR",
         "content": {
             "channel": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/KDDL",
@@ -3221,6 +3244,7 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "gc-alert",
         "severity": "CRITICAL",
         "content": {
             "title": "Metadata archive is older than 24 hours",
@@ -3371,7 +3395,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-01-20 18:51:14 UTC
+Last updated 2026-02-06 11:59:15 UTC
 </div>
 </div>
 </body>

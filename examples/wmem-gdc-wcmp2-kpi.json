@@ -11,6 +11,7 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "wcmp2-kpi",
         "severity": "INFO",
         "content": {
             "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",

@@ -11,6 +11,7 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "gc-alert",
         "severity": "CRITICAL",
         "content": {
             "title": "Metadata archive is older than 24 hours",

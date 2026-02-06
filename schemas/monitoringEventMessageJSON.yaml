@@ -16,6 +16,9 @@ allOf:
             type: array
             contains:
                 const: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core
+          subtype:
+            type: string
+            description: A string further describing the event type
           severity:
             type: string
             description: Severity level

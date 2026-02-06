@@ -11,6 +11,7 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
+        "subtype": "gc-error",
         "severity": "ERROR",
         "content": {
             "title": "Cannot download data granule: https://example.org/404"

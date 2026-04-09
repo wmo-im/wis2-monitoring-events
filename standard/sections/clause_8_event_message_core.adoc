@@ -77,10 +77,6 @@ The table below provides an overview of the set of properties that are included 
 |Optional
 |The identifier that the event is referencing (see <<_data_ref>>)
 
-|``data.channel``
-|Optional
-|The WIS2 channel related to the event (see <<_data_channel>>)
-
 |``data.time``
 |Optional
 |The date/time associated with the event (see <<_data_time>>)
@@ -285,18 +281,6 @@ Example:
 "ref": "6da24af0-b19f-4106-b583-73cc25a4435d"
 ----
 
-==== Data channel
-
-The ``data.channel`` property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).
-
-Example:
-[source,json]
-----
-"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"
-----
-
-include::../recommendations/monitoring-event-message-core/REC_data_channel.adoc[]
-
 ==== Data time
 
 The ``data.time`` property defines time interval that the WMEM may be referring to (for example for a data outage notice).
@@ -366,6 +350,18 @@ Example:
 
 include::../requirements/monitoring-event-message-core/REQ_data_content.adoc[]
 include::../recommendations/monitoring-event-message-core/PER_data_content.adoc[]
+
+==== Data content channel
+
+The ``data.content.channel`` property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).
+
+Example:
+[source,json]
+----
+"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"
+----
+
+include::../recommendations/monitoring-event-message-core/REC_data_content_channel.adoc[]
 
 ===== Data content title
 

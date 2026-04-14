@@ -1,0 +1,7 @@
+[[rec_monitoring-event-message-core_data_content_channel]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-message-core/data_content_channel*
+^|A |A WMEM SHOULD provide a `+data.content.channel+` property if the event is based on data being published to a given topic.
+|===
+

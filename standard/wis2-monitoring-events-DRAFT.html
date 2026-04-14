@@ -96,10 +96,10 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-03-13</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-04-14</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-03-13</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-04-14</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -182,9 +182,9 @@ body {
 <li><a href="#_data_subtype">8.1.14. Data subtype</a></li>
 <li><a href="#_data_severity">8.1.15. Data severity</a></li>
 <li><a href="#_data_ref">8.1.16. Data ref</a></li>
-<li><a href="#_data_channel">8.1.17. Data channel</a></li>
-<li><a href="#_data_time">8.1.18. Data time</a></li>
-<li><a href="#_data_content">8.1.19. Data content</a></li>
+<li><a href="#_data_time">8.1.17. Data time</a></li>
+<li><a href="#_data_content">8.1.18. Data content</a></li>
+<li><a href="#_data_content_channel">8.1.19. Data content channel</a></li>
 <li><a href="#_data_links">8.1.20. Data links</a></li>
 </ul>
 </li>
@@ -948,11 +948,6 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The identifier that the event is referencing (see <a href="#_data_ref">Data ref</a>)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.channel</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The WIS2 channel related to the event (see <a href="#_data_channel">Data channel</a>)</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.time</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date/time associated with the event (see <a href="#_data_time">Data time</a>)</p></td>
@@ -1546,41 +1541,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_channel"><a class="anchor" href="#_data_channel"></a>8.1.17. Data channel</h4>
-<div class="paragraph">
-<p>The <code>data.channel</code> property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"</code></pre>
-</div>
-</div>
-<table id="rec_monitoring-event-message-core_data_channel" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/monitoring-event-message-core/data_channel</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>channel</code> property SHOULD be used if the event is based on data being published to a given topic.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.18. Data time</h4>
+<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.17. Data time</h4>
 <div class="paragraph">
 <p>The <code>data.time</code> property defines time interval that the WMEM may be referring to (for example for a data outage notice).</p>
 </div>
@@ -1624,7 +1585,7 @@ development of this specification:</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/monitoring-event-message-core/data_time</strong></p>
 </div></div></td>
@@ -1659,7 +1620,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.19. Data content</h4>
+<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.18. Data content</h4>
 <div class="paragraph">
 <p>The <code>data.content</code> property provides an inline description and summary of the event.</p>
 </div>
@@ -1725,6 +1686,40 @@ development of this specification:</p>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WMEM MAY provide a <code>data.content</code> property while at the same time providing a <code>data.links</code> property..</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_data_content_channel"><a class="anchor" href="#_data_content_channel"></a>8.1.19. Data content channel</h4>
+<div class="paragraph">
+<p>The <code>data.content.channel</code> property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"channel": "origin/a/wis2/ar-smn/data/core/weather/surface-based-observations/synop"</code></pre>
+</div>
+</div>
+<table id="rec_monitoring-event-message-core_data_content_channel" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/monitoring-event-message-core/data_content_channel</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WMEM SHOULD provide a <code>data.content.channel</code> property if the event is based on data being published to a given topic.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3398,7 +3393,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-03-13 12:38:41 UTC
+Last updated 2026-04-14 01:46:02 UTC
 </div>
 </div>
 </body>

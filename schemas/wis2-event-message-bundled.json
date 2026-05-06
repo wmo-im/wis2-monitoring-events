@@ -11,9 +11,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": [
-            "int.wmo.wis.wme.event"
-          ]
+          "description": "The type of event related to the event message."
         },
         "data": {
           "properties": {
@@ -22,10 +20,6 @@
               "contains": {
                 "const": "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
               }
-            },
-            "subtype": {
-              "type": "string",
-              "description": "A string further describing the event type"
             },
             "severity": {
               "type": "string",

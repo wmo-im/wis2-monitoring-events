@@ -1,7 +1,7 @@
 {
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.wcmp2.kpi",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "time": "2025-02-01T18:19:37Z",
@@ -11,7 +11,6 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "wcmp2-kpi",
         "severity": "INFO",
         "content": {
             "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",

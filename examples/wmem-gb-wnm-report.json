@@ -1,7 +1,7 @@
 {
     "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.wnm.validation",
     "source": "io-wis2dev-global-broker",
     "subject": "io-wis2dev-12-test",
     "time": "2024-12-11T12:54:40.605Z",
@@ -11,7 +11,6 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "wnm-report",
         "severity": "ERROR",
         "content": {
             "channel": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/KDDL",

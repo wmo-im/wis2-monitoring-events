@@ -47,7 +47,7 @@ include::../../examples/wmem-gb-wnm-report.json[]
 
 === WIS2 Monitoring Event Message: Notice Report
 
-.Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage
+.Example: Notice report event notification from the Instituto Nacional de Meteorología (Brazil) WIS2 Node, concerning a forthcoming data outage
 [source,json]
 ----
 include::../../examples/wmem-wis2node-outage.json[]

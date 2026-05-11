@@ -1,7 +1,7 @@
 {
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.item.download",
     "source": "jp-jma-global-cache",
     "subject": "ca-eccc-msc",
     "time": "2024-10-17T05:13:22Z",
@@ -11,7 +11,6 @@
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "gc-error",
         "severity": "ERROR",
         "content": {
             "title": "Cannot download data granule: https://example.org/404"

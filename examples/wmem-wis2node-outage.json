@@ -2,8 +2,8 @@
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
     "type": "int.wmo.wis.wme.event",
-    "source": "ca-eccc-msc",
-    "subject": "ca-eccc-msc",
+    "source": "br-inmet",
+    "subject": "br-inmet",
     "time": "2025-12-29T05:13:22Z",
     "datacontenttype": "application/json",
     "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
@@ -21,7 +21,7 @@
         "content": {
             "title": "Data outage notice",
             "description": "Surface synoptic observations will be missing on 05 January 2026 at 14h UTC for a 3 hour period",
-            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop"
+            "channel": "origin/a/wis2/br-inmet/data/core/weather/surface-based-observations/synop"
         }
     }
 }

@@ -96,10 +96,10 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-04-14</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-05-11</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-04-14</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0-DRAFT-2026-05-11</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -179,13 +179,12 @@ body {
 <li><a href="#_data_schema">8.1.11. Data schema</a></li>
 <li><a href="#_data">8.1.12. Data</a></li>
 <li><a href="#_data_conformance">8.1.13. Data conformance</a></li>
-<li><a href="#_data_subtype">8.1.14. Data subtype</a></li>
-<li><a href="#_data_severity">8.1.15. Data severity</a></li>
-<li><a href="#_data_ref">8.1.16. Data ref</a></li>
-<li><a href="#_data_time">8.1.17. Data time</a></li>
-<li><a href="#_data_content">8.1.18. Data content</a></li>
-<li><a href="#_data_content_channel">8.1.19. Data content channel</a></li>
-<li><a href="#_data_links">8.1.20. Data links</a></li>
+<li><a href="#_data_severity">8.1.14. Data severity</a></li>
+<li><a href="#_data_ref">8.1.15. Data ref</a></li>
+<li><a href="#_data_time">8.1.16. Data time</a></li>
+<li><a href="#_data_content">8.1.17. Data content</a></li>
+<li><a href="#_data_content_channel">8.1.18. Data content channel</a></li>
+<li><a href="#_data_links">8.1.19. Data links</a></li>
 </ul>
 </li>
 </ul>
@@ -933,11 +932,6 @@ development of this specification:</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WME associated to which the event message conforms (see <a href="#_data_conformance">Data conformance</a>)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.subtype</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A string further describing the event type (see <a href="#_data_subtype">Data subtype</a>)</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data.severity</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The severity level of the event (see <a href="#_data_severity">Data severity</a>)</p></td>
@@ -1115,7 +1109,7 @@ development of this specification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"type": "int.wmo.wis.wme.event.wcmp2.ets"</code></pre>
 </div>
 </div>
 <table id="req_monitoring-event-message-core_type" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1139,7 +1133,7 @@ development of this specification:</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>type</code> property SHALL be equal to <code>int.wmo.wis.wme.event</code></p>
+<p>The <code>type</code> property SHALL be a valid code from the WMEM event type code list.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1457,18 +1451,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_subtype"><a class="anchor" href="#_data_subtype"></a>8.1.14. Data subtype</h4>
-<div class="paragraph">
-<p>The <code>subtype</code> property further describes a given event type.  This value can be useful for deeper observability and filtering of monitoring messages for dedicated workflows.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"subtype": "wcmp2-ets"</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_data_severity"><a class="anchor" href="#_data_severity"></a>8.1.15. Data severity</h4>
+<h4 id="_data_severity"><a class="anchor" href="#_data_severity"></a>8.1.14. Data severity</h4>
 <div class="paragraph">
 <p>The <code>data.severity</code> property defines a list of severity levels to describe the seriousness of an event.</p>
 </div>
@@ -1527,7 +1510,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>8.1.16. Data ref</h4>
+<h4 id="_data_ref"><a class="anchor" href="#_data_ref"></a>8.1.15. Data ref</h4>
 <div class="paragraph">
 <p>The <code>data.ref</code> property defines an identifier that the event is referencing (for example, to refer/follow up on a previous monitoring event).</p>
 </div>
@@ -1541,7 +1524,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.17. Data time</h4>
+<h4 id="_data_time"><a class="anchor" href="#_data_time"></a>8.1.16. Data time</h4>
 <div class="paragraph">
 <p>The <code>data.time</code> property defines time interval that the WMEM may be referring to (for example for a data outage notice).</p>
 </div>
@@ -1620,7 +1603,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.18. Data content</h4>
+<h4 id="_data_content"><a class="anchor" href="#_data_content"></a>8.1.17. Data content</h4>
 <div class="paragraph">
 <p>The <code>data.content</code> property provides an inline description and summary of the event.</p>
 </div>
@@ -1692,7 +1675,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_content_channel"><a class="anchor" href="#_data_content_channel"></a>8.1.19. Data content channel</h4>
+<h4 id="_data_content_channel"><a class="anchor" href="#_data_content_channel"></a>8.1.18. Data content channel</h4>
 <div class="paragraph">
 <p>The <code>data.content.channel</code> property defines a WIS2 topic that the event may be referring to (for example for a data outage notice).</p>
 </div>
@@ -1725,7 +1708,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_data_content_title"><a class="anchor" href="#_data_content_title"></a>8.1.19.1. Data content title</h5>
+<h5 id="_data_content_title"><a class="anchor" href="#_data_content_title"></a>8.1.18.1. Data content title</h5>
 <div class="paragraph">
 <p>The <code>data.content.title</code> property defines a texual summary of the <a href="#wis2-metric-hierarchy">WIS2 Metric Hierarchy</a> alert summary annotations <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
 </div>
@@ -1765,7 +1748,7 @@ development of this specification:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_data_content_description"><a class="anchor" href="#_data_content_description"></a>8.1.19.2. Data content description</h5>
+<h5 id="_data_content_description"><a class="anchor" href="#_data_content_description"></a>8.1.18.2. Data content description</h5>
 <div class="paragraph">
 <p>The <code>data.content.description</code> property defines a detailed description of the problem, as defined by the issuer of the event.</p>
 </div>
@@ -1800,7 +1783,7 @@ development of this specification:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_links"><a class="anchor" href="#_data_links"></a>8.1.20. Data links</h4>
+<h4 id="_data_links"><a class="anchor" href="#_data_links"></a>8.1.19. Data links</h4>
 <div class="paragraph">
 <p>The <code>data.links</code> array property consists of one or more objects providing URLs to access data.</p>
 </div>
@@ -1932,7 +1915,7 @@ development of this specification:</p>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>8.1.20.1. Access control</h5>
+<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>8.1.19.1. Access control</h5>
 <div class="paragraph">
 <p>WMEM links may also provide links to resources that implement access control in support of authentication and authorization. The example demonstrates how to express access control using HTTP Basic authentication for a given Global Cache logging dashboard.</p>
 </div>
@@ -2258,7 +2241,7 @@ development of this specification:</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>type</code> property begins with <code>int.wmo.wis.wme.event</code>.</p>
+<p>Check that the value of properties.type is part of the <a href="https://github.com/wmo-im/wis2-monitoring-events-codelists/blob/main/codelists/event-type.csv">WMEM event type codelist</a>.</p>
 </div>
 </div>
 </div>
@@ -2783,17 +2766,13 @@ allOf:
   - properties:
       type:
         type: string
-        enum:
-          - int.wmo.wis.wme.event
+        description: The type of event related to the event message.
       data:    
         properties:
           conformsTo:
             type: array
             contains:
                 const: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core
-          subtype:
-            type: string
-            description: A string further describing the event type
           severity:
             type: string
             description: Severity level
@@ -2880,7 +2859,7 @@ allOf:
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.wcmp2.ets",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "time": "2024-10-17T05:13:22Z",
@@ -2890,7 +2869,6 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "wcmp2-ets",
         "severity": "INFO",
         "content": {
             "id": "f84f34d6-cfb0-4cff-98ec-32f88d0fd7b8",
@@ -2972,7 +2950,7 @@ allOf:
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.wcmp2.kpi",
     "source": "ca-eccc-msc-global-discovery-catalogue",
     "subject": "de-dwd",
     "time": "2025-02-01T18:19:37Z",
@@ -2982,7 +2960,6 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "wcmp2-kpi",
         "severity": "INFO",
         "content": {
             "id": "38631309-36b7-4c71-a7cd-aaca48f81a49",
@@ -3087,7 +3064,7 @@ allOf:
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "id": "08361ecb-e7ff-4965-9abe-465b63433ca5",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
+    "type": "int.wmo.wis.wme.event.wnm.validation",
     "source": "io-wis2dev-global-broker",
     "subject": "io-wis2dev-12-test",
     "time": "2024-12-11T12:54:40.605Z",
@@ -3097,7 +3074,6 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "wnm-report",
         "severity": "ERROR",
         "content": {
             "channel": "cache/a/wis2/de-dwd-gts-to-wis2/data/recommended/U/A/N/T/99/KDDL",
@@ -3192,14 +3168,14 @@ allOf:
 <div class="sect2">
 <h3 id="_wis2_monitoring_event_message_notice_report"><a class="anchor" href="#_wis2_monitoring_event_message_notice_report"></a>C.5. WIS2 Monitoring Event Message: Notice Report</h3>
 <div class="listingblock">
-<div class="title">Example: Notice report event notification from the EUMETSAT WIS2 Node, concerning a forthcoming data outage</div>
+<div class="title">Example: Notice report event notification from the Instituto Nacional de Meteorología (Brazil) WIS2 Node, concerning a forthcoming data outage</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
     "type": "int.wmo.wis.wme.event",
-    "source": "ca-eccc-msc",
-    "subject": "ca-eccc-msc",
+    "source": "br-inmet",
+    "subject": "br-inmet",
     "time": "2025-12-29T05:13:22Z",
     "datacontenttype": "application/json",
     "dataschema": "https://schemas.wmo.int/wme/1.0.0/schemas/wis2-event-message-bundled.json",
@@ -3217,7 +3193,7 @@ allOf:
         "content": {
             "title": "Data outage notice",
             "description": "Surface synoptic observations will be missing on 05 January 2026 at 14h UTC for a 3 hour period",
-            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop"
+            "channel": "origin/a/wis2/br-inmet/data/core/weather/surface-based-observations/synop"
         }
     }
 }</code></pre>
@@ -3232,8 +3208,8 @@ allOf:
 <pre class="highlight"><code class="language-json" data-lang="json">{
     "id": "6e1c7f9f-dd6c-48d9-bbc4-aef0625f1fb8",
     "specversion": "1.0",
-    "type": "int.wmo.wis.wme.event",
-    "source": "ca-eccc-msc-global-discovery-catalogue",
+    "type": "int.wmo.wis.wme.event.metadata-archive",
+    "source": "de-dwd-global-cache",
     "subject": "ca-eccc-msc-global-discovery-catalogue",
     "time": "2024-10-17T05:13:22Z",
     "datacontenttype": "application/json",
@@ -3242,7 +3218,6 @@ allOf:
         "conformsTo": [
             "http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core"
         ],
-        "subtype": "gc-alert",
         "severity": "CRITICAL",
         "content": {
             "title": "Metadata archive is older than 24 hours",
@@ -3393,7 +3368,7 @@ allOf:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-04-14 01:46:02 UTC
+Last updated 2026-05-11 13:22:36 UTC
 </div>
 </div>
 </body>

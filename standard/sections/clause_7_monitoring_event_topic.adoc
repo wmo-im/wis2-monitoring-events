@@ -61,5 +61,6 @@ Examples:
 
 ``monitor/a/wis2/fr-meteofrance/#``
 
+``monitor/a/wis2/+``
 
 include::../recommendations/monitoring-event-topic/REC_subscribing.adoc[]

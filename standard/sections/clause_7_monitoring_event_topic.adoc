@@ -50,3 +50,17 @@ The table below provides an overview of the primary topic levels.
 A simple ruleset is defined for publishing events to WMET that enables the clear identification of the event subject, to trigger corrective action or as informative notice.
 
 include::../requirements/monitoring-event-topic/REQ_publishing.adoc[]
+
+==== Subscribing
+
+Subscribing to events is based on standard MQTT topic subscription rules, including single or multiple level wildcards.
+
+Examples:
+
+``monitor/a/wis2/ca-eccc-msc/#``
+
+``monitor/a/wis2/fr-meteofrance/#``
+
+``monitor/a/wis2/+``
+
+include::../recommendations/monitoring-event-topic/REC_subscribing.adoc[]

@@ -1,0 +1,7 @@
+[[rec_monitoring-event-topic_subscribing]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/monitoring-event-topic/subscribing*
+^|A |Topic subscriptions SHOULD use a multiple level wildcard character (`#`) at the end of a topic in order to account for potential future subtopic definitions.
+|===
+

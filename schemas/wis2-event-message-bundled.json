@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.wmo.int/wme/1/eventMessageJSON.yaml",
+  "$id": "https://raw.githubusercontent.com/wmo-im/wis2-monitoring-events/refs/heads/main/schemas/wis2-event-message-bundled.json",
   "title": "WIS2 Event Message",
   "description": "WIS2 Event Message",
   "allOf": [

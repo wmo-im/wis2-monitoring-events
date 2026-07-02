@@ -3,6 +3,6 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-message-core/data_links*
 ^|A |A WMEM SHALL provide a `+data.links+` array property, when a `+data.content+` property is not provided.
-^|B |The `+links+` array property SHALL contain at least one link with, at a minimum, the `+href+` and `+rel+` properties.
+^|B |The `+links+` array property SHALL contain at least one link with the `+href+` and `+rel+` properties.
 ^|C |The links SHALL be HTTP, HTTPS, FTP or SFTP.
 |===

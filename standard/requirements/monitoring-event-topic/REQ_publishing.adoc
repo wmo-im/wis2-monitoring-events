@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/monitoring-event-topic/publishing*
-^|A |Events SHALL NOT be published with a topic that is not defined in this specification.
+^|A |Events SHALL NOT be published with a topic that is not defined in the WMET.
 ^|B |Events SHALL be published to exactly level 4.
 ^|C |Event topic level 1 SHALL be named ``monitor``.
 ^|D |Event topic level 2 SHALL be named ``a``.

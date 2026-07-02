@@ -8,7 +8,7 @@ Once connected to the WIS2 infrastructure, all Global Services will be monitored
 
 WIS2 Nodes may plan for data and/or service outages, and may wish to provide a notice to WIS2 operations for planning and recovery.
 
-A mechanism to notify on and describe such events in support of WIS2 operations and corrective action.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.
+A mechanism is needed to notify on and describe such events in support of WIS2 operations and facilitate corrective actions.  Using the WIS2 Topic Hierarchy and CloudEvents baselines for this specification provide broad interoperability and low barrier publication and event handling for the WIS2 ecosystem and beyond.
 
 === Scenarios
 

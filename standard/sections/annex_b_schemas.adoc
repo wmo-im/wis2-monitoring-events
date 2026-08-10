@@ -3,11 +3,11 @@
 :appendix-caption: Annex
 == Schemas (Normative)
 
-NOTE: Schema documents will be published on `schemas.wmo.int` after the standard has been approved.
+NOTE: Schema documents will be published on https://schemas.wmo.int/wme once the standard has been approved.
 
 === WIS2 Monitoring Event Message Schema
 
 [source,yaml]
 ----
-include::../../schemas/monitoringEventMessageJSON.yaml[]
+include::../../schemas/wis2-event-message-bundled.json[]
 ----

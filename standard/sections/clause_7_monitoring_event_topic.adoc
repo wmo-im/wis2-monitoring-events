@@ -2,7 +2,8 @@
 
 The WIS2 Monitoring Event Topic (WMET) provides a mechanism for Global Services to provide reports and notifications to WIS2 Global Services, as well as data and metadata reports that WIS2 Nodes can subscribe to and receive notifications.
 
-=== 1. Requirements Class Core
+:sectnums!:
+=== 1. Requirements Class "WIS2 Monitoring Event Topic"
 
 ==== 1.1 Overview
 

@@ -1,7 +1,7 @@
 [[ats_monitoring-event-topic]]
 ====
 [%metadata]
-label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-topic
+label:: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-topic
 subject:: Requirements Class "WIS2 Monitoring Event Topic"
 classification:: Target Type:Topic Classification
 ====

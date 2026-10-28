@@ -1,7 +1,7 @@
 [[ats_monitoring-event-message-core]]
 ====
 [%metadata]
-label:: http://wis.wmo.int/spec/wme/1/req/monitoring-event-message-core
+label:: http://wis.wmo.int/spec/wme/1/conf/monitoring-event-message-core
 subject:: Requirements Class "WIS2 Monitoring Event Message: Core"
 classification:: Target Type:Event Metadata
 ====
